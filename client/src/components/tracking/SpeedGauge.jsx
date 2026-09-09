@@ -80,7 +80,7 @@ export const SpeedGauge = ({ speed = 0, maxSpeed = 160 }) => {
       </div>
 
       <div className="flex items-center gap-3 mt-1 text-[11px]">
-        <span className="text-slate-400 font-medium">Max: {maxSpeed} km/h</span>
+        <span className="text-slate-500 font-medium">Max: {maxSpeed} km/h</span>
         <span className="font-bold text-emerald-700">
           {speed > 100 ? 'High Speed' : speed > 60 ? 'Normal Zone' : speed > 0 ? 'Slow Zone' : 'Stationary'}
         </span>

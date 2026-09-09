@@ -42,19 +42,19 @@ const RouteAnalytics = () => {
       {/* KPI Summary */}
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
         <Card>
-          <div className="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Punctuality Rate</div>
+          <div className="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Punctuality Rate</div>
           <div className="text-2xl font-extrabold text-emerald-700 mt-1 font-mono">{overview?.onTimePercentage}%</div>
         </Card>
         <Card>
-          <div className="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Avg Network Delay</div>
+          <div className="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Avg Network Delay</div>
           <div className="text-2xl font-extrabold text-amber-600 mt-1 font-mono">{overview?.averageDelayMinutes} min</div>
         </Card>
         <Card>
-          <div className="text-[10px] uppercase tracking-wider text-slate-400 font-bold">System Health</div>
+          <div className="text-[10px] uppercase tracking-wider text-slate-500 font-bold">System Health</div>
           <div className="text-2xl font-extrabold text-blue-600 mt-1 font-mono">{overview?.systemHealthScore}%</div>
         </Card>
         <Card>
-          <div className="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Throughput</div>
+          <div className="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Throughput</div>
           <div className="text-base font-bold text-slate-900 mt-1">{overview?.networkThroughput}</div>
         </Card>
       </div>

@@ -152,7 +152,7 @@ const TrainSearch = () => {
             <button
               type="button"
               onClick={handleClear}
-              className="ml-auto text-[11px] font-semibold text-slate-400 hover:text-rose-600 transition-colors cursor-pointer"
+              className="ml-auto text-[11px] font-medium text-slate-500 hover:text-rose-600 transition-colors cursor-pointer"
             >
               Clear Search
             </button>
@@ -352,7 +352,7 @@ const TrainSearch = () => {
                     style={{ width: `${selectedTrain.progress || 0}%` }}
                   />
                 </div>
-                <div className="flex justify-between text-[11px] text-slate-400 font-medium mt-1.5">
+                <div className="flex justify-between text-[11px] text-slate-500 font-medium mt-1.5">
                   <span>{selectedTrain.sourceCode || 'SRC'}</span>
                   <span>{selectedTrain.distanceRemainingKm ? `${selectedTrain.distanceRemainingKm} km remaining` : ''}</span>
                   <span>{selectedTrain.destinationCode || 'DEST'}</span>
@@ -402,7 +402,7 @@ const TrainSearch = () => {
                                 : 'hover:bg-slate-50/60 text-slate-800'
                             }`}
                           >
-                            <td className="py-3 px-3 font-mono text-slate-400">
+                            <td className="py-3 px-3 font-mono text-slate-500 font-medium">
                               {stop.sequence || idx + 1}
                             </td>
                             <td className="py-3 px-3">
@@ -442,7 +442,7 @@ const TrainSearch = () => {
                                   Current Halt
                                 </span>
                               ) : isDeparted ? (
-                                <span className="text-[11px] text-slate-400 font-medium">
+                                <span className="text-[11px] text-slate-500 font-medium">
                                   Departed
                                 </span>
                               ) : (

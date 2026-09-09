@@ -34,7 +34,7 @@ export const CongestionRadar = ({ corridors = [] }) => {
             <div className="flex items-center gap-3 shrink-0">
               <div className="text-right">
                 <div className="text-lg font-bold font-mono text-slate-900">{c.congestionIndex}</div>
-                <div className="text-[9px] text-slate-400 font-bold">INDEX</div>
+                <div className="text-[9px] text-slate-500 font-bold">INDEX</div>
               </div>
               <span className="text-[10px] font-bold px-2.5 py-1 rounded-full border border-current whitespace-nowrap bg-white/80">
                 {c.status}

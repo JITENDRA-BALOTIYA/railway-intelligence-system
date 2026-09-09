@@ -83,7 +83,7 @@ export const TrainTrackingCard = ({ train }) => {
             style={{ width: `${train.progress}%` }}
           />
         </div>
-        <div className="flex justify-between text-[11px] text-slate-400 font-medium mt-1.5">
+        <div className="flex justify-between text-[11px] text-slate-500 font-medium mt-1.5">
           <span>{train.sourceCode || 'SRC'}</span>
           <span>{train.distanceRemainingKm ? `${train.distanceRemainingKm} km remaining` : ''}</span>
           <span>{train.destinationCode || 'DEST'}</span>

@@ -134,7 +134,7 @@ export const TrainDetailPanel = ({ train }) => {
           <div className="text-[11px] text-slate-600 mt-1 font-mono">
             Dep: <span className="font-bold text-slate-900">{departsTime}</span>
           </div>
-          <div className="text-[10px] text-slate-400">
+          <div className="text-[10px] text-slate-500 font-medium">
             {firstHalt?.scheduledTime ? `Scheduled: ${firstHalt.scheduledTime}` : 'Origin Departure'}
           </div>
           <div className="text-[10px] text-emerald-700 font-semibold mt-0.5">
@@ -149,7 +149,7 @@ export const TrainDetailPanel = ({ train }) => {
           <div className="text-[11px] text-slate-600 mt-1 font-mono">
             Arr: <span className="font-bold text-slate-900">{arrivesTime}</span>
           </div>
-          <div className="text-[10px] text-slate-400">
+          <div className="text-[10px] text-slate-500 font-medium">
             {lastHalt?.scheduledTime ? `Scheduled: ${lastHalt.scheduledTime}` : 'Terminus Arrival'}
           </div>
           <div className="text-[10px] text-emerald-700 font-semibold mt-0.5">
@@ -161,25 +161,25 @@ export const TrainDetailPanel = ({ train }) => {
       {/* Quick Metrics Grid */}
       <div className="grid grid-cols-4 gap-2 text-center">
         <div className="p-2 rounded-xl bg-slate-50 border border-slate-100">
-          <div className="text-[9px] font-semibold text-slate-400 uppercase">Distance</div>
+          <div className="text-[9px] font-bold text-slate-500 uppercase tracking-wider">Distance</div>
           <div className="text-xs font-bold font-mono text-slate-900 mt-0.5">
             {totalDist > 0 ? `${totalDist} km` : '—'}
           </div>
         </div>
         <div className="p-2 rounded-xl bg-slate-50 border border-slate-100">
-          <div className="text-[9px] font-semibold text-slate-400 uppercase">Duration</div>
+          <div className="text-[9px] font-bold text-slate-500 uppercase tracking-wider">Duration</div>
           <div className="text-xs font-bold font-mono text-slate-900 mt-0.5">
             {train.duration || '—'}
           </div>
         </div>
         <div className="p-2 rounded-xl bg-slate-50 border border-slate-100">
-          <div className="text-[9px] font-semibold text-slate-400 uppercase">Avg Speed</div>
+          <div className="text-[9px] font-bold text-slate-500 uppercase tracking-wider">Avg Speed</div>
           <div className="text-xs font-bold font-mono text-slate-900 mt-0.5">
             {train.speed != null ? `${train.speed} km/h` : '—'}
           </div>
         </div>
         <div className="p-2 rounded-xl bg-slate-50 border border-slate-100">
-          <div className="text-[9px] font-semibold text-slate-400 uppercase">Halts</div>
+          <div className="text-[9px] font-bold text-slate-500 uppercase tracking-wider">Halts</div>
           <div className="text-xs font-bold font-mono text-slate-900 mt-0.5">
             {haltsCount > 0 ? haltsCount : '—'}
           </div>

@@ -4,10 +4,16 @@ const CustomTooltip = ({ active, payload }) => {
   if (!active || !payload || !payload[0]) return null
   return (
     <div className="bg-white rounded-xl p-3 text-xs border border-slate-200 shadow-lg">
-      <p className="font-bold text-slate-900" style={{ color: payload[0].payload.color }}>
-        {payload[0].payload.name}
+      <p className="font-bold text-slate-900 flex items-center gap-1.5 mb-1">
+        <span
+          className="w-2.5 h-2.5 rounded-full shrink-0"
+          style={{ backgroundColor: payload[0].payload.color }}
+        />
+        <span>{payload[0].payload.name}</span>
       </p>
-      <p className="text-slate-600 font-mono font-semibold">{payload[0].value}% contribution</p>
+      <p className="text-slate-600 font-mono font-semibold pl-4">
+        {payload[0].value}% contribution
+      </p>
     </div>
   )
 }

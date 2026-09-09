@@ -9,7 +9,7 @@ export const Loader = ({ message = 'Loading railway telemetry data...' }) => {
         </div>
         <div className="absolute -inset-1 rounded-2xl border-2 border-emerald-500/30 border-t-emerald-600 animate-spin" />
       </div>
-      <p className="text-xs font-semibold text-slate-600 animate-pulse">{message}</p>
+      <p className="text-xs font-bold text-slate-700 animate-pulse">{message}</p>
     </div>
   )
 }

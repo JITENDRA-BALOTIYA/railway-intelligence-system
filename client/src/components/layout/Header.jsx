@@ -64,14 +64,14 @@ export const Header = () => {
             </button>
           </div>
         </form>
-        <div className="flex items-center gap-1.5 mt-1 text-[11px] text-slate-400">
+        <div className="flex items-center gap-1.5 mt-1 text-[11px] text-slate-500 font-medium">
           <span>Try:</span>
           {['12301', '12951', '12002', '22221'].map((tag, idx) => (
             <button
               key={tag}
               type="button"
               onClick={() => handleQuickTagClick(tag)}
-              className="hover:text-emerald-600 transition-colors font-mono font-semibold cursor-pointer"
+              className="text-slate-600 hover:text-emerald-700 transition-colors font-mono font-bold cursor-pointer"
             >
               {tag}{idx < 3 ? ',' : ''}
             </button>

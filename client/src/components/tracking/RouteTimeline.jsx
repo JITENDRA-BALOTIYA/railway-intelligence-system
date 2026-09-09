@@ -97,7 +97,7 @@ export const RouteTimeline = ({ timeline = [], expanded = false }) => {
                   </span>
                   {stop.platform && <span className="text-slate-600 font-semibold">{stop.platform}</span>}
                   {stop.status && stop.status !== 'Current' && (
-                    <span className="text-slate-400 italic text-[11px]">{stop.status}</span>
+                    <span className="text-slate-500 italic text-[11px] font-medium">{stop.status}</span>
                   )}
                 </div>
               </div>

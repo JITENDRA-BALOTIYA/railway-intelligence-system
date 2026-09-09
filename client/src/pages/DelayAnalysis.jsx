@@ -115,7 +115,7 @@ const DelayAnalysis = () => {
           {/* Recovery & Risk */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Card>
-              <div className="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Risk Level</div>
+              <div className="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Risk Level</div>
               <div className={`text-2xl font-extrabold mt-1 ${
                 delayData.riskLevel === 'Severe' ? 'text-rose-600' :
                 delayData.riskLevel === 'High' ? 'text-amber-600' : 'text-emerald-700'
@@ -124,11 +124,11 @@ const DelayAnalysis = () => {
               </div>
             </Card>
             <Card>
-              <div className="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Recovery Probability</div>
+              <div className="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Recovery Probability</div>
               <div className="text-2xl font-extrabold font-mono text-emerald-700 mt-1">{delayData.recoveryProbability}%</div>
             </Card>
             <Card>
-              <div className="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Recovery Window</div>
+              <div className="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Recovery Window</div>
               <div className="text-sm font-bold text-slate-800 mt-1">{delayData.recoveryWindow}</div>
             </Card>
           </div>

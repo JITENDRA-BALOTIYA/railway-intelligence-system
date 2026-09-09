@@ -76,7 +76,7 @@ export const Sidebar = () => {
           {navGroups.map((group, gIdx) => (
             <div key={gIdx}>
               {group.group && (
-                <div className="text-[10px] font-bold text-slate-400 tracking-wider uppercase px-3 mb-2">
+                <div className="text-[10px] font-bold text-slate-500 tracking-wider uppercase px-3 mb-2">
                   {group.group}
                 </div>
               )}

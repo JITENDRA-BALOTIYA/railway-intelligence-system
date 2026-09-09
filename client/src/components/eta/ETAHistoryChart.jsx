@@ -4,11 +4,12 @@ const CustomTooltip = ({ active, payload, label }) => {
   if (!active || !payload) return null
   return (
     <div className="bg-white rounded-xl p-3 text-xs border border-slate-200 shadow-lg">
-      <p className="font-bold text-slate-900 mb-1">{label}</p>
+      <p className="font-bold text-slate-900 mb-1.5">{label}</p>
       {payload.map((entry, idx) => (
-        <p key={idx} className="flex items-center gap-2 font-medium" style={{ color: entry.color }}>
-          <span className="w-2 h-2 rounded-full" style={{ background: entry.color }} />
-          {entry.name}: <span className="font-mono font-bold">{entry.value} min</span>
+        <p key={idx} className="flex items-center gap-2 font-medium text-slate-700 py-0.5">
+          <span className="w-2 h-2 rounded-full shrink-0" style={{ background: entry.color }} />
+          <span>{entry.name}:</span>
+          <span className="font-mono font-bold text-slate-900">{entry.value} min</span>
         </p>
       ))}
     </div>
