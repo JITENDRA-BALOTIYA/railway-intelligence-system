@@ -10,7 +10,7 @@ export const etaService = {
    */
   async getPrediction(trainNumber) {
     const cleanNumber = String(trainNumber).trim()
-    const train = await trainService.getTrainByNumber(cleanNumber)
+    const train = (await trainService.getLiveStatus(cleanNumber)) || (await trainService.getTrainByNumber(cleanNumber))
 
     if (!train) return null
 
@@ -25,7 +25,7 @@ export const etaService = {
 
     // Determine upcoming terminus/destination stop
     const terminus = train.timeline?.find((s) => s.type === 'Destination') || {
-      station: train.destination,
+      station: train.destination || train.destName || 'Destination',
       scheduledTime: storedETA?.scheduledArrival || '10:00 AM',
     }
 

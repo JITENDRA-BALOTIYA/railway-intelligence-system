@@ -5,11 +5,12 @@ export const trainService = {
     return await apiClient.get('/trains', params)
   },
 
-  async getTrainByNumber(trainNumber) {
-    return await apiClient.get(`/trains/${trainNumber}`)
+  async getTrainByNumber(trainNumber, params = {}) {
+    return await apiClient.get(`/trains/${trainNumber}`, params)
   },
 
-  async getLiveTracking(trainNumber) {
-    return await apiClient.get(`/trains/${trainNumber}/live`)
+  async getLiveTracking(trainNumber, params = {}) {
+    return await apiClient.get(`/trains/${trainNumber}/live`, params)
   },
 }
+

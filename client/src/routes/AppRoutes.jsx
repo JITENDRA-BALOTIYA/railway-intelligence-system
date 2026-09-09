@@ -9,6 +9,7 @@ import TrainSearch from '../pages/TrainSearch.jsx'
 import RouteAnalytics from '../pages/RouteAnalytics.jsx'
 import CongestionMap from '../pages/CongestionMap.jsx'
 import StationCrowd from '../pages/StationCrowd.jsx'
+import FestivalRush from '../pages/FestivalRush.jsx'
 import SavedTrips from '../pages/SavedTrips.jsx'
 
 const AppRoutes = () => {
@@ -24,6 +25,7 @@ const AppRoutes = () => {
         <Route path="analytics" element={<RouteAnalytics />} />
         <Route path="congestion" element={<CongestionMap />} />
         <Route path="stations" element={<StationCrowd />} />
+        <Route path="festival-rush" element={<FestivalRush />} />
         <Route path="saved" element={<SavedTrips />} />
       </Route>
     </Routes>

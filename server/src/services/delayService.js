@@ -19,7 +19,7 @@ export const delayService = {
     }
 
     // Dynamic synthesis if no record exists
-    const train = await trainService.getTrainByNumber(cleanNumber)
+    const train = (await trainService.getLiveStatus(cleanNumber)) || (await trainService.getTrainByNumber(cleanNumber))
     if (!train) return null
 
     const duration = train.delay || 0

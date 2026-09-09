@@ -1,25 +1,51 @@
+# ===========================
 # Dependencies
+# ===========================
 node_modules/
 .pnp
 .pnp.js
 
-# Production builds
+# ===========================
+# Production Builds
+# ===========================
 dist/
 build/
+client/dist/
 
-# Environment variables
+# ===========================
+# Environment Variables
+# NEVER commit .env files
+# ===========================
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
+# Client env (Vercel injects via env vars — do NOT commit)
+client/.env
+client/.env.local
+client/.env.production
+
+# Server env (contains API keys — NEVER commit)
+server/.env
+server/.env.local
+
+# Keep .env.example files (safe to commit — no real secrets)
+!.env.example
+!client/.env.example
+!server/.env.example
+
+# ===========================
 # Logs
+# ===========================
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# ===========================
 # IDE / System
+# ===========================
 .vscode/
 .idea/
 .DS_Store
@@ -27,8 +53,12 @@ yarn-error.log*
 *.swo
 Thumbs.db
 
+# ===========================
 # Coverage
+# ===========================
 coverage/
 
-# MongoDB data
+# ===========================
+# MongoDB local data
+# ===========================
 data/db/

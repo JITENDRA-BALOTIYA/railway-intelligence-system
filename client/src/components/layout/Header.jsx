@@ -4,7 +4,7 @@ import { useTrain } from '../../context/TrainContext.jsx'
 import { useNavigate } from 'react-router-dom'
 
 export const Header = () => {
-  const { searchQuery, setSearchQuery } = useTrain()
+  const { selectedTrain, refreshTrain, isRefreshing } = useTrain()
   const [localSearch, setLocalSearch] = useState('')
   const [currentTime, setCurrentTime] = useState(new Date())
   const navigate = useNavigate()
@@ -16,16 +16,15 @@ export const Header = () => {
 
   const handleSearchSubmit = (e) => {
     e.preventDefault()
-    if (localSearch.trim()) {
-      setSearchQuery(localSearch.trim())
-      navigate('/search')
+    const clean = localSearch.trim()
+    if (clean) {
+      navigate(`/search?train=${encodeURIComponent(clean)}`)
     }
   }
 
-  const handleQuickTagClick = (tag) => {
-    setLocalSearch(tag)
-    setSearchQuery(tag)
-    navigate('/search')
+  const handleQuickTagClick = (trainNum) => {
+    setLocalSearch(trainNum)
+    navigate(`/search?train=${encodeURIComponent(trainNum)}`)
   }
 
   const formattedTime = currentTime.toLocaleTimeString([], {
@@ -44,21 +43,22 @@ export const Header = () => {
 
   return (
     <header className="h-20 bg-white border-b border-slate-200/80 px-6 flex items-center justify-between gap-6 shrink-0 z-20">
-      {/* Search Bar matching screenshot */}
+      {/* Search Bar */}
       <div className="flex-1 max-w-2xl">
         <form onSubmit={handleSearchSubmit} className="relative flex items-center">
           <div className="relative flex-1">
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
             <input
               type="text"
-              placeholder="Search trains, stations or routes..."
+              placeholder="Enter train number (e.g. 12301, 12951, 12002)..."
               value={localSearch}
               onChange={(e) => setLocalSearch(e.target.value)}
-              className="w-full pl-10 pr-12 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 transition-all shadow-xs"
+              className="w-full pl-10 pr-12 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 transition-all shadow-xs font-mono"
             />
             <button
               type="submit"
-              className="absolute right-1.5 top-1/2 -translate-y-1/2 p-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white transition-colors"
+              className="absolute right-1.5 top-1/2 -translate-y-1/2 p-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white transition-colors cursor-pointer"
+              title="Search Train"
             >
               <Search className="w-3.5 h-3.5" />
             </button>
@@ -66,12 +66,12 @@ export const Header = () => {
         </form>
         <div className="flex items-center gap-1.5 mt-1 text-[11px] text-slate-400">
           <span>Try:</span>
-          {['12301', 'Vande Bharat', 'New Delhi', 'Mumbai'].map((tag, idx) => (
+          {['12301', '12951', '12002', '22221'].map((tag, idx) => (
             <button
               key={tag}
               type="button"
               onClick={() => handleQuickTagClick(tag)}
-              className="hover:text-emerald-600 transition-colors font-medium cursor-pointer"
+              className="hover:text-emerald-600 transition-colors font-mono font-semibold cursor-pointer"
             >
               {tag}{idx < 3 ? ',' : ''}
             </button>
