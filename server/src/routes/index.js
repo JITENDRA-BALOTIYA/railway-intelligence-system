@@ -5,9 +5,13 @@ import delayRoutes from './delayRoutes.js'
 import stationRoutes from './stationRoutes.js'
 import analyticsRoutes from './analyticsRoutes.js'
 import alertRoutes from './alertRoutes.js'
+import authRoutes from './authRoutes.js'
+import cleaningRoutes from './cleaningRoutes.js'
 import { analyticsService } from '../services/analyticsService.js'
 import { trainService } from '../services/trainService.js'
 import { alertController } from '../controllers/alertController.js'
+import { dashboardController } from '../controllers/dashboardController.js'
+import { requireAuth } from '../middleware/authMiddleware.js'
 import { ApiResponse } from '../utils/apiResponse.js'
 
 const apiRouter = Router()
@@ -81,12 +85,17 @@ apiRouter.get('/dashboard', async (req, res, next) => {
 })
 
 // Mount domain routes
+apiRouter.use('/auth', authRoutes)
+apiRouter.use('/cleaning', cleaningRoutes)
 apiRouter.use('/trains', trainRoutes)
 apiRouter.use('/eta', etaRoutes)
 apiRouter.use('/delays', delayRoutes)
 apiRouter.use('/stations', stationRoutes)
 apiRouter.use('/analytics', analyticsRoutes)
 apiRouter.use('/alerts', alertRoutes)
+
+// Role-tailored dashboard metrics
+apiRouter.get('/dashboard/role', requireAuth, dashboardController.getRoleDashboard)
 
 export { apiRouter }
 export default apiRouter

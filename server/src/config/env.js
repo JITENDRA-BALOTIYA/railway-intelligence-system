@@ -10,5 +10,7 @@ export const config = {
   isDev: (process.env.NODE_ENV || 'development') === 'development',
   railradarApiKey: process.env.RAILRADAR_API_KEY || 'rg_3c599fb3e5614d89846d7ba4f2e99110',
   railradarBaseUrl: process.env.RAILRADAR_BASE_URL || 'https://api.railradar.in',
+  jwtSecret: process.env.JWT_SECRET || 'railway_intelligence_jwt_secret_dev_key_2026',
+  jwtExpiresIn: '7d',
 }
 

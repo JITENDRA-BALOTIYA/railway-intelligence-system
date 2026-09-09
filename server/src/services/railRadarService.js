@@ -143,6 +143,154 @@ class RailRadarService {
   }
 
   /**
+   * Fetch real-time live trains at a station (arrivals, departures, platform, delays)
+   */
+  async getStationLive(stationCode, bypassCache = false) {
+    const cleanCode = String(stationCode || '').trim().toUpperCase()
+    if (!cleanCode) return null
+
+    const result = await this.fetchApi(`/v1/stations/${cleanCode}/live`, bypassCache)
+    if (!result || !result.data) return null
+
+    const raw = result.data
+    const stationInfo = raw.station || {}
+    const rawTrains = Array.isArray(raw.trains) ? raw.trains : []
+
+    const normalizedTrains = rawTrains.map((t) => {
+      const train = t.train || {}
+      const stop = t.stop || {}
+      const live = t.live || {}
+      const delayMinutes = live.delayMinutes != null ? Math.max(0, live.delayMinutes) : 0
+
+      const schedArr = stop.arrival || 'N/A'
+      const schedDep = stop.departure || 'N/A'
+
+      let expArr = 'N/A'
+      if (live.expectedArrivalTime) {
+        try {
+          expArr = new Date(live.expectedArrivalTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+        } catch {
+          expArr = schedArr
+        }
+      } else if (schedArr !== 'N/A') {
+        expArr = schedArr
+      }
+
+      let expDep = 'N/A'
+      if (live.expectedDepartureTime) {
+        try {
+          expDep = new Date(live.expectedDepartureTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+        } catch {
+          expDep = schedDep
+        }
+      } else if (schedDep !== 'N/A') {
+        expDep = schedDep
+      }
+
+      const rawPlatform = stop.platform ? `PF ${stop.platform}` : 'PF —'
+      const movementType =
+        !stop.arrival || stop.sequence === 1 ? 'Departure' : !stop.departure ? 'Terminating' : 'Transit'
+
+      const status =
+        live.type === 'at-station'
+          ? 'At Platform'
+          : delayMinutes > 15
+          ? 'Delayed'
+          : delayMinutes > 0
+          ? 'Running Late'
+          : 'On Time'
+
+      return {
+        trainNumber: String(train.number || 'N/A'),
+        trainName: train.name || 'N/A',
+        type: train.type || 'Express',
+        source: typeof train.source === 'object' ? train.source.name || train.source.code : train.source || 'N/A',
+        destination:
+          typeof train.destination === 'object'
+            ? train.destination.name || train.destination.code
+            : train.destination || 'N/A',
+        scheduledArrival: schedArr,
+        scheduledDeparture: schedDep,
+        expectedArrival: expArr,
+        expectedDeparture: expDep,
+        platform: rawPlatform,
+        delay: delayMinutes,
+        delayText: delayMinutes > 0 ? `+${delayMinutes} min` : 'On Time',
+        status,
+        movementType,
+        liveType: live.type || 'approaching',
+        distance: stop.distance != null ? `${stop.distance} km` : 'N/A',
+      }
+    })
+
+    return {
+      station: {
+        stationCode: stationInfo.code || cleanCode,
+        stationName: stationInfo.name || cleanCode,
+        city: stationInfo.city || 'N/A',
+        lat: stationInfo.lat || null,
+        lng: stationInfo.lng || null,
+      },
+      trains: normalizedTrains,
+      count: raw.count || normalizedTrains.length,
+      dataSource: result.isCached ? 'CACHED' : 'RAILRADAR',
+      lastUpdated: new Date(result.cacheTimestamp || Date.now()).toISOString(),
+    }
+  }
+
+  /**
+   * Fetch full catalog of scheduled trains passing through a station
+   */
+  async getStationTrains(stationCode, bypassCache = false) {
+    const cleanCode = String(stationCode || '').trim().toUpperCase()
+    if (!cleanCode) return null
+
+    const result = await this.fetchApi(`/v1/stations/${cleanCode}/trains`, bypassCache)
+    if (!result || !result.data) return null
+
+    const raw = result.data
+    const stationInfo = raw.station || {}
+    const rawTrains = Array.isArray(raw.trains) ? raw.trains : []
+
+    const normalizedTrains = rawTrains.map((t) => {
+      const train = t.train || {}
+      const stop = t.stop || {}
+
+      return {
+        trainNumber: String(train.number || 'N/A'),
+        trainName: train.name || 'N/A',
+        type: train.type || 'Express',
+        source: typeof train.source === 'object' ? train.source.name || train.source.code : train.source || 'N/A',
+        destination:
+          typeof train.destination === 'object'
+            ? train.destination.name || train.destination.code
+            : train.destination || 'N/A',
+        scheduledArrival: stop.arrival || 'N/A',
+        scheduledDeparture: stop.departure || 'N/A',
+        expectedArrival: stop.arrival || 'N/A',
+        expectedDeparture: stop.departure || 'N/A',
+        platform: stop.platform ? `PF ${stop.platform}` : 'PF —',
+        delay: 0,
+        delayText: 'On Time',
+        status: 'Scheduled',
+        runDays: train.runDays || [],
+      }
+    })
+
+    return {
+      station: {
+        stationCode: stationInfo.code || cleanCode,
+        stationName: stationInfo.name || cleanCode,
+        city: stationInfo.city || 'N/A',
+      },
+      trains: normalizedTrains,
+      count: raw.count || normalizedTrains.length,
+      dataSource: result.isCached ? 'CACHED' : 'RAILRADAR',
+      lastUpdated: new Date(result.cacheTimestamp || Date.now()).toISOString(),
+    }
+  }
+
+  /**
    * Transform RailRadar live status payload into normalized internal train schema
    */
   transformLiveStatus(liveData, isCached = false, cacheTimestamp = Date.now()) {

@@ -6,7 +6,17 @@ import { Station } from '../models/Station.js'
 import { ETA } from '../models/ETA.js'
 import { Delay } from '../models/Delay.js'
 import { Alert } from '../models/Alert.js'
-import { seedTrains, seedStations, seedETAs, seedDelays, seedAlerts } from '../data/seedData.js'
+import { User } from '../models/User.js'
+import { CleaningTask } from '../models/CleaningTask.js'
+import {
+  seedTrains,
+  seedStations,
+  seedETAs,
+  seedDelays,
+  seedAlerts,
+  seedUsers,
+  seedCleaningTasks,
+} from '../data/seedData.js'
 
 let isConnected = false
 let usingInMemoryFallback = false
@@ -24,6 +34,8 @@ export const memoryStore = {
   etas: [...seedETAs],
   delays: [...seedDelays],
   alerts: [...seedAlerts],
+  users: [...seedUsers],
+  cleaningTasks: [...seedCleaningTasks],
 }
 
 export const connectDatabase = async () => {
@@ -61,6 +73,8 @@ async function seedDatabaseIfEmpty() {
         ETA.insertMany(seedETAs),
         Delay.insertMany(seedDelays),
         Alert.insertMany(seedAlerts),
+        User.insertMany(seedUsers),
+        CleaningTask.insertMany(seedCleaningTasks),
       ])
       logger.info('Database seeding completed successfully.')
     }

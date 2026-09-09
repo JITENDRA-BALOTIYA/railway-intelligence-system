@@ -17,6 +17,18 @@ export class ApiError extends Error {
   }
 }
 
+const getAuthHeaders = () => {
+  const token = localStorage.getItem('railway_token')
+  const headers = {
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
+  }
+  if (token) {
+    headers['Authorization'] = `Bearer ${token}`
+  }
+  return headers
+}
+
 export const apiClient = {
   async get(endpoint, params = {}) {
     const url = new URL(`${API_BASE_URL}${endpoint}`, window.location.origin)
@@ -28,10 +40,7 @@ export const apiClient = {
 
     try {
       const response = await fetch(url.toString(), {
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
+        headers: getAuthHeaders(),
       })
 
       const payload = await response.json().catch(() => ({}))
@@ -55,10 +64,7 @@ export const apiClient = {
     try {
       const response = await fetch(`${API_BASE_URL}${endpoint}`, {
         method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
+        headers: getAuthHeaders(),
         body: JSON.stringify(body),
       })
 
@@ -78,4 +84,78 @@ export const apiClient = {
       throw new ApiError(err.message || 'Network connection failed', 0)
     }
   },
+
+  async put(endpoint, body = {}) {
+    try {
+      const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+        method: 'PUT',
+        headers: getAuthHeaders(),
+        body: JSON.stringify(body),
+      })
+
+      const payload = await response.json().catch(() => ({}))
+
+      if (!response.ok) {
+        throw new ApiError(
+          payload.message || `Request failed with status ${response.status}`,
+          response.status,
+          payload.errors,
+        )
+      }
+
+      return payload.data !== undefined ? payload.data : payload
+    } catch (err) {
+      if (err instanceof ApiError) throw err
+      throw new ApiError(err.message || 'Network connection failed', 0)
+    }
+  },
+
+  async delete(endpoint) {
+    try {
+      const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+        method: 'DELETE',
+        headers: getAuthHeaders(),
+      })
+
+      const payload = await response.json().catch(() => ({}))
+
+      if (!response.ok) {
+        throw new ApiError(
+          payload.message || `Request failed with status ${response.status}`,
+          response.status,
+          payload.errors,
+        )
+      }
+
+      return payload.data !== undefined ? payload.data : payload
+    } catch (err) {
+      if (err instanceof ApiError) throw err
+      throw new ApiError(err.message || 'Network connection failed', 0)
+    }
+  },
+}
+
+// Authentication Service Helper
+export const authService = {
+  login: (credentials) => apiClient.post('/auth/login', credentials),
+  register: (userData) => apiClient.post('/auth/register', userData),
+  getCurrentUser: () => apiClient.get('/auth/me'),
+}
+
+// Station Operations Service Helper
+export const stationOpsService = {
+  getArrivals: (stationCode) => apiClient.get(`/stations/${stationCode}/arrivals`),
+  getDepartures: (stationCode) => apiClient.get(`/stations/${stationCode}/departures`),
+  getPlatforms: (stationCode) => apiClient.get(`/stations/${stationCode}/platforms`),
+  getAlerts: (stationCode) => apiClient.get(`/stations/${stationCode}/alerts`),
+  getTrains: (stationCode) => apiClient.get(`/stations/${stationCode}/trains`),
+}
+
+// Cleaning Operations Service Helper
+export const cleaningOpsService = {
+  getTasks: (stationId, status) => apiClient.get('/cleaning/tasks', { stationId, status }),
+  getUpcoming: (stationId) => apiClient.get('/cleaning/upcoming', { stationId }),
+  getStats: (stationId) => apiClient.get('/cleaning/stats', { stationId }),
+  startTask: (taskId) => apiClient.post(`/cleaning/tasks/${taskId}/start`),
+  completeTask: (taskId, notes) => apiClient.post(`/cleaning/tasks/${taskId}/complete`, { notes }),
 }
