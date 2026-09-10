@@ -2,13 +2,16 @@ import { Router } from 'express'
 import { stationController } from '../controllers/stationController.js'
 import { validateRequest } from '../middleware/validateRequest.js'
 import { validateStationCode } from '../validators/trainValidator.js'
-import { requireAuth, requireRole, requireStationAccess } from '../middleware/authMiddleware.js'
+import { requireAuth, requireRole, requireStationAccess, requireStationReadAccess } from '../middleware/authMiddleware.js'
 
 const router = Router()
 
 // Public station lookups
 // GET /api/stations
 router.get('/', stationController.getAllStations)
+
+// GET /api/stations/search
+router.get('/search', stationController.searchStations)
 
 // GET /api/stations/:stationCode
 router.get('/:stationCode', validateRequest(validateStationCode), stationController.getStationByCode)
@@ -19,13 +22,13 @@ router.get('/:stationCode/crowd', validateRequest(validateStationCode), stationC
 // GET /api/stations/:stationCode/trains
 router.get('/:stationCode/trains', validateRequest(validateStationCode), stationController.getStationTrains)
 
-// Station Operations (require authentication, role check, and station access scoping)
+// Station Operations (require authentication, role check, and read-access scoping)
 // GET /api/stations/:stationCode/schedule
 router.get(
   '/:stationCode/schedule',
   requireAuth,
   requireRole('station_master', 'super_admin'),
-  requireStationAccess,
+  requireStationReadAccess,
   stationController.getStationSchedule,
 )
 
@@ -34,7 +37,7 @@ router.get(
   '/:stationCode/arrivals',
   requireAuth,
   requireRole('station_master', 'super_admin'),
-  requireStationAccess,
+  requireStationReadAccess,
   stationController.getStationArrivals,
 )
 
@@ -43,7 +46,7 @@ router.get(
   '/:stationCode/departures',
   requireAuth,
   requireRole('station_master', 'super_admin'),
-  requireStationAccess,
+  requireStationReadAccess,
   stationController.getStationDepartures,
 )
 
@@ -52,7 +55,7 @@ router.get(
   '/:stationCode/platforms',
   requireAuth,
   requireRole('station_master', 'super_admin'),
-  requireStationAccess,
+  requireStationReadAccess,
   stationController.getStationPlatformStatus,
 )
 
@@ -61,7 +64,7 @@ router.get(
   '/:stationCode/platforms/:platformNumber',
   requireAuth,
   requireRole('station_master', 'super_admin'),
-  requireStationAccess,
+  requireStationReadAccess,
   stationController.getPlatformDetail,
 )
 
@@ -70,7 +73,7 @@ router.get(
   '/:stationCode/alerts',
   requireAuth,
   requireRole('station_master', 'super_admin'),
-  requireStationAccess,
+  requireStationReadAccess,
   stationController.getStationAlerts,
 )
 
@@ -79,11 +82,11 @@ router.get(
   '/:stationCode/alerts/:alertId',
   requireAuth,
   requireRole('station_master', 'super_admin'),
-  requireStationAccess,
+  requireStationReadAccess,
   stationController.getStationAlertDetail,
 )
 
-// POST /api/stations/:stationCode/alerts/:alertId/acknowledge
+// POST /api/stations/:stationCode/alerts/:alertId/acknowledge (strict station access scoping)
 router.post(
   '/:stationCode/alerts/:alertId/acknowledge',
   requireAuth,

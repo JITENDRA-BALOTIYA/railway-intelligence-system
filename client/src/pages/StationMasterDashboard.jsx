@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import {
   Building2,
   Clock,
@@ -16,6 +16,14 @@ import {
   Activity,
   Layers,
   ChevronRight,
+  Search,
+  X,
+  Lock,
+  ArrowLeft,
+  Eye,
+  Check,
+  AlertCircle,
+  MapPin,
 } from 'lucide-react'
 import { useAuth } from '../context/AuthContext.jsx'
 import { stationOpsService, apiClient } from '../services/api.js'
@@ -23,7 +31,18 @@ import { DetailPanel } from '../components/dashboard/DetailPanel.jsx'
 
 export default function StationMasterDashboard() {
   const { stationId, stationName, user } = useAuth()
-  const activeStation = stationId || 'NDLS'
+  const homeStation = stationId
+
+  const [viewedStation, setViewedStation] = useState(homeStation || 'NDLS')
+  const [hasManuallySwitched, setHasManuallySwitched] = useState(false)
+  const [stationNotFound, setStationNotFound] = useState(false)
+
+  // Station search dropdown state
+  const [stationSearchInput, setStationSearchInput] = useState('')
+  const [searchResults, setSearchResults] = useState([])
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [searchLoading, setSearchLoading] = useState(false)
+  const searchContainerRef = useRef(null)
 
   const [activeTab, setActiveTab] = useState('schedule') // 'schedule' | 'arrivals' | 'departures' | 'platforms' | 'delays' | 'alerts'
   const [loading, setLoading] = useState(true)
@@ -44,6 +63,79 @@ export default function StationMasterDashboard() {
     id: null,
   })
 
+  // Sync viewedStation with homeStation when auth hydrates, if user hasn't manually switched
+  useEffect(() => {
+    if (homeStation && !hasManuallySwitched) {
+      setViewedStation(homeStation)
+    }
+  }, [homeStation, hasManuallySwitched])
+
+  // Close search dropdown on click outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (searchContainerRef.current && !searchContainerRef.current.contains(e.target)) {
+        setIsSearchOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
+
+  const isViewingOther = Boolean(homeStation && viewedStation !== homeStation)
+
+  const handleSearchStations = async (query = '') => {
+    setSearchLoading(true)
+    try {
+      const res = await stationOpsService.searchStations(query)
+      const list = Array.isArray(res) ? res : res?.stations || []
+      setSearchResults(list)
+    } catch (err) {
+      console.warn('Station search failed:', err)
+      const defaultList = [
+        { code: 'NDLS', stationCode: 'NDLS', name: 'New Delhi Railway Station (NDLS)', stationName: 'New Delhi Railway Station', city: 'New Delhi' },
+        { code: 'MMCT', stationCode: 'MMCT', name: 'Mumbai Central (MMCT)', stationName: 'Mumbai Central', city: 'Mumbai' },
+        { code: 'HWH', stationCode: 'HWH', name: 'Howrah Junction (HWH)', stationName: 'Howrah Junction', city: 'Kolkata' },
+        { code: 'JP', stationCode: 'JP', name: 'Jaipur Junction (JP)', stationName: 'Jaipur Junction', city: 'Jaipur' },
+        { code: 'KOTA', stationCode: 'KOTA', name: 'Kota Junction (KOTA)', stationName: 'Kota Junction', city: 'Kota' },
+        { code: 'CNB', stationCode: 'CNB', name: 'Kanpur Central (CNB)', stationName: 'Kanpur Central', city: 'Kanpur' },
+      ]
+      setSearchResults(
+        defaultList.filter(
+          (s) =>
+            s.stationCode.toLowerCase().includes(query.toLowerCase()) ||
+            s.stationName.toLowerCase().includes(query.toLowerCase()),
+        ),
+      )
+    } finally {
+      setSearchLoading(false)
+    }
+  }
+
+  const handleSelectStation = (code) => {
+    const cleanCode = String(code || '').trim().toUpperCase()
+    if (!cleanCode) return
+    setViewedStation(cleanCode)
+    setHasManuallySwitched(true)
+    setIsSearchOpen(false)
+    setStationSearchInput('')
+  }
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault()
+    if (stationSearchInput.trim()) {
+      handleSelectStation(stationSearchInput.trim().toUpperCase())
+    }
+  }
+
+  const handleBackToHomeStation = () => {
+    if (homeStation) {
+      setViewedStation(homeStation)
+      setHasManuallySwitched(false)
+      setStationNotFound(false)
+      setStationSearchInput('')
+    }
+  }
+
   const openDetail = (type, id) => {
     if (!id) return
     setPanelState({
@@ -58,36 +150,77 @@ export default function StationMasterDashboard() {
   }
 
   const fetchStationDashboard = useCallback(async (isBackground = false) => {
+    if (!viewedStation) return
     if (!isBackground) setLoading(true)
     else setRefreshing(true)
 
     try {
-      // Call backend role dashboard or station operational endpoints
-      const [roleRes, schedRes, arrivalsRes, departuresRes, platformsRes, alertsRes] = await Promise.all([
-        apiClient.get('/dashboard/role').catch(() => null),
-        stationOpsService.getSchedule(activeStation).catch(() => ({ trains: [] })),
-        stationOpsService.getArrivals(activeStation).catch(() => ({ arrivals: [] })),
-        stationOpsService.getDepartures(activeStation).catch(() => ({ departures: [] })),
-        stationOpsService.getPlatforms(activeStation).catch(() => ({ platforms: [] })),
-        stationOpsService.getAlerts(activeStation).catch(() => ({ alerts: [] })),
+      // Call backend role dashboard and station operational endpoints using viewedStation
+      const [roleRes, schedRes, arrivalsRes, departuresRes, platformsRes, alertsRes, stationProfileRes] = await Promise.all([
+        apiClient.get('/dashboard/role', { stationId: viewedStation }).catch(() => null),
+        stationOpsService.getSchedule(viewedStation).catch(() => null),
+        stationOpsService.getArrivals(viewedStation).catch(() => null),
+        stationOpsService.getDepartures(viewedStation).catch(() => null),
+        stationOpsService.getPlatforms(viewedStation).catch(() => null),
+        stationOpsService.getAlerts(viewedStation).catch(() => null),
+        stationOpsService.getStation(viewedStation).catch(() => null),
       ])
+
+      // If station does not exist anywhere across services, flag not found
+      if (!roleRes && !schedRes && !arrivalsRes && !stationProfileRes) {
+        setStationNotFound(true)
+        setStationData(null)
+        setScheduleData([])
+        setArrivalsData([])
+        setDeparturesData([])
+        setPlatformData([])
+        setAlertsData([])
+        return
+      }
+
+      setStationNotFound(false)
 
       if (roleRes && roleRes.station) {
         setStationData(roleRes)
+      } else if (stationProfileRes) {
+        setStationData({
+          station: {
+            stationCode: stationProfileRes.stationCode || viewedStation,
+            stationName: stationProfileRes.stationName || viewedStation,
+            city: stationProfileRes.city || 'N/A',
+            crowdLevel: stationProfileRes.crowdLevel || 'Moderate',
+            crowdPercentage: stationProfileRes.crowdPercentage || 65,
+            weather: stationProfileRes.weather || 'Clear Sky',
+            temperature: stationProfileRes.temperature || '26°C',
+          },
+        })
+      } else {
+        setStationData({
+          station: {
+            stationCode: viewedStation,
+            stationName: `${viewedStation} Railway Station`,
+            city: 'Railway Network',
+            crowdLevel: 'Moderate',
+            crowdPercentage: 60,
+            weather: 'Clear Sky',
+            temperature: '25°C',
+          },
+        })
       }
 
-      setScheduleData(schedRes.trains || [])
-      setArrivalsData(arrivalsRes.arrivals || [])
-      setDeparturesData(departuresRes.departures || [])
-      setPlatformData(platformsRes.platforms || [])
-      setAlertsData(alertsRes.alerts || [])
+      setScheduleData(schedRes?.trains || [])
+      setArrivalsData(arrivalsRes?.arrivals || [])
+      setDeparturesData(departuresRes?.departures || [])
+      setPlatformData(platformsRes?.platforms || [])
+      setAlertsData(alertsRes?.alerts || [])
     } catch (err) {
       console.error('Failed to load station operations:', err)
+      setStationNotFound(true)
     } finally {
       setLoading(false)
       setRefreshing(false)
     }
-  }, [activeStation])
+  }, [viewedStation])
 
   useEffect(() => {
     fetchStationDashboard()
@@ -97,8 +230,10 @@ export default function StationMasterDashboard() {
 
   const handleAcknowledgeAlert = async (alertId, e) => {
     if (e) e.stopPropagation()
+    if (isViewingOther) return
+
     try {
-      await stationOpsService.acknowledgeAlert(activeStation, alertId)
+      await stationOpsService.acknowledgeAlert(viewedStation, alertId)
       setAcknowledgedAlerts((prev) => [...prev, alertId])
       setAlertsData((prev) =>
         prev.map((a) =>
@@ -141,18 +276,20 @@ export default function StationMasterDashboard() {
     trainsArrivingToday: arrivalsData.length || 24,
     trainsDepartingToday: departuresData.length || 18,
     delayedTrains: allScheduledTrains.filter((t) => t.delay > 15).length,
-    onTimeRate: '88%',
+    onTimeRate: allScheduledTrains.length > 0
+      ? `${Math.round((allScheduledTrains.filter((t) => (t.delay || 0) <= 15).length / allScheduledTrains.length) * 100)}%`
+      : '88%',
     averageDelayMinutes: 14,
     activePlatforms: platformData.filter((p) => p.isOccupied).length || 6,
     totalPlatforms: platformData.length || 16,
   }
 
   const stationInfo = stationData?.station || {
-    stationCode: activeStation,
-    stationName: stationName || 'New Delhi Railway Station',
-    city: 'New Delhi',
-    crowdLevel: 'High',
-    crowdPercentage: 78,
+    stationCode: viewedStation,
+    stationName: (!isViewingOther && stationName) ? stationName : `${viewedStation} Railway Station`,
+    city: 'Railway Network',
+    crowdLevel: 'Moderate',
+    crowdPercentage: 68,
     weather: 'Clear Sky',
     temperature: '26°C',
   }
@@ -160,11 +297,20 @@ export default function StationMasterDashboard() {
   return (
     <div className="space-y-6 pb-12">
       {/* Header Banner */}
-      <div className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+      <div className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs flex flex-col xl:flex-row xl:items-center xl:justify-between gap-6">
         <div>
           <div className="flex items-center gap-2 text-xs font-bold text-emerald-700 uppercase tracking-wider mb-1">
             <Building2 className="w-4 h-4" />
             <span>Station Master Operations Command</span>
+            {isViewingOther ? (
+              <span className="px-2 py-0.5 rounded bg-amber-100 text-amber-800 text-[10px] font-bold">
+                Previewing External Station
+              </span>
+            ) : (
+              <span className="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[10px] font-bold">
+                Assigned Station
+              </span>
+            )}
           </div>
           <h1 className="text-2xl font-extrabold text-slate-900 tracking-tight">
             {stationInfo.stationName} ({stationInfo.stationCode})
@@ -174,8 +320,129 @@ export default function StationMasterDashboard() {
           </p>
         </div>
 
-        {/* Station Environmental Telemetry */}
+        {/* Station Search / Switcher & Environmental Telemetry */}
         <div className="flex flex-wrap items-center gap-3">
+          {/* Station Switcher Autocomplete Dropdown */}
+          <div className="relative" ref={searchContainerRef}>
+            <form onSubmit={handleSearchSubmit} className="relative">
+              <div className="relative flex items-center">
+                <Search className="w-4 h-4 text-slate-400 absolute left-3 pointer-events-none" />
+                <input
+                  type="text"
+                  placeholder="Switch station (e.g. MMCT, HWH)..."
+                  value={stationSearchInput}
+                  onFocus={() => {
+                    setIsSearchOpen(true)
+                    if (searchResults.length === 0) handleSearchStations('')
+                  }}
+                  onChange={(e) => {
+                    setStationSearchInput(e.target.value)
+                    handleSearchStations(e.target.value)
+                    if (!isSearchOpen) setIsSearchOpen(true)
+                  }}
+                  className="pl-9 pr-8 py-2 w-64 sm:w-72 rounded-xl border border-slate-200 text-xs bg-slate-50/70 hover:bg-white focus:bg-white text-slate-800 placeholder-slate-400 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 transition-all font-medium"
+                />
+                {stationSearchInput && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setStationSearchInput('')
+                      handleSearchStations('')
+                    }}
+                    className="absolute right-2.5 text-slate-400 hover:text-slate-600 p-0.5 rounded cursor-pointer"
+                  >
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                )}
+              </div>
+            </form>
+
+            {/* Autocomplete Dropdown Panel */}
+            {isSearchOpen && (
+              <div className="absolute left-0 right-0 mt-2 bg-white rounded-2xl border border-slate-200 shadow-xl z-50 overflow-hidden max-h-80 flex flex-col">
+                <div className="p-2.5 border-b border-slate-100 flex items-center justify-between text-[11px] font-bold text-slate-500 bg-slate-50/80">
+                  <span>Select Railway Station</span>
+                  {searchLoading && <RefreshCw className="w-3 h-3 animate-spin text-emerald-600" />}
+                </div>
+
+                <div className="overflow-y-auto divide-y divide-slate-100 p-1 max-h-64">
+                  {searchResults.length === 0 && !searchLoading ? (
+                    <div className="p-4 text-center text-xs text-slate-400">
+                      No stations found for "{stationSearchInput}"
+                    </div>
+                  ) : (
+                    searchResults.map((stn) => {
+                      const code = stn.stationCode || stn.code
+                      const name = stn.stationName || stn.name
+                      const isCurrent = viewedStation === code
+                      const isHome = homeStation === code
+
+                      return (
+                        <button
+                          key={code}
+                          type="button"
+                          onClick={() => handleSelectStation(code)}
+                          className={`w-full p-2.5 rounded-xl text-left flex items-center justify-between gap-2 transition-all cursor-pointer ${
+                            isCurrent
+                              ? 'bg-emerald-50 font-bold text-emerald-900'
+                              : 'hover:bg-slate-50 text-slate-700'
+                          }`}
+                        >
+                          <div className="min-w-0">
+                            <div className="flex items-center gap-2">
+                              <span className="font-mono text-xs font-bold text-emerald-700 px-1.5 py-0.5 rounded bg-emerald-100/60">
+                                {code}
+                              </span>
+                              <span className="text-xs truncate font-semibold text-slate-800">
+                                {name}
+                              </span>
+                            </div>
+                            {stn.city && (
+                              <div className="text-[10px] text-slate-400 mt-0.5 ml-0.5 truncate">
+                                {stn.city}{stn.state ? `, ${stn.state}` : ''}
+                              </div>
+                            )}
+                          </div>
+
+                          <div className="flex items-center gap-1.5 shrink-0">
+                            {isHome && (
+                              <span className="px-1.5 py-0.5 text-[9px] font-bold rounded bg-blue-50 text-blue-700 border border-blue-200">
+                                Home
+                              </span>
+                            )}
+                            {isCurrent && <Check className="w-4 h-4 text-emerald-600" />}
+                          </div>
+                        </button>
+                      )
+                    })
+                  )}
+                </div>
+
+                {/* Popular Stations Quick Bar inside dropdown */}
+                <div className="p-2 border-t border-slate-100 bg-slate-50/80 flex items-center justify-between gap-1 overflow-x-auto text-[10px]">
+                  <span className="text-slate-400 font-medium shrink-0">Popular:</span>
+                  <div className="flex items-center gap-1">
+                    {['NDLS', 'MMCT', 'HWH', 'CNB', 'JP', 'KOTA'].map((quickCode) => (
+                      <button
+                        key={quickCode}
+                        type="button"
+                        onClick={() => handleSelectStation(quickCode)}
+                        className={`px-1.5 py-0.5 rounded font-mono font-bold transition-colors cursor-pointer ${
+                          viewedStation === quickCode
+                            ? 'bg-emerald-600 text-white'
+                            : 'bg-white hover:bg-slate-200 text-slate-600 border border-slate-200'
+                        }`}
+                      >
+                        {quickCode}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Environmental Telemetry */}
           <div className="px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-2">
             <CloudSun className="w-4 h-4 text-amber-500" />
             <div>
@@ -208,8 +475,84 @@ export default function StationMasterDashboard() {
         </div>
       </div>
 
-      {/* KPI Cards Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      {/* Viewing Other Station Mode Banner */}
+      {isViewingOther && (
+        <div className="bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-transparent rounded-2xl border border-amber-300/80 p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center shrink-0 border border-amber-200">
+              <Eye className="w-5 h-5" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-bold text-amber-900">
+                  Viewing Mode: {stationInfo.stationName} ({viewedStation})
+                </span>
+                <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 border border-amber-200 uppercase tracking-wider">
+                  Read-Only Preview
+                </span>
+              </div>
+              <p className="text-[11px] text-amber-700/90 mt-0.5">
+                You are previewing live operational telemetry for this station. Alert acknowledgments and turnaround management remain restricted to your assigned station ({homeStation}).
+              </p>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            onClick={handleBackToHomeStation}
+            className="px-4 py-2 rounded-xl bg-white hover:bg-amber-50 text-amber-900 border border-amber-300 text-xs font-bold flex items-center gap-2 transition-all cursor-pointer shrink-0 shadow-xs hover:shadow"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" />
+            <span>Back to My Station ({homeStation})</span>
+          </button>
+        </div>
+      )}
+
+      {stationNotFound ? (
+        <div className="bg-white rounded-3xl border border-slate-200 p-8 sm:p-12 text-center max-w-2xl mx-auto shadow-xs space-y-5 my-8">
+          <div className="w-16 h-16 rounded-2xl bg-amber-50 text-amber-600 mx-auto flex items-center justify-center border border-amber-200">
+            <AlertCircle className="w-8 h-8" />
+          </div>
+          <div>
+            <h2 className="text-xl font-black text-slate-900">
+              Station "{viewedStation}" Not Found
+            </h2>
+            <p className="text-xs text-slate-500 mt-2 leading-relaxed">
+              We couldn't retrieve operational records or live train schedules for station code{' '}
+              <span className="font-mono font-bold text-slate-800">{viewedStation}</span>. Please verify the code or select from one of the active stations below.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
+            {['NDLS', 'MMCT', 'HWH', 'CNB', 'JP', 'KOTA'].map((code) => (
+              <button
+                key={code}
+                type="button"
+                onClick={() => handleSelectStation(code)}
+                className="px-3 py-1.5 rounded-xl border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50 text-xs font-bold font-mono text-slate-700 hover:text-emerald-700 transition-all cursor-pointer"
+              >
+                {code}
+              </button>
+            ))}
+          </div>
+
+          <div className="pt-4 border-t border-slate-100 flex items-center justify-center gap-3">
+            {homeStation && (
+              <button
+                type="button"
+                onClick={handleBackToHomeStation}
+                className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold transition-all shadow-md shadow-emerald-600/20 flex items-center gap-2 cursor-pointer"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                <span>Return to My Station ({homeStation})</span>
+              </button>
+            )}
+          </div>
+        </div>
+      ) : (
+        <>
+          {/* KPI Cards Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
         <div className="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs">
           <div className="flex items-center justify-between text-slate-500 mb-1">
             <span className="text-[11px] font-bold uppercase tracking-wider">Arriving Today</span>
@@ -342,7 +685,7 @@ export default function StationMasterDashboard() {
                 {filteredSchedule.length === 0 ? (
                   <tr>
                     <td colSpan="9" className="px-4 py-8 text-center text-slate-400">
-                      No trains matching current search filter for {activeStation}.
+                      No trains matching current search filter for {viewedStation}.
                     </td>
                   </tr>
                 ) : (
@@ -596,7 +939,7 @@ export default function StationMasterDashboard() {
         <div className="space-y-3">
           {alertsData.length === 0 ? (
             <div className="bg-white p-8 rounded-2xl border border-slate-200 text-center text-slate-400 text-xs">
-              No active operational alerts for station {activeStation}. All track circuits clear.
+              No active operational alerts for station {viewedStation}. All track circuits clear.
             </div>
           ) : (
             alertsData.map((alert) => {
@@ -653,20 +996,32 @@ export default function StationMasterDashboard() {
                   <button
                     type="button"
                     onClick={(e) => handleAcknowledgeAlert(alertKey, e)}
-                    disabled={isAck}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-bold shrink-0 transition-colors cursor-pointer ${
-                      isAck
-                        ? 'bg-slate-200 text-slate-500 cursor-not-allowed'
-                        : 'bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 shadow-xs'
+                    disabled={isAck || isViewingOther}
+                    title={isViewingOther ? 'Only available for your assigned station' : isAck ? 'Already acknowledged' : 'Acknowledge Alert'}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-bold shrink-0 transition-colors flex items-center gap-1.5 ${
+                      isAck || isViewingOther
+                        ? 'bg-slate-100 text-slate-400 border border-slate-200 cursor-not-allowed'
+                        : 'bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 shadow-xs cursor-pointer'
                     }`}
                   >
-                    {isAck ? 'Acknowledged' : 'Acknowledge'}
+                    {isAck ? (
+                      'Acknowledged'
+                    ) : isViewingOther ? (
+                      <>
+                        <Lock className="w-3.5 h-3.5 text-slate-400" />
+                        <span>Action Locked</span>
+                      </>
+                    ) : (
+                      'Acknowledge'
+                    )}
                   </button>
                 </div>
               )
             })
           )}
         </div>
+      )}
+        </>
       )}
 
       {/* Reusable Detail Drawer Component */}
@@ -675,7 +1030,8 @@ export default function StationMasterDashboard() {
         onClose={closeDetail}
         type={panelState.type}
         id={panelState.id}
-        stationCode={activeStation}
+        stationCode={viewedStation}
+        canAcknowledge={!isViewingOther}
         onAlertAcknowledged={handlePanelAlertAcknowledged}
       />
     </div>

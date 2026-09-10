@@ -131,3 +131,24 @@ export const requireStationAccess = (req, res, next) => {
 
   next()
 }
+
+/**
+ * Middleware to enforce read-only station access scoping.
+ * Station Master and Super Admin are permitted to read any station code.
+ */
+export const requireStationReadAccess = (req, res, next) => {
+  if (!req.user) {
+    return ApiResponse.error(res, 'Authentication required.', 401)
+  }
+
+  // Super Admin and Station Master can read any station's operational data
+  if (req.user.role === 'super_admin' || req.user.role === 'station_master') {
+    return next()
+  }
+
+  return ApiResponse.error(
+    res,
+    `Access denied. Role '${req.user.role}' does not have permission to access station operational data.`,
+    403,
+  )
+}

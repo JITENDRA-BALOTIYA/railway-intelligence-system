@@ -144,6 +144,8 @@ export const authService = {
 
 // Station Operations Service Helper
 export const stationOpsService = {
+  searchStations: (query) => apiClient.get('/stations/search', { query }),
+  getStation: (stationCode) => apiClient.get(`/stations/${stationCode}`),
   getSchedule: (stationCode) => apiClient.get(`/stations/${stationCode}/schedule`),
   getArrivals: (stationCode) => apiClient.get(`/stations/${stationCode}/arrivals`),
   getDepartures: (stationCode) => apiClient.get(`/stations/${stationCode}/departures`),

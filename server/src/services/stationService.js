@@ -15,6 +15,98 @@ export const stationService = {
   },
 
   /**
+   * Search stations by code, name, or city with fallback list and RailRadar integration
+   */
+  async searchStations(query = '', limit = 20) {
+    const q = String(query || '').trim().toLowerCase()
+    const { isConnected } = getDbStatus()
+
+    let baseStations = []
+    if (isConnected) {
+      baseStations = await Station.find().lean()
+    } else {
+      baseStations = memoryStore.stations || []
+    }
+
+    // Baseline popular stations backing the Login dropdown and core network
+    const defaultStations = [
+      { stationCode: 'NDLS', stationName: 'New Delhi Railway Station', city: 'New Delhi', state: 'Delhi' },
+      { stationCode: 'MMCT', stationName: 'Mumbai Central', city: 'Mumbai', state: 'Maharashtra' },
+      { stationCode: 'HWH', stationName: 'Howrah Junction', city: 'Kolkata', state: 'West Bengal' },
+      { stationCode: 'JP', stationName: 'Jaipur Junction', city: 'Jaipur', state: 'Rajasthan' },
+      { stationCode: 'KOTA', stationName: 'Kota Junction', city: 'Kota', state: 'Rajasthan' },
+      { stationCode: 'CNB', stationName: 'Kanpur Central', city: 'Kanpur', state: 'Uttar Pradesh' },
+      { stationCode: 'DGR', stationName: 'Durgapur Railway Station', city: 'Durgapur', state: 'West Bengal' },
+    ]
+
+    const stationMap = new Map()
+
+    // 1. Ingest base stations from database/memoryStore
+    baseStations.forEach((s) => {
+      const code = (s.stationCode || s.code || '').toUpperCase()
+      if (code) {
+        stationMap.set(code, {
+          stationCode: code,
+          stationName: s.stationName || s.name || code,
+          city: s.city || '',
+          state: s.state || '',
+          code,
+          name: s.stationName || s.name || code,
+        })
+      }
+    })
+
+    // 2. Ingest defaultStations if missing
+    defaultStations.forEach((s) => {
+      if (!stationMap.has(s.stationCode)) {
+        stationMap.set(s.stationCode, {
+          ...s,
+          code: s.stationCode,
+          name: s.stationName,
+        })
+      }
+    })
+
+    // 3. If query provided, query RailRadar API for network-wide station matches
+    if (q) {
+      try {
+        const liveResults = await railRadarService.searchStations(q, limit)
+        if (Array.isArray(liveResults)) {
+          liveResults.forEach((s) => {
+            const code = (s.stationCode || s.code || '').toUpperCase()
+            if (code && !stationMap.has(code)) {
+              stationMap.set(code, {
+                stationCode: code,
+                stationName: s.stationName || s.name || code,
+                city: s.city || s.stationName || '',
+                state: s.state || '',
+                code,
+                name: s.stationName || s.name || code,
+              })
+            }
+          })
+        }
+      } catch {
+        // Fall back gracefully to local map
+      }
+    }
+
+    const all = Array.from(stationMap.values())
+    if (!q) {
+      return all.slice(0, limit)
+    }
+
+    return all
+      .filter(
+        (s) =>
+          s.stationCode.toLowerCase().includes(q) ||
+          s.stationName.toLowerCase().includes(q) ||
+          s.city.toLowerCase().includes(q),
+      )
+      .slice(0, limit)
+  },
+
+  /**
    * Get station details by stationCode
    */
   async getStationByCode(stationCode) {
@@ -31,7 +123,7 @@ export const stationService = {
     if (!station) {
       try {
         const liveStations = await railRadarService.searchStations(code, 5)
-        const match = liveStations.find((s) => s.stationCode.toUpperCase() === code) || liveStations[0]
+        const match = liveStations.find((s) => s.stationCode.toUpperCase() === code)
         if (match) {
           station = {
             stationCode: match.stationCode,

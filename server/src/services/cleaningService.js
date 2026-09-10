@@ -96,6 +96,17 @@ export const cleaningService = {
   },
 
   /**
+   * Find a single cleaning task by taskId
+   */
+  async getTaskById(taskId) {
+    const { isConnected } = getDbStatus()
+    if (isConnected) {
+      return await CleaningTask.findOne({ taskId }).lean()
+    }
+    return memoryStore.cleaningTasks.find((t) => t.taskId === taskId) || null
+  },
+
+  /**
    * Start a cleaning task (transitions to cleaning_in_progress)
    */
   async startCleaningTask(taskId, userId, userName) {

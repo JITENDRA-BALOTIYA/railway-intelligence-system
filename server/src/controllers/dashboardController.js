@@ -11,7 +11,7 @@ export const dashboardController = {
   async getRoleDashboard(req, res, next) {
     try {
       const role = req.user?.role || 'public_user'
-      const stationId = req.user?.stationId || req.query.stationId || 'NDLS'
+      const stationId = String(req.query.stationId || req.user?.stationId || 'NDLS').trim().toUpperCase()
 
       if (role === 'station_master') {
         const [liveStation, stationProfile, platformData, alerts] = await Promise.all([
@@ -20,6 +20,10 @@ export const dashboardController = {
           stationService.getStationPlatformStatus(stationId),
           stationService.getStationAlerts(stationId),
         ])
+
+        if (!stationProfile && !liveStation) {
+          return ApiResponse.error(res, `Station ${stationId} not found`, 404)
+        }
 
         const trains = liveStation?.trains || []
         const delayed = trains.filter((t) => t.delay > 15).length
@@ -35,8 +39,8 @@ export const dashboardController = {
           role: 'station_master',
           station: {
             stationCode: stationId,
-            stationName: stationProfile?.stationName || stationId,
-            city: stationProfile?.city || 'N/A',
+            stationName: stationProfile?.stationName || liveStation?.station?.stationName || stationId,
+            city: stationProfile?.city || liveStation?.station?.city || 'N/A',
             crowdLevel: stationProfile?.crowdLevel || 'Moderate',
             crowdPercentage: stationProfile?.crowdPercentage || 65,
             weather: stationProfile?.weather || 'Clear Sky',

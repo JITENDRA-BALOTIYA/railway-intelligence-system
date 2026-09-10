@@ -5,6 +5,10 @@ export const stationService = {
     return await apiClient.get('/stations')
   },
 
+  async searchStations(query) {
+    return await apiClient.get('/stations/search', { query })
+  },
+
   async getStationByCode(stationCode) {
     return await apiClient.get(`/stations/${stationCode}`)
   },

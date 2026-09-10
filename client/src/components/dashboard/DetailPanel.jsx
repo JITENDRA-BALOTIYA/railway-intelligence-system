@@ -20,6 +20,7 @@ import {
   Radio,
   Check,
   Circle,
+  Lock,
 } from 'lucide-react'
 import { stationOpsService } from '../../services/api.js'
 import { trainService } from '../../services/trainService.js'
@@ -36,6 +37,7 @@ export const DetailPanel = ({
   stationCode = 'NDLS',
   initialData = null,
   onAlertAcknowledged,
+  canAcknowledge = true,
 }) => {
   const [currentType, setCurrentType] = useState(initialType)
   const [currentId, setCurrentId] = useState(initialId)
@@ -179,7 +181,7 @@ export const DetailPanel = ({
 
   // Handle in-place alert acknowledgment
   const handleAcknowledge = async () => {
-    if (!currentId || acknowledging) return
+    if (!currentId || acknowledging || !canAcknowledge) return
     setAcknowledging(true)
 
     try {
@@ -336,6 +338,7 @@ export const DetailPanel = ({
                     onAcknowledge={handleAcknowledge}
                     acknowledging={acknowledging}
                     ackSuccess={ackSuccess}
+                    canAcknowledge={canAcknowledge}
                   />
                 )}
               </>
@@ -789,6 +792,7 @@ const AlertDetailContent = ({
   onAcknowledge,
   acknowledging,
   ackSuccess,
+  canAcknowledge = true,
 }) => {
   const isAck = alert.status === 'acknowledged' || ackSuccess
   const severity = alert.severity || 'info'
@@ -863,6 +867,8 @@ const AlertDetailContent = ({
           <div className="text-[11px] text-slate-500 mt-0.5">
             {isAck
               ? `Acknowledged by ${alert.acknowledgedBy || 'Station Master'} • Recorded in duty log`
+              : !canAcknowledge
+              ? 'Only available for your assigned station (Read-only viewing mode)'
               : 'Requires Station Master formal confirmation to clear signal flags'}
           </div>
         </div>
@@ -870,11 +876,12 @@ const AlertDetailContent = ({
         <button
           type="button"
           onClick={onAcknowledge}
-          disabled={isAck || acknowledging}
-          className={`px-4 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all cursor-pointer ${
-            isAck
+          disabled={isAck || acknowledging || !canAcknowledge}
+          title={!canAcknowledge ? 'Only available for your assigned station' : isAck ? 'Already acknowledged' : 'Acknowledge Alert'}
+          className={`px-4 py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all ${
+            isAck || !canAcknowledge
               ? 'bg-slate-100 text-slate-400 border border-slate-200 cursor-not-allowed'
-              : 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-md shadow-emerald-600/20'
+              : 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-md shadow-emerald-600/20 cursor-pointer'
           }`}
         >
           {acknowledging ? (
@@ -886,6 +893,11 @@ const AlertDetailContent = ({
             <>
               <Check className="w-4 h-4 text-emerald-600" />
               <span>Acknowledged</span>
+            </>
+          ) : !canAcknowledge ? (
+            <>
+              <Lock className="w-3.5 h-3.5 text-slate-400" />
+              <span>Only available for your assigned station</span>
             </>
           ) : (
             <>

@@ -11,6 +11,17 @@ export const stationController = {
     }
   },
 
+  async searchStations(req, res, next) {
+    try {
+      const query = req.query.query || req.query.q || ''
+      const limit = parseInt(req.query.limit, 10) || 20
+      const stations = await stationService.searchStations(query, limit)
+      return ApiResponse.success(res, stations, 'Stations search results')
+    } catch (err) {
+      next(err)
+    }
+  },
+
   async getStationByCode(req, res, next) {
     try {
       const { stationCode } = req.params
