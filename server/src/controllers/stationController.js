@@ -77,6 +77,56 @@ export const stationController = {
     }
   },
 
+  async getStationSchedule(req, res, next) {
+    try {
+      const { stationCode } = req.params
+      const schedule = await stationService.getStationSchedule(stationCode)
+      return ApiResponse.success(res, schedule, 'Station schedule timetable retrieved successfully')
+    } catch (err) {
+      next(err)
+    }
+  },
+
+  async getPlatformDetail(req, res, next) {
+    try {
+      const { stationCode, platformNumber } = req.params
+      const platform = await stationService.getPlatformDetail(stationCode, platformNumber)
+      if (!platform) {
+        return ApiResponse.error(res, `Platform ${platformNumber} at station ${stationCode} not found`, 404)
+      }
+      return ApiResponse.success(res, platform, 'Platform operational detail retrieved successfully')
+    } catch (err) {
+      next(err)
+    }
+  },
+
+  async getStationAlertDetail(req, res, next) {
+    try {
+      const { stationCode, alertId } = req.params
+      const alert = await stationService.getStationAlertDetail(stationCode, alertId)
+      if (!alert) {
+        return ApiResponse.error(res, `Alert ${alertId} not found`, 404)
+      }
+      return ApiResponse.success(res, alert, 'Alert detail retrieved successfully')
+    } catch (err) {
+      next(err)
+    }
+  },
+
+  async acknowledgeAlert(req, res, next) {
+    try {
+      const { stationCode, alertId } = req.params
+      const userName = req.user?.name || req.user?.email || 'Station Master'
+      const updated = await stationService.acknowledgeStationAlert(stationCode, alertId, userName)
+      if (!updated) {
+        return ApiResponse.error(res, `Alert ${alertId} not found or could not be acknowledged`, 404)
+      }
+      return ApiResponse.success(res, updated, 'Alert acknowledged successfully')
+    } catch (err) {
+      next(err)
+    }
+  },
+
   async getStationTrains(req, res, next) {
     try {
       const { stationCode } = req.params

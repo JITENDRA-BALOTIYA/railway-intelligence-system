@@ -15,9 +15,11 @@ import {
   CloudSun,
   Activity,
   Layers,
+  ChevronRight,
 } from 'lucide-react'
 import { useAuth } from '../context/AuthContext.jsx'
 import { stationOpsService, apiClient } from '../services/api.js'
+import { DetailPanel } from '../components/dashboard/DetailPanel.jsx'
 
 export default function StationMasterDashboard() {
   const { stationId, stationName, user } = useAuth()
@@ -27,6 +29,7 @@ export default function StationMasterDashboard() {
   const [loading, setLoading] = useState(true)
   const [refreshing, setRefreshing] = useState(false)
   const [stationData, setStationData] = useState(null)
+  const [scheduleData, setScheduleData] = useState([])
   const [arrivalsData, setArrivalsData] = useState([])
   const [departuresData, setDeparturesData] = useState([])
   const [platformData, setPlatformData] = useState([])
@@ -34,14 +37,35 @@ export default function StationMasterDashboard() {
   const [acknowledgedAlerts, setAcknowledgedAlerts] = useState([])
   const [searchFilter, setSearchFilter] = useState('')
 
+  // Detail Panel State
+  const [panelState, setPanelState] = useState({
+    isOpen: false,
+    type: 'train', // 'train' | 'platform' | 'alert'
+    id: null,
+  })
+
+  const openDetail = (type, id) => {
+    if (!id) return
+    setPanelState({
+      isOpen: true,
+      type,
+      id: String(id),
+    })
+  }
+
+  const closeDetail = () => {
+    setPanelState((prev) => ({ ...prev, isOpen: false }))
+  }
+
   const fetchStationDashboard = useCallback(async (isBackground = false) => {
     if (!isBackground) setLoading(true)
     else setRefreshing(true)
 
     try {
       // Call backend role dashboard or station operational endpoints
-      const [roleRes, arrivalsRes, departuresRes, platformsRes, alertsRes] = await Promise.all([
+      const [roleRes, schedRes, arrivalsRes, departuresRes, platformsRes, alertsRes] = await Promise.all([
         apiClient.get('/dashboard/role').catch(() => null),
+        stationOpsService.getSchedule(activeStation).catch(() => ({ trains: [] })),
         stationOpsService.getArrivals(activeStation).catch(() => ({ arrivals: [] })),
         stationOpsService.getDepartures(activeStation).catch(() => ({ departures: [] })),
         stationOpsService.getPlatforms(activeStation).catch(() => ({ platforms: [] })),
@@ -52,6 +76,7 @@ export default function StationMasterDashboard() {
         setStationData(roleRes)
       }
 
+      setScheduleData(schedRes.trains || [])
       setArrivalsData(arrivalsRes.arrivals || [])
       setDeparturesData(departuresRes.departures || [])
       setPlatformData(platformsRes.platforms || [])
@@ -70,14 +95,41 @@ export default function StationMasterDashboard() {
     return () => clearInterval(interval)
   }, [fetchStationDashboard])
 
-  const handleAcknowledgeAlert = (alertId) => {
-    setAcknowledgedAlerts((prev) => [...prev, alertId])
+  const handleAcknowledgeAlert = async (alertId, e) => {
+    if (e) e.stopPropagation()
+    try {
+      await stationOpsService.acknowledgeAlert(activeStation, alertId)
+      setAcknowledgedAlerts((prev) => [...prev, alertId])
+      setAlertsData((prev) =>
+        prev.map((a) =>
+          (a.id === alertId || a._id === alertId)
+            ? { ...a, status: 'acknowledged', acknowledgedBy: user?.name || 'Station Master', acknowledgedAt: new Date().toISOString() }
+            : a,
+        ),
+      )
+    } catch (err) {
+      console.error('Failed to acknowledge alert:', err)
+    }
   }
 
-  // Combine arrivals & departures for schedule table
-  const allScheduledTrains = [...arrivalsData, ...departuresData].filter((t, idx, arr) =>
-    arr.findIndex((other) => other.trainNumber === t.trainNumber) === idx
-  )
+  const handlePanelAlertAcknowledged = (alertId, updatedAlert) => {
+    setAcknowledgedAlerts((prev) => [...prev, alertId])
+    setAlertsData((prev) =>
+      prev.map((a) =>
+        (a.id === alertId || a._id === alertId)
+          ? { ...a, ...updatedAlert, status: 'acknowledged' }
+          : a,
+      ),
+    )
+  }
+
+  // Combine schedule data or arrivals/departures
+  const allScheduledTrains =
+    scheduleData.length > 0
+      ? scheduleData
+      : [...arrivalsData, ...departuresData].filter((t, idx, arr) =>
+          arr.findIndex((other) => other.trainNumber === t.trainNumber) === idx,
+        )
 
   const filteredSchedule = allScheduledTrains.filter(
     (t) =>
@@ -283,21 +335,31 @@ export default function StationMasterDashboard() {
                   <th className="px-4 py-3">Platform</th>
                   <th className="px-4 py-3">Status</th>
                   <th className="px-4 py-3">Delay</th>
+                  <th className="px-4 py-3 text-right">Action</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 text-slate-800 font-medium">
                 {filteredSchedule.length === 0 ? (
                   <tr>
-                    <td colSpan="8" className="px-4 py-8 text-center text-slate-400">
+                    <td colSpan="9" className="px-4 py-8 text-center text-slate-400">
                       No trains matching current search filter for {activeStation}.
                     </td>
                   </tr>
                 ) : (
                   filteredSchedule.map((train, idx) => (
-                    <tr key={`${train.trainNumber}-${idx}`} className="hover:bg-slate-50/60 transition-colors">
+                    <tr
+                      key={`${train.trainNumber}-${idx}`}
+                      onClick={() => openDetail('train', train.trainNumber)}
+                      className="hover:bg-emerald-50/70 transition-colors cursor-pointer group"
+                      title="Click to view full train telemetry & route timeline"
+                    >
                       <td className="px-4 py-3">
-                        <div className="font-bold text-slate-900">{train.trainName}</div>
-                        <div className="font-mono text-emerald-700 text-[11px]">{train.trainNumber}</div>
+                        <div className="font-bold text-slate-900 group-hover:text-emerald-800 transition-colors">
+                          {train.trainName}
+                        </div>
+                        <div className="font-mono text-emerald-700 text-[11px] font-semibold">
+                          #{train.trainNumber}
+                        </div>
                       </td>
                       <td className="px-4 py-3 text-slate-600">{train.type}</td>
                       <td className="px-4 py-3 text-slate-600">
@@ -332,6 +394,12 @@ export default function StationMasterDashboard() {
                           {train.delayText}
                         </span>
                       </td>
+                      <td className="px-4 py-3 text-right">
+                        <div className="flex items-center justify-end gap-1 text-slate-400 group-hover:text-emerald-700 font-bold text-[11px] transition-colors">
+                          <span className="hidden sm:inline">Details</span>
+                          <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                        </div>
+                      </td>
                     </tr>
                   ))
                 )}
@@ -347,21 +415,23 @@ export default function StationMasterDashboard() {
           {(activeTab === 'arrivals' ? arrivalsData : departuresData).map((train, idx) => (
             <div
               key={`${train.trainNumber}-${idx}`}
-              className="bg-white rounded-2xl border border-slate-200/80 p-5 shadow-xs hover:border-emerald-300 transition-all"
+              onClick={() => openDetail('train', train.trainNumber)}
+              className="bg-white rounded-2xl border border-slate-200/80 p-5 shadow-xs hover:border-emerald-400 hover:shadow-md transition-all cursor-pointer group"
+              title="Click to view full live telemetry"
             >
               <div className="flex items-start justify-between gap-2 mb-3">
                 <div>
                   <span className="text-xs font-bold font-mono text-emerald-700">
-                    {train.trainNumber}
+                    #{train.trainNumber}
                   </span>
-                  <h4 className="text-sm font-bold text-slate-900 leading-tight">
+                  <h4 className="text-sm font-bold text-slate-900 leading-tight group-hover:text-emerald-800 transition-colors">
                     {train.trainName}
                   </h4>
                   <div className="text-[11px] text-slate-500 mt-0.5">
                     {train.source} → {train.destination}
                   </div>
                 </div>
-                <span className="px-2.5 py-1 rounded-lg bg-emerald-50 border border-emerald-200 font-mono font-bold text-xs text-emerald-800">
+                <span className="px-2.5 py-1 rounded-lg bg-emerald-50 border border-emerald-200 font-mono font-bold text-xs text-emerald-800 shrink-0">
                   {train.platform}
                 </span>
               </div>
@@ -388,6 +458,14 @@ export default function StationMasterDashboard() {
                   </span>
                 </div>
               </div>
+
+              <div className="mt-3 pt-2 border-t border-slate-100/60 flex items-center justify-between text-[11px] text-slate-400 group-hover:text-emerald-700 transition-colors">
+                <span>Section Telemetry</span>
+                <div className="flex items-center gap-0.5 font-bold">
+                  <span>View Details</span>
+                  <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -399,14 +477,16 @@ export default function StationMasterDashboard() {
           {platformData.map((pf) => (
             <div
               key={pf.platformNumber}
-              className={`rounded-2xl border p-5 transition-all ${
+              onClick={() => openDetail('platform', pf.platformNumber)}
+              className={`rounded-2xl border p-5 transition-all cursor-pointer hover:shadow-md group ${
                 pf.isOccupied
-                  ? 'bg-white border-amber-300 ring-2 ring-amber-400/20 shadow-xs'
-                  : 'bg-white border-slate-200/80 opacity-90'
+                  ? 'bg-white border-amber-300 ring-2 ring-amber-400/20 hover:border-amber-400'
+                  : 'bg-white border-slate-200/80 hover:border-emerald-400 opacity-95'
               }`}
+              title="Click to inspect platform occupancy and scheduled queue"
             >
               <div className="flex items-center justify-between mb-3">
-                <span className="text-base font-black font-mono text-slate-900">
+                <span className="text-base font-black font-mono text-slate-900 group-hover:text-emerald-700 transition-colors">
                   {pf.platformLabel}
                 </span>
                 <span
@@ -422,13 +502,13 @@ export default function StationMasterDashboard() {
 
               {pf.currentTrain ? (
                 <div className="space-y-2 text-xs">
-                  <div className="p-3 rounded-xl bg-amber-50/60 border border-amber-200/60">
+                  <div className="p-3 rounded-xl bg-amber-50/60 border border-amber-200/60 group-hover:bg-amber-50/90 transition-colors">
                     <div className="text-[10px] font-bold uppercase text-amber-800">
                       Rake on Track
                     </div>
-                    <div className="font-bold text-slate-900">{pf.currentTrain.trainName}</div>
+                    <div className="font-bold text-slate-900 truncate">{pf.currentTrain.trainName}</div>
                     <div className="font-mono text-xs text-amber-900 font-semibold">
-                      {pf.currentTrain.trainNumber}
+                      #{pf.currentTrain.trainNumber}
                     </div>
                     <div className="text-[10px] text-slate-500 mt-1 flex justify-between">
                       <span>Dep: {pf.currentTrain.expectedDeparture}</span>
@@ -437,18 +517,23 @@ export default function StationMasterDashboard() {
                   </div>
                 </div>
               ) : (
-                <div className="py-6 text-center text-xs text-slate-400 font-medium">
+                <div className="py-6 text-center text-xs text-slate-400 font-medium group-hover:text-slate-600 transition-colors">
                   Track free for section movement
                 </div>
               )}
 
               {pf.nextTrain && (
-                <div className="mt-3 pt-3 border-t border-slate-100 text-[11px] text-slate-600">
+                <div className="mt-3 pt-3 border-t border-slate-100 text-[11px] text-slate-600 truncate">
                   <span className="text-slate-400">Next Inbound:</span>{' '}
                   <span className="font-bold text-slate-800">{pf.nextTrain.trainName}</span> (
                   {pf.nextTrain.expectedArrival})
                 </div>
               )}
+
+              <div className="mt-3 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400 group-hover:text-emerald-700 transition-colors">
+                <span>Berth Inspection</span>
+                <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+              </div>
             </div>
           ))}
         </div>
@@ -515,41 +600,59 @@ export default function StationMasterDashboard() {
             </div>
           ) : (
             alertsData.map((alert) => {
-              const isAck = acknowledgedAlerts.includes(alert.id || alert._id)
+              const alertKey = alert.id || alert._id
+              const isAck = acknowledgedAlerts.includes(alertKey) || alert.status === 'acknowledged'
               return (
                 <div
-                  key={alert.id || alert._id}
-                  className={`p-4 rounded-2xl border flex items-start justify-between gap-4 transition-all ${
+                  key={alertKey}
+                  onClick={() => openDetail('alert', alertKey)}
+                  className={`p-4 rounded-2xl border flex items-start justify-between gap-4 transition-all cursor-pointer group hover:shadow-xs ${
                     isAck
-                      ? 'bg-slate-50 border-slate-200 opacity-60'
+                      ? 'bg-slate-50/80 border-slate-200 hover:border-slate-300'
                       : alert.severity === 'critical'
-                      ? 'bg-rose-50/70 border-rose-200'
-                      : 'bg-amber-50/70 border-amber-200'
+                      ? 'bg-rose-50/70 border-rose-200 hover:border-rose-300'
+                      : 'bg-amber-50/70 border-amber-200 hover:border-amber-300'
                   }`}
+                  title="Click to view full alert details and affected units"
                 >
-                  <div className="flex items-start gap-3">
+                  <div className="flex items-start gap-3 min-w-0">
                     <ShieldAlert
                       className={`w-5 h-5 shrink-0 mt-0.5 ${
-                        alert.severity === 'critical' ? 'text-rose-600' : 'text-amber-600'
+                        alert.severity === 'critical'
+                          ? 'text-rose-600'
+                          : alert.severity === 'warning'
+                          ? 'text-amber-600'
+                          : 'text-blue-600'
                       }`}
                     />
-                    <div>
+                    <div className="min-w-0">
                       <div className="flex items-center gap-2">
-                        <h4 className="text-sm font-bold text-slate-900">{alert.title}</h4>
-                        <span className="px-2 py-0.5 rounded text-[9px] font-bold uppercase bg-white border border-slate-200 text-slate-700">
+                        <h4 className="text-sm font-bold text-slate-900 group-hover:text-emerald-800 transition-colors truncate">
+                          {alert.title}
+                        </h4>
+                        <span className="px-2 py-0.5 rounded text-[9px] font-bold uppercase bg-white border border-slate-200 text-slate-700 shrink-0">
                           {alert.severity}
                         </span>
+                        {isAck && (
+                          <span className="px-2 py-0.5 rounded text-[9px] font-bold uppercase bg-slate-200 text-slate-600 shrink-0">
+                            Acknowledged
+                          </span>
+                        )}
                       </div>
-                      <p className="text-xs text-slate-600 mt-1">{alert.description}</p>
-                      <div className="text-[10px] text-slate-400 mt-1">
-                        Affected: {alert.affectedTrains?.join(', ') || alert.section}
+                      <p className="text-xs text-slate-600 mt-1 line-clamp-2">{alert.description || alert.message}</p>
+                      <div className="text-[10px] text-slate-400 mt-1 flex items-center gap-2">
+                        <span>Affected: {alert.affectedTrains?.join(', ') || alert.section}</span>
+                        {alert.platform && <span>• {alert.platform}</span>}
+                        <span className="text-emerald-700 font-semibold group-hover:underline">
+                          • Click for Details →
+                        </span>
                       </div>
                     </div>
                   </div>
 
                   <button
                     type="button"
-                    onClick={() => handleAcknowledgeAlert(alert.id || alert._id)}
+                    onClick={(e) => handleAcknowledgeAlert(alertKey, e)}
                     disabled={isAck}
                     className={`px-3 py-1.5 rounded-lg text-xs font-bold shrink-0 transition-colors cursor-pointer ${
                       isAck
@@ -565,6 +668,16 @@ export default function StationMasterDashboard() {
           )}
         </div>
       )}
+
+      {/* Reusable Detail Drawer Component */}
+      <DetailPanel
+        isOpen={panelState.isOpen}
+        onClose={closeDetail}
+        type={panelState.type}
+        id={panelState.id}
+        stationCode={activeStation}
+        onAlertAcknowledged={handlePanelAlertAcknowledged}
+      />
     </div>
   )
 }

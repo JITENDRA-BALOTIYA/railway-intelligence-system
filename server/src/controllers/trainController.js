@@ -39,4 +39,17 @@ export const trainController = {
       next(err)
     }
   },
+
+  async getTrainRoute(req, res, next) {
+    try {
+      const { trainNumber } = req.params
+      const routeData = await trainService.getTrainRoute(trainNumber)
+      if (!routeData) {
+        return ApiResponse.error(res, `Route for train ${trainNumber} not found.`, 404)
+      }
+      return ApiResponse.success(res, routeData, 'Train route retrieved successfully')
+    } catch (err) {
+      next(err)
+    }
+  },
 }

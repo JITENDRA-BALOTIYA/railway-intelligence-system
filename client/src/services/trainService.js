@@ -12,5 +12,9 @@ export const trainService = {
   async getLiveTracking(trainNumber, params = {}) {
     return await apiClient.get(`/trains/${trainNumber}/live`, params)
   },
+
+  async getTrainRoute(trainNumber, params = {}) {
+    return await apiClient.get(`/trains/${trainNumber}/route`, params)
+  },
 }
 

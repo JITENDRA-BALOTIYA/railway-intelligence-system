@@ -12,7 +12,15 @@ const alertSchema = new mongoose.Schema(
     section: { type: String, default: 'Network-wide' },
     zone: { type: String, default: 'All' },
     affectedTrains: [{ type: String }],
+    platform: { type: String },
     active: { type: Boolean, default: true },
+    status: {
+      type: String,
+      enum: ['active', 'acknowledged', 'resolved'],
+      default: 'active',
+    },
+    acknowledgedBy: { type: String, default: null },
+    acknowledgedAt: { type: Date, default: null },
     timestamp: { type: Date, default: Date.now },
   },
   {

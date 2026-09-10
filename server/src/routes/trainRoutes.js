@@ -14,4 +14,7 @@ router.get('/:trainNumber', validateRequest(validateTrainNumber), trainControlle
 // GET /api/trains/:trainNumber/live
 router.get('/:trainNumber/live', validateRequest(validateTrainNumber), trainController.getLiveTracking)
 
+// GET /api/trains/:trainNumber/route
+router.get('/:trainNumber/route', validateRequest(validateTrainNumber), trainController.getTrainRoute)
+
 export default router

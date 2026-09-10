@@ -144,10 +144,16 @@ export const authService = {
 
 // Station Operations Service Helper
 export const stationOpsService = {
+  getSchedule: (stationCode) => apiClient.get(`/stations/${stationCode}/schedule`),
   getArrivals: (stationCode) => apiClient.get(`/stations/${stationCode}/arrivals`),
   getDepartures: (stationCode) => apiClient.get(`/stations/${stationCode}/departures`),
   getPlatforms: (stationCode) => apiClient.get(`/stations/${stationCode}/platforms`),
+  getPlatformDetail: (stationCode, platformNumber) =>
+    apiClient.get(`/stations/${stationCode}/platforms/${platformNumber}`),
   getAlerts: (stationCode) => apiClient.get(`/stations/${stationCode}/alerts`),
+  getAlertDetail: (stationCode, alertId) => apiClient.get(`/stations/${stationCode}/alerts/${alertId}`),
+  acknowledgeAlert: (stationCode, alertId) =>
+    apiClient.post(`/stations/${stationCode}/alerts/${alertId}/acknowledge`),
   getTrains: (stationCode) => apiClient.get(`/stations/${stationCode}/trains`),
 }
 

@@ -80,5 +80,66 @@ export const trainService = {
 
     return null
   },
+
+  /**
+   * Get full train route / timeline
+   */
+  async getTrainRoute(trainNumber) {
+    const num = String(trainNumber).trim()
+    if (!num) return null
+
+    // 1. Primary: RailRadar route endpoint
+    try {
+      const liveRoute = await railRadarService.getTrainRoute(num)
+      if (liveRoute && ((Array.isArray(liveRoute) && liveRoute.length > 0) || liveRoute.features || liveRoute.route)) {
+        return liveRoute
+      }
+    } catch (err) {
+      logger.warn(`RailRadar route fetch for ${num} error: ${err.message}`)
+    }
+
+    // 2. Secondary: extract route & timeline from RailRadar live status or details
+    try {
+      const liveStatus = await railRadarService.getLiveStatus(num)
+      if (liveStatus && (liveStatus.timeline?.length > 0 || liveStatus.route?.length > 0)) {
+        return {
+          trainNumber: num,
+          trainName: liveStatus.trainName,
+          source: liveStatus.source,
+          destination: liveStatus.destination,
+          timeline: liveStatus.timeline || [],
+          route: liveStatus.route || [],
+          totalHalts: liveStatus.totalHalts || liveStatus.timeline?.length || 0,
+          dataSource: liveStatus.dataSource,
+        }
+      }
+    } catch (err) {
+      logger.warn(`RailRadar live status for route extraction for ${num} error: ${err.message}`)
+    }
+
+    // 3. Fallback: Database or in-memory store
+    const { isConnected } = getDbStatus()
+    let dbTrain = null
+    if (isConnected) {
+      dbTrain = await Train.findOne({ trainNumber: num }).lean()
+    } else {
+      dbTrain = memoryStore.trains.find((t) => t.trainNumber === num) || null
+    }
+
+    if (dbTrain) {
+      return {
+        trainNumber: dbTrain.trainNumber,
+        trainName: dbTrain.trainName,
+        source: dbTrain.source,
+        destination: dbTrain.destination,
+        timeline: dbTrain.timeline || [],
+        route: dbTrain.timeline || [],
+        totalHalts: dbTrain.timeline?.length || 0,
+        dataSource: 'FALLBACK_REPOSITORY',
+      }
+    }
+
+    return null
+  },
 }
 
