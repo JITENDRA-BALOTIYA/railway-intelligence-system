@@ -15,6 +15,19 @@ export const etaController = {
     }
   },
 
+  async getFullETA(req, res, next) {
+    try {
+      const { trainNumber } = req.params
+      const prediction = await etaService.getFullPrediction(trainNumber)
+      if (!prediction) {
+        return ApiResponse.error(res, `Full ETA prediction for train ${trainNumber} not available`, 404)
+      }
+      return ApiResponse.success(res, prediction, 'Full ETA prediction fetched successfully')
+    } catch (err) {
+      next(err)
+    }
+  },
+
   async getETAHistory(req, res, next) {
     try {
       const { trainNumber } = req.params

@@ -8,6 +8,9 @@ const router = Router()
 // GET /api/eta/:trainNumber
 router.get('/:trainNumber', validateRequest(validateTrainNumber), etaController.getETA)
 
+// GET /api/eta/:trainNumber/full  — enriched payload for the rich dashboard
+router.get('/:trainNumber/full', validateRequest(validateTrainNumber), etaController.getFullETA)
+
 // GET /api/eta/:trainNumber/history
 router.get('/:trainNumber/history', validateRequest(validateTrainNumber), etaController.getETAHistory)
 

@@ -160,21 +160,12 @@ export default function CongestionMap() {
         attributionControl: true,
       })
 
-      // Esri World Dark Gray GIS tile layer (watermark-free, high-speed operations center GIS)
+      // OpenStreetMap tiles — free, no API key, real map
       L.tileLayer(
-        'https://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
         {
-          attribution: '&copy; Esri, DeLorme, NAVTEQ',
-          maxZoom: 16,
-        },
-      ).addTo(map)
-
-      // Esri World Dark Gray Reference Layer (Crisp City & Boundary Labels)
-      L.tileLayer(
-        'https://services.arcgisonline.com/arcgis/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}',
-        {
-          maxZoom: 16,
-          opacity: 0.85,
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+          maxZoom: 19,
         },
       ).addTo(map)
 

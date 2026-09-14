@@ -3,8 +3,10 @@ import { etaService } from '../services/etaService.js'
 
 export const useETAPrediction = (trainNumber) => {
   const [prediction, setPrediction] = useState(null)
+  const [fullData, setFullData] = useState(null)
   const [history, setHistory] = useState([])
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
+  const [fullLoading, setFullLoading] = useState(false)
   const [error, setError] = useState(null)
 
   const fetchETA = useCallback(async () => {
@@ -25,9 +27,27 @@ export const useETAPrediction = (trainNumber) => {
     }
   }, [trainNumber])
 
-  useEffect(() => {
-    fetchETA()
-  }, [fetchETA])
+  const fetchFull = useCallback(async (num) => {
+    const tn = num || trainNumber
+    if (!tn) return
+    try {
+      setFullLoading(true)
+      setError(null)
+      const data = await etaService.getFullETA(tn)
+      setFullData(data)
+    } catch (err) {
+      setError(err.message || 'Failed to fetch full ETA data')
+      setFullData(null)
+    } finally {
+      setFullLoading(false)
+    }
+  }, [trainNumber])
 
-  return { prediction, history, loading, error, refresh: fetchETA }
+  useEffect(() => {
+    if (trainNumber) {
+      fetchFull(trainNumber)
+    }
+  }, [trainNumber, fetchFull])
+
+  return { prediction, fullData, history, loading, fullLoading, error, refresh: fetchETA, refreshFull: fetchFull }
 }
