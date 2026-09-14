@@ -16,6 +16,9 @@ router.get('/search', stationController.searchStations)
 // GET /api/stations/:stationCode
 router.get('/:stationCode', validateRequest(validateStationCode), stationController.getStationByCode)
 
+// GET /api/stations/:stationCode/status
+router.get('/:stationCode/status', validateRequest(validateStationCode), stationController.getStationStatus)
+
 // GET /api/stations/:stationCode/crowd
 router.get('/:stationCode/crowd', validateRequest(validateStationCode), stationController.getStationCrowd)
 

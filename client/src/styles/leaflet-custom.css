@@ -1,0 +1,171 @@
+/* Custom styles for Railway Operations Center Leaflet Map */
+@import 'leaflet/dist/leaflet.css';
+
+/* Map Container */
+.railway-leaflet-container {
+  width: 100%;
+  height: 520px;
+  background-color: #060913 !important;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* Dark mode map tiles adjustments */
+.leaflet-tile-pane {
+  filter: brightness(0.92) contrast(1.15);
+}
+
+/* Hide default attribution link clutter slightly while keeping legal requirements */
+.leaflet-control-attribution {
+  background: rgba(10, 15, 29, 0.75) !important;
+  color: #64748b !important;
+  font-size: 9px !important;
+  font-family: monospace;
+}
+.leaflet-control-attribution a {
+  color: #94a3b8 !important;
+}
+
+/* Custom Zoom Controls */
+.leaflet-bar {
+  border: 1px solid #334155 !important;
+  background: #0f172a !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+}
+.leaflet-bar a {
+  background-color: #0f172a !important;
+  color: #e2e8f0 !important;
+  border-bottom: 1px solid #1e293b !important;
+  transition: background-color 0.15s;
+}
+.leaflet-bar a:hover {
+  background-color: #1e293b !important;
+  color: #38bdf8 !important;
+}
+
+/* Custom Station Marker Icon */
+.station-pin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.station-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2.5px solid #ffffff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.8), 0 0 8px currentColor;
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+.station-pin:hover .station-dot {
+  transform: scale(1.35);
+}
+
+.station-pulse-ring {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  top: -9px;
+  left: -9px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  opacity: 0.7;
+  animation: stationPulse 2.2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes stationPulse {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.9;
+  }
+  70% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+.station-badge-label {
+  margin-top: 4px;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid #334155;
+  color: #f1f5f9;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: 4px;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+  letter-spacing: 0.04em;
+}
+
+/* Train Marker Pin */
+.train-pin {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #0284c7;
+  border: 1.5px solid #38bdf8;
+  color: #ffffff;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 10px;
+  font-weight: 800;
+  box-shadow: 0 0 14px rgba(2, 132, 199, 0.6), 0 2px 8px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+.train-pin:hover {
+  background: #0369a1;
+  border-color: #7dd3fc;
+}
+
+.train-pin-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #38bdf8;
+  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Leaflet Dark Tooltips */
+.leaflet-tooltip.railway-dark-tooltip {
+  background: rgba(15, 23, 42, 0.96) !important;
+  border: 1px solid #475569 !important;
+  color: #f8fafc !important;
+  font-family: ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 11px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6) !important;
+  padding: 6px 10px !important;
+}
+.leaflet-tooltip-top:before,
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+  border-top-color: #475569 !important;
+}

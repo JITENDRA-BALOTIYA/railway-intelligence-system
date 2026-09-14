@@ -137,11 +137,14 @@ export const Header = () => {
                 <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                 <input
                   type="text"
-                  placeholder="Enter train number (e.g. 12301, 12951, 12002)..."
+                  placeholder="NDLS-CNB Quad"
                   value={localSearch}
                   onChange={(e) => setLocalSearch(e.target.value)}
-                  className="w-full pl-10 pr-12 py-2 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 transition-all shadow-xs font-mono"
+                  className="w-full pl-10 pr-14 py-2 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 transition-all shadow-xs font-mono"
                 />
+                <span className="absolute right-9 top-1/2 -translate-y-1/2 text-[10px] font-mono text-slate-400 bg-slate-200/80 px-1 rounded">
+                  ESC
+                </span>
                 <button
                   type="submit"
                   className="absolute right-1.5 top-1/2 -translate-y-1/2 p-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white transition-colors cursor-pointer"
@@ -151,16 +154,16 @@ export const Header = () => {
                 </button>
               </div>
             </form>
-            <div className="flex items-center gap-1.5 mt-1 text-[11px] text-slate-500 font-medium">
-              <span>Quick Lookups:</span>
-              {['12301', '12951', '12002', '22436'].map((tag, idx) => (
+            <div className="flex items-center gap-1.5 mt-1 text-[11px] text-slate-500 font-medium flex-wrap">
+              <span className="text-slate-400 font-mono text-[10px]">Quick:</span>
+              {['Quad Line North', 'Golden Quad', 'Western DFC'].map((tag) => (
                 <button
                   key={tag}
                   type="button"
                   onClick={() => handleQuickTagClick(tag)}
-                  className="text-slate-600 hover:text-emerald-700 transition-colors font-mono font-bold cursor-pointer"
+                  className="px-1.5 py-0.5 rounded bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors text-[10px] font-medium border border-slate-200 cursor-pointer"
                 >
-                  {tag}{idx < 3 ? ',' : ''}
+                  {tag}
                 </button>
               ))}
             </div>
@@ -169,11 +172,11 @@ export const Header = () => {
       </div>
 
       {/* Right Side Header Items */}
-      <div className="flex items-center gap-5">
-        {/* Live Data Pill */}
-        <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold">
+      <div className="flex items-center gap-4">
+        {/* Live Telemetry Sync Pill */}
+        <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold">
           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          <span>Live Data</span>
+          <span>Live Telemetry Sync</span>
         </div>
 
         {/* User Profile with Functional Dropdown */}

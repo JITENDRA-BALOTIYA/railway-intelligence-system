@@ -1,4 +1,5 @@
 import { stationService } from '../services/stationService.js'
+import { routeService } from '../services/routeService.js'
 import { ApiResponse } from '../utils/apiResponse.js'
 
 export const stationController = {
@@ -31,6 +32,19 @@ export const stationController = {
       }
       return ApiResponse.success(res, station, 'Station details retrieved successfully')
     } catch (err) {
+      next(err)
+    }
+  },
+
+  async getStationStatus(req, res, next) {
+    try {
+      const { stationCode } = req.params
+      const status = await routeService.getStationStatus(stationCode)
+      return ApiResponse.success(res, status, 'Station status retrieved successfully')
+    } catch (err) {
+      if (err.statusCode === 404) {
+        return ApiResponse.error(res, err.message, 404)
+      }
       next(err)
     }
   },

@@ -33,6 +33,7 @@ class RailRadarService {
       const response = await fetch(url, {
         method: 'GET',
         headers: this.getHeaders(),
+        signal: AbortSignal.timeout(3500),
       })
 
       if (response.status === 404) {

@@ -7,6 +7,7 @@ import analyticsRoutes from './analyticsRoutes.js'
 import alertRoutes from './alertRoutes.js'
 import authRoutes from './authRoutes.js'
 import cleaningRoutes from './cleaningRoutes.js'
+import routeRoutes from './routeRoutes.js'
 import { analyticsService } from '../services/analyticsService.js'
 import { trainService } from '../services/trainService.js'
 import { alertController } from '../controllers/alertController.js'
@@ -90,6 +91,8 @@ apiRouter.use('/cleaning', cleaningRoutes)
 apiRouter.use('/trains', trainRoutes)
 apiRouter.use('/eta', etaRoutes)
 apiRouter.use('/delays', delayRoutes)
+apiRouter.use('/routes', routeRoutes)
+apiRouter.use('/route', routeRoutes)
 apiRouter.use('/stations', stationRoutes)
 apiRouter.use('/analytics', analyticsRoutes)
 apiRouter.use('/alerts', alertRoutes)

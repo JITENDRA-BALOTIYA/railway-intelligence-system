@@ -19,4 +19,14 @@ export const analyticsController = {
       next(err)
     }
   },
+
+  async executeReroute(req, res, next) {
+    try {
+      const { actionId } = req.body || {}
+      const result = await analyticsService.executeReroute({ actionId })
+      return ApiResponse.success(res, result, result.message)
+    } catch (err) {
+      next(err)
+    }
+  },
 }
