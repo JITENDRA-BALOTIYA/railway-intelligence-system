@@ -1,0 +1,62 @@
+{
+  "what": "Typical per-station delay, evaluated on unseen services (GroupKFold=5, grouped by up/down train pair)",
+  "data": "etrain.info 1-year aggregate scraped 2025-09-27 (public Kaggle dump)",
+  "trained_at": "2026-10-10T17:44:30+00:00",
+  "rows": 1463,
+  "trains": 88,
+  "service_pairs": 44,
+  "features": [
+    "elapsed_min",
+    "frac_time",
+    "total_min",
+    "class_code",
+    "odd",
+    "hour"
+  ],
+  "mae_xgboost_min": 20.96,
+  "mae_baseline_global_median_min": 25.42,
+  "mae_baseline_class_median_min": 25.83,
+  "p10_p90_coverage": 0.721,
+  "target_coverage": 0.8,
+  "by_class": {
+    "duronto": {
+      "rows": 52,
+      "mae_xgboost_min": 94.1,
+      "mae_baseline_global_median_min": 93.8
+    },
+    "express": {
+      "rows": 913,
+      "mae_xgboost_min": 18.5,
+      "mae_baseline_global_median_min": 22.8
+    },
+    "mail": {
+      "rows": 269,
+      "mae_xgboost_min": 27.7,
+      "mae_baseline_global_median_min": 32.3
+    },
+    "rajdhani": {
+      "rows": 140,
+      "mae_xgboost_min": 7.4,
+      "mae_baseline_global_median_min": 11.2
+    },
+    "shatabdi": {
+      "rows": 46,
+      "mae_xgboost_min": 4.7,
+      "mae_baseline_global_median_min": 13.9
+    },
+    "vande_bharat": {
+      "rows": 43,
+      "mae_xgboost_min": 4.7,
+      "mae_baseline_global_median_min": 13.1
+    }
+  },
+  "feature_importance": {
+    "elapsed_min": 0.285,
+    "frac_time": 0.19,
+    "total_min": 0.269,
+    "class_code": 0.151,
+    "odd": 0.044,
+    "hour": 0.06
+  },
+  "caveat": "Small data (~90 trains). Predicts the station-typical delay, not a specific day's delay; interval = spread of typical delay across similar stations, not guaranteed day-level coverage."
+}

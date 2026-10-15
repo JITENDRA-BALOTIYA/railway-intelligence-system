@@ -1,0 +1,139 @@
+{
+ "train_id": "12842",
+ "train_name": "Coromandel Express",
+ "train_class": "express",
+ "corridor_from": "Mgr Chennai Ctr",
+ "corridor_to": "Howrah Jn",
+ "total_min": 1680,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "OGL",
+   "station_name": "Ongole",
+   "scheduled_time": "10:58",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 238
+  },
+  {
+   "station_code": "BZA",
+   "station_name": "Vijayawada Jn",
+   "scheduled_time": "13:05",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 365
+  },
+  {
+   "station_code": "EE",
+   "station_name": "Eluru",
+   "scheduled_time": "14:09",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 429
+  },
+  {
+   "station_code": "TDD",
+   "station_name": "Tadepalligudem",
+   "scheduled_time": "14:49",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 469
+  },
+  {
+   "station_code": "RJY",
+   "station_name": "Rajamundry",
+   "scheduled_time": "15:38",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 518
+  },
+  {
+   "station_code": "VSKP",
+   "station_name": "Visakhapatnam",
+   "scheduled_time": "19:25",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 745
+  },
+  {
+   "station_code": "KUR",
+   "station_name": "Khurda Road Jn",
+   "scheduled_time": "01:20",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1100
+  },
+  {
+   "station_code": "BBS",
+   "station_name": "Bhubaneswar",
+   "scheduled_time": "01:55",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1135
+  },
+  {
+   "station_code": "CTC",
+   "station_name": "Cuttack",
+   "scheduled_time": "02:30",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1170
+  },
+  {
+   "station_code": "BHC",
+   "station_name": "Bhadrakh",
+   "scheduled_time": "05:10",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1330
+  },
+  {
+   "station_code": "BLS",
+   "station_name": "Balasore",
+   "scheduled_time": "05:48",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1368
+  },
+  {
+   "station_code": "KGP",
+   "station_name": "Kharagpur Jn",
+   "scheduled_time": "07:35",
+   "sequence": 12,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1475
+  },
+  {
+   "station_code": "SRC",
+   "station_name": "Santragachi Jn",
+   "scheduled_time": "09:48",
+   "sequence": 13,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1608
+  },
+  {
+   "station_code": "HWH",
+   "station_name": "Howrah Jn",
+   "scheduled_time": "11:00",
+   "sequence": 14,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1680
+  }
+ ]
+}

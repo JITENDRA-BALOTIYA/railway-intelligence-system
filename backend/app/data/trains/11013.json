@@ -1,0 +1,202 @@
+{
+ "train_id": "11013",
+ "train_name": "Coimbatore Express",
+ "train_class": "express",
+ "corridor_from": "Lokmanyatilak",
+ "corridor_to": "Coimbatore Jn",
+ "total_min": 1935,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "TNA",
+   "station_name": "Thane",
+   "scheduled_time": "22:53",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 18
+  },
+  {
+   "station_code": "KYN",
+   "station_name": "Kalyan Jn",
+   "scheduled_time": "23:17",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 42
+  },
+  {
+   "station_code": "KWV",
+   "station_name": "Kurduvadi",
+   "scheduled_time": "04:23",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 348
+  },
+  {
+   "station_code": "SUR",
+   "station_name": "Solapur Jn",
+   "scheduled_time": "06:00",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 445
+  },
+  {
+   "station_code": "DUD",
+   "station_name": "Dudhani",
+   "scheduled_time": "06:48",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 493
+  },
+  {
+   "station_code": "GUR",
+   "station_name": "Ganagapur Road",
+   "scheduled_time": "07:08",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 513
+  },
+  {
+   "station_code": "KLBG",
+   "station_name": "Kalaburagi Jn",
+   "scheduled_time": "07:37",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 542
+  },
+  {
+   "station_code": "SDB",
+   "station_name": "Shahabad",
+   "scheduled_time": "08:18",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 583
+  },
+  {
+   "station_code": "WADI",
+   "station_name": "Wadi",
+   "scheduled_time": "09:08",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 633
+  },
+  {
+   "station_code": "YG",
+   "station_name": "Yadgir",
+   "scheduled_time": "09:38",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 663
+  },
+  {
+   "station_code": "KSN",
+   "station_name": "Krishna",
+   "scheduled_time": "10:15",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 700
+  },
+  {
+   "station_code": "RC",
+   "station_name": "Raichur",
+   "scheduled_time": "10:53",
+   "sequence": 12,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 738
+  },
+  {
+   "station_code": "MALM",
+   "station_name": "Manthralayam Rd",
+   "scheduled_time": "11:18",
+   "sequence": 13,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 763
+  },
+  {
+   "station_code": "AD",
+   "station_name": "Adoni",
+   "scheduled_time": "11:58",
+   "sequence": 14,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 803
+  },
+  {
+   "station_code": "GTL",
+   "station_name": "Guntakal Jn",
+   "scheduled_time": "13:00",
+   "sequence": 15,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 865
+  },
+  {
+   "station_code": "ATP",
+   "station_name": "Anantapur",
+   "scheduled_time": "14:28",
+   "sequence": 16,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 953
+  },
+  {
+   "station_code": "DMM",
+   "station_name": "Dharmavaram Jn",
+   "scheduled_time": "15:45",
+   "sequence": 17,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1030
+  },
+  {
+   "station_code": "BNC",
+   "station_name": "Bangalore Cant",
+   "scheduled_time": "22:00",
+   "sequence": 18,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1405
+  },
+  {
+   "station_code": "DPJ",
+   "station_name": "Dharmapuri",
+   "scheduled_time": "00:50",
+   "sequence": 19,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1575
+  },
+  {
+   "station_code": "ED",
+   "station_name": "Erode Jn",
+   "scheduled_time": "04:30",
+   "sequence": 20,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1795
+  },
+  {
+   "station_code": "TUP",
+   "station_name": "Tiruppur",
+   "scheduled_time": "05:18",
+   "sequence": 21,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1843
+  }
+ ]
+}

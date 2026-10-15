@@ -1,0 +1,49 @@
+{
+ "train_id": "22301",
+ "train_name": "Vande Bharat",
+ "train_class": "vande_bharat",
+ "corridor_from": "Howrah Jn",
+ "corridor_to": "New Jalpaiguri",
+ "total_min": 455,
+ "route_partial": false,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "HWH",
+   "station_name": "Howrah Jn",
+   "scheduled_time": "05:55",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "MLDT",
+   "station_name": "Malda Town",
+   "scheduled_time": "10:22",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 267
+  },
+  {
+   "station_code": "BOE",
+   "station_name": "Barsoi Jn",
+   "scheduled_time": "11:28",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 333
+  },
+  {
+   "station_code": "NJP",
+   "station_name": "New Jalpaiguri",
+   "scheduled_time": "13:30",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 455
+  }
+ ]
+}

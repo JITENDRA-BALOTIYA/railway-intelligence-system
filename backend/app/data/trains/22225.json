@@ -1,0 +1,67 @@
+{
+ "train_id": "22225",
+ "train_name": "Chennai Vande Bharat",
+ "train_class": "vande_bharat",
+ "corridor_from": "C Shivaji Maharaj T",
+ "corridor_to": "Solapur Jn",
+ "total_min": 395,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "DR",
+   "station_name": "Dadar",
+   "scheduled_time": "16:15",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 10
+  },
+  {
+   "station_code": "TNA",
+   "station_name": "Thane",
+   "scheduled_time": "16:33",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 28
+  },
+  {
+   "station_code": "KYN",
+   "station_name": "Kalyan Jn",
+   "scheduled_time": "16:48",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 43
+  },
+  {
+   "station_code": "PUNE",
+   "station_name": "Pune Jn",
+   "scheduled_time": "19:10",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 185
+  },
+  {
+   "station_code": "KWV",
+   "station_name": "Kurduvadi",
+   "scheduled_time": "21:28",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 323
+  },
+  {
+   "station_code": "SUR",
+   "station_name": "Solapur Jn",
+   "scheduled_time": "22:40",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 395
+  }
+ ]
+}

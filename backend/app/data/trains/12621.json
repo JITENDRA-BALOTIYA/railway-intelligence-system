@@ -1,0 +1,94 @@
+{
+ "train_id": "12621",
+ "train_name": "Tamil Nadu Exp",
+ "train_class": "express",
+ "corridor_from": "Mgr Chennai Ctr",
+ "corridor_to": "New Delhi",
+ "total_min": 1950,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "BZA",
+   "station_name": "Vijayawada Jn",
+   "scheduled_time": "03:40",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 340
+  },
+  {
+   "station_code": "KMT",
+   "station_name": "Khammam",
+   "scheduled_time": "05:19",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 439
+  },
+  {
+   "station_code": "WL",
+   "station_name": "Warangal",
+   "scheduled_time": "06:53",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 533
+  },
+  {
+   "station_code": "BPQ",
+   "station_name": "Balharshah",
+   "scheduled_time": "10:30",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 750
+  },
+  {
+   "station_code": "NGP",
+   "station_name": "Nagpur",
+   "scheduled_time": "13:45",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 945
+  },
+  {
+   "station_code": "ET",
+   "station_name": "Itarsi Jn",
+   "scheduled_time": "18:30",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1230
+  },
+  {
+   "station_code": "GWL",
+   "station_name": "Gwalior",
+   "scheduled_time": "01:32",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1652
+  },
+  {
+   "station_code": "AGC",
+   "station_name": "Agra Cantt",
+   "scheduled_time": "03:05",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1745
+  },
+  {
+   "station_code": "NDLS",
+   "station_name": "New Delhi",
+   "scheduled_time": "06:30",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1950
+  }
+ ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Rail Intelligence System",
+  "description": "Dynamic train ETA prediction and cascading delay intelligence system for Indian Railways operations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

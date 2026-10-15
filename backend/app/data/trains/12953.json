@@ -1,0 +1,112 @@
+{
+ "train_id": "12953",
+ "train_name": "August Kranti Rajdhani",
+ "train_class": "rajdhani",
+ "corridor_from": "Mumbai Central",
+ "corridor_to": "Hazrat Nizamuddin",
+ "total_min": 993,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "MMCT",
+   "station_name": "Mumbai Central",
+   "scheduled_time": "17:10",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "BVI",
+   "station_name": "Borivali",
+   "scheduled_time": "17:38",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 28
+  },
+  {
+   "station_code": "VAPI",
+   "station_name": "Vapi",
+   "scheduled_time": "18:53",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 103
+  },
+  {
+   "station_code": "BL",
+   "station_name": "Valsad",
+   "scheduled_time": "19:13",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 123
+  },
+  {
+   "station_code": "ST",
+   "station_name": "Surat",
+   "scheduled_time": "20:10",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 180
+  },
+  {
+   "station_code": "BRC",
+   "station_name": "Vadodara Jn",
+   "scheduled_time": "21:44",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 274
+  },
+  {
+   "station_code": "DHD",
+   "station_name": "Dahod",
+   "scheduled_time": "23:38",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 388
+  },
+  {
+   "station_code": "RTM",
+   "station_name": "Ratlam Jn",
+   "scheduled_time": "01:13",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 483
+  },
+  {
+   "station_code": "KOTA",
+   "station_name": "Kota Jn",
+   "scheduled_time": "04:05",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 655
+  },
+  {
+   "station_code": "SWM",
+   "station_name": "Sawai Madhopur",
+   "scheduled_time": "05:23",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 733
+  },
+  {
+   "station_code": "MTJ",
+   "station_name": "Mathura Jn",
+   "scheduled_time": "07:53",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 883
+  }
+ ]
+}

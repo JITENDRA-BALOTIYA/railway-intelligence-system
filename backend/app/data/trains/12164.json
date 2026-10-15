@@ -1,0 +1,202 @@
+{
+ "train_id": "12164",
+ "train_name": "Chennai Express",
+ "train_class": "express",
+ "corridor_from": "Mgr Chennai Ctr",
+ "corridor_to": "Lokmanyatilak",
+ "total_min": 1290,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "AJJ",
+   "station_name": "Arakkonam",
+   "scheduled_time": "19:23",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 58
+  },
+  {
+   "station_code": "TRT",
+   "station_name": "Tiruttani",
+   "scheduled_time": "19:38",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 73
+  },
+  {
+   "station_code": "PUT",
+   "station_name": "Puttur",
+   "scheduled_time": "20:08",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 103
+  },
+  {
+   "station_code": "RU",
+   "station_name": "Renigunta Jn",
+   "scheduled_time": "20:45",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 140
+  },
+  {
+   "station_code": "KOU",
+   "station_name": "Koduru",
+   "scheduled_time": "21:24",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 179
+  },
+  {
+   "station_code": "RJP",
+   "station_name": "Razampeta",
+   "scheduled_time": "21:49",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 204
+  },
+  {
+   "station_code": "YA",
+   "station_name": "Yerraguntla",
+   "scheduled_time": "22:59",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 274
+  },
+  {
+   "station_code": "TU",
+   "station_name": "Tadipatri",
+   "scheduled_time": "23:54",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 329
+  },
+  {
+   "station_code": "GY",
+   "station_name": "Gooty Jn",
+   "scheduled_time": "00:54",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 389
+  },
+  {
+   "station_code": "GTL",
+   "station_name": "Guntakal Jn",
+   "scheduled_time": "01:25",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 420
+  },
+  {
+   "station_code": "AD",
+   "station_name": "Adoni",
+   "scheduled_time": "02:19",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 474
+  },
+  {
+   "station_code": "RC",
+   "station_name": "Raichur",
+   "scheduled_time": "03:28",
+   "sequence": 12,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 543
+  },
+  {
+   "station_code": "SADP",
+   "station_name": "Saidapur",
+   "scheduled_time": "04:09",
+   "sequence": 13,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 584
+  },
+  {
+   "station_code": "YG",
+   "station_name": "Yadgir",
+   "scheduled_time": "04:28",
+   "sequence": 14,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 603
+  },
+  {
+   "station_code": "WADI",
+   "station_name": "Wadi",
+   "scheduled_time": "05:30",
+   "sequence": 15,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 665
+  },
+  {
+   "station_code": "KLBG",
+   "station_name": "Kalaburagi Jn",
+   "scheduled_time": "06:12",
+   "sequence": 16,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 707
+  },
+  {
+   "station_code": "SUR",
+   "station_name": "Solapur Jn",
+   "scheduled_time": "07:40",
+   "sequence": 17,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 795
+  },
+  {
+   "station_code": "LNL",
+   "station_name": "Lonavala",
+   "scheduled_time": "12:40",
+   "sequence": 18,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1095
+  },
+  {
+   "station_code": "KYN",
+   "station_name": "Kalyan Jn",
+   "scheduled_time": "14:17",
+   "sequence": 19,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1192
+  },
+  {
+   "station_code": "TNA",
+   "station_name": "Thane",
+   "scheduled_time": "14:37",
+   "sequence": 20,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1212
+  },
+  {
+   "station_code": "LTT",
+   "station_name": "Lokmanyatilak T",
+   "scheduled_time": "15:55",
+   "sequence": 21,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1290
+  }
+ ]
+}

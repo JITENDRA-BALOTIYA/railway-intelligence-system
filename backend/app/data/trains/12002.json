@@ -1,0 +1,85 @@
+{
+ "train_id": "12002",
+ "train_name": "Shatabdi",
+ "train_class": "shatabdi",
+ "corridor_from": "New Delhi",
+ "corridor_to": "Rani Kamlapati(Bhopal",
+ "total_min": 520,
+ "route_partial": false,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "NDLS",
+   "station_name": "New Delhi",
+   "scheduled_time": "06:00",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "MTJ",
+   "station_name": "Mathura Jn",
+   "scheduled_time": "07:19",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 79
+  },
+  {
+   "station_code": "AGC",
+   "station_name": "Agra Cantt",
+   "scheduled_time": "07:50",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 110
+  },
+  {
+   "station_code": "DHO",
+   "station_name": "Dhaulpur",
+   "scheduled_time": "08:39",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 159
+  },
+  {
+   "station_code": "MRA",
+   "station_name": "Morena",
+   "scheduled_time": "08:57",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 177
+  },
+  {
+   "station_code": "BINA",
+   "station_name": "Bina Jn",
+   "scheduled_time": "12:40",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 400
+  },
+  {
+   "station_code": "BPL",
+   "station_name": "Bhopal Jn",
+   "scheduled_time": "14:12",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 492
+  },
+  {
+   "station_code": "RKMP",
+   "station_name": "Rani Kamlapati",
+   "scheduled_time": "14:40",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 520
+  }
+ ]
+}

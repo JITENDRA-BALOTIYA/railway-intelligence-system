@@ -1,0 +1,49 @@
+{
+ "train_id": "12246",
+ "train_name": "Duronto Express",
+ "train_class": "duronto",
+ "corridor_from": "Smvt Bengaluru",
+ "corridor_to": "Howrah Jn",
+ "total_min": 1790,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "RU",
+   "station_name": "Renigunta Jn",
+   "scheduled_time": "16:35",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 320
+  },
+  {
+   "station_code": "BZA",
+   "station_name": "Vijayawada Jn",
+   "scheduled_time": "22:00",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 645
+  },
+  {
+   "station_code": "VZM",
+   "station_name": "Vizianagram Jn",
+   "scheduled_time": "04:15",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1020
+  },
+  {
+   "station_code": "BBS",
+   "station_name": "Bhubaneswar",
+   "scheduled_time": "09:25",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1330
+  }
+ ]
+}

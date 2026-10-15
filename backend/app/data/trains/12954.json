@@ -1,0 +1,103 @@
+{
+ "train_id": "12954",
+ "train_name": "August Kranti Rajdhani",
+ "train_class": "rajdhani",
+ "corridor_from": "Hazrat Nizamuddin",
+ "corridor_to": "Mumbai Central",
+ "total_min": 1010,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "MTJ",
+   "station_name": "Mathura Jn",
+   "scheduled_time": "18:43",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 88
+  },
+  {
+   "station_code": "SWM",
+   "station_name": "Sawai Madhopur",
+   "scheduled_time": "20:48",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 213
+  },
+  {
+   "station_code": "KOTA",
+   "station_name": "Kota Jn",
+   "scheduled_time": "22:00",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 285
+  },
+  {
+   "station_code": "RTM",
+   "station_name": "Ratlam Jn",
+   "scheduled_time": "01:05",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 470
+  },
+  {
+   "station_code": "BH",
+   "station_name": "Bharuch Jn",
+   "scheduled_time": "05:26",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 731
+  },
+  {
+   "station_code": "ST",
+   "station_name": "Surat",
+   "scheduled_time": "06:13",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 778
+  },
+  {
+   "station_code": "BL",
+   "station_name": "Valsad",
+   "scheduled_time": "07:03",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 828
+  },
+  {
+   "station_code": "VAPI",
+   "station_name": "Vapi",
+   "scheduled_time": "07:23",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 848
+  },
+  {
+   "station_code": "BVI",
+   "station_name": "Borivali",
+   "scheduled_time": "09:08",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 953
+  },
+  {
+   "station_code": "MMCT",
+   "station_name": "Mumbai Central",
+   "scheduled_time": "10:05",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1010
+  }
+ ]
+}

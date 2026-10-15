@@ -1,0 +1,292 @@
+{
+ "train_id": "12925",
+ "train_name": "Paschim Express",
+ "train_class": "express",
+ "corridor_from": "Bandra Terminus",
+ "corridor_to": "Amritsar Jn",
+ "total_min": 1960,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "BVI",
+   "station_name": "Borivali",
+   "scheduled_time": "11:53",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 23
+  },
+  {
+   "station_code": "DRD",
+   "station_name": "Dahanu Road",
+   "scheduled_time": "13:08",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 98
+  },
+  {
+   "station_code": "VAPI",
+   "station_name": "Vapi",
+   "scheduled_time": "13:38",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 128
+  },
+  {
+   "station_code": "BL",
+   "station_name": "Valsad",
+   "scheduled_time": "14:02",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 152
+  },
+  {
+   "station_code": "ST",
+   "station_name": "Surat",
+   "scheduled_time": "15:47",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 257
+  },
+  {
+   "station_code": "BH",
+   "station_name": "Bharuch Jn",
+   "scheduled_time": "16:38",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 308
+  },
+  {
+   "station_code": "MGN",
+   "station_name": "Meghnagar",
+   "scheduled_time": "20:22",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 532
+  },
+  {
+   "station_code": "RTM",
+   "station_name": "Ratlam Jn",
+   "scheduled_time": "21:40",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 610
+  },
+  {
+   "station_code": "KUH",
+   "station_name": "Khachrod",
+   "scheduled_time": "22:14",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 644
+  },
+  {
+   "station_code": "NAD",
+   "station_name": "Nagda Jn",
+   "scheduled_time": "22:55",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 685
+  },
+  {
+   "station_code": "RMA",
+   "station_name": "Ramganj Mandi",
+   "scheduled_time": "00:33",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 783
+  },
+  {
+   "station_code": "KOTA",
+   "station_name": "Kota Jn",
+   "scheduled_time": "01:40",
+   "sequence": 12,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 850
+  },
+  {
+   "station_code": "SWM",
+   "station_name": "Sawai Madhopur",
+   "scheduled_time": "03:03",
+   "sequence": 13,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 933
+  },
+  {
+   "station_code": "GGC",
+   "station_name": "Gangapur City",
+   "scheduled_time": "04:10",
+   "sequence": 14,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1000
+  },
+  {
+   "station_code": "HAN",
+   "station_name": "Hindaun City",
+   "scheduled_time": "04:48",
+   "sequence": 15,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1038
+  },
+  {
+   "station_code": "BXN",
+   "station_name": "Bayana Jn",
+   "scheduled_time": "05:18",
+   "sequence": 16,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1068
+  },
+  {
+   "station_code": "BTE",
+   "station_name": "Bharatpur Jn",
+   "scheduled_time": "06:08",
+   "sequence": 17,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1118
+  },
+  {
+   "station_code": "MTJ",
+   "station_name": "Mathura Jn",
+   "scheduled_time": "07:30",
+   "sequence": 18,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1200
+  },
+  {
+   "station_code": "NDLS",
+   "station_name": "New Delhi",
+   "scheduled_time": "10:40",
+   "sequence": 19,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1390
+  },
+  {
+   "station_code": "SNP",
+   "station_name": "Sonipat Jn",
+   "scheduled_time": "11:48",
+   "sequence": 20,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1458
+  },
+  {
+   "station_code": "PNP",
+   "station_name": "Panipat Jn",
+   "scheduled_time": "12:20",
+   "sequence": 21,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1490
+  },
+  {
+   "station_code": "KUN",
+   "station_name": "Karnal",
+   "scheduled_time": "12:44",
+   "sequence": 22,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1514
+  },
+  {
+   "station_code": "KKDE",
+   "station_name": "Kurukshetra Jn",
+   "scheduled_time": "13:09",
+   "sequence": 23,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1539
+  },
+  {
+   "station_code": "UMB",
+   "station_name": "Ambala Cant Jn",
+   "scheduled_time": "14:30",
+   "sequence": 24,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1620
+  },
+  {
+   "station_code": "CDG",
+   "station_name": "Chandigarh",
+   "scheduled_time": "15:23",
+   "sequence": 25,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1673
+  },
+  {
+   "station_code": "LDH",
+   "station_name": "Ludhiana Jn",
+   "scheduled_time": "17:39",
+   "sequence": 26,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1809
+  },
+  {
+   "station_code": "PGW",
+   "station_name": "Phagwara Jn",
+   "scheduled_time": "18:16",
+   "sequence": 27,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1846
+  },
+  {
+   "station_code": "JRC",
+   "station_name": "Jalandhar Cant",
+   "scheduled_time": "18:35",
+   "sequence": 28,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1865
+  },
+  {
+   "station_code": "JUC",
+   "station_name": "Jalandhar City",
+   "scheduled_time": "18:47",
+   "sequence": 29,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1877
+  },
+  {
+   "station_code": "BEAS",
+   "station_name": "Beas",
+   "scheduled_time": "19:23",
+   "sequence": 30,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1913
+  },
+  {
+   "station_code": "ASR",
+   "station_name": "Amritsar Jn",
+   "scheduled_time": "20:10",
+   "sequence": 31,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1960
+  }
+ ]
+}

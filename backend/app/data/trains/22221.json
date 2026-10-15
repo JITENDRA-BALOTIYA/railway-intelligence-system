@@ -1,0 +1,49 @@
+{
+ "train_id": "22221",
+ "train_name": "Mumbai Vande Bharat",
+ "train_class": "vande_bharat",
+ "corridor_from": "C Shivaji Maharaj T",
+ "corridor_to": "Hazrat Nizamuddin",
+ "total_min": 1075,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "KYN",
+   "station_name": "Kalyan Jn",
+   "scheduled_time": "16:43",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 43
+  },
+  {
+   "station_code": "BSL",
+   "station_name": "Bhusaval Jn",
+   "scheduled_time": "21:15",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 315
+  },
+  {
+   "station_code": "BPL",
+   "station_name": "Bhopal Jn",
+   "scheduled_time": "01:55",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 595
+  },
+  {
+   "station_code": "GWL",
+   "station_name": "Gwalior",
+   "scheduled_time": "06:09",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 849
+  }
+ ]
+}

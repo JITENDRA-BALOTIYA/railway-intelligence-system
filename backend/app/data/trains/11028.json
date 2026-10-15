@@ -1,0 +1,238 @@
+{
+ "train_id": "11028",
+ "train_name": "Mumbai Chennai Mail",
+ "train_class": "mail",
+ "corridor_from": "Satara",
+ "corridor_to": "Dadar",
+ "total_min": 905,
+ "route_partial": false,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "STR",
+   "station_name": "Satara",
+   "scheduled_time": "15:30",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "KRG",
+   "station_name": "Koregaon",
+   "scheduled_time": "15:41",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 11
+  },
+  {
+   "station_code": "MSR",
+   "station_name": "Masur",
+   "scheduled_time": "16:05",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 35
+  },
+  {
+   "station_code": "KRD",
+   "station_name": "Karad",
+   "scheduled_time": "16:22",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 52
+  },
+  {
+   "station_code": "TKR",
+   "station_name": "Takari",
+   "scheduled_time": "16:53",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 83
+  },
+  {
+   "station_code": "KOV",
+   "station_name": "Kirloskarvadi",
+   "scheduled_time": "17:08",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 98
+  },
+  {
+   "station_code": "BVQ",
+   "station_name": "Bhilavdi",
+   "scheduled_time": "17:23",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 113
+  },
+  {
+   "station_code": "SLI",
+   "station_name": "Sangli",
+   "scheduled_time": "17:47",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 137
+  },
+  {
+   "station_code": "KVK",
+   "station_name": "Kavathe Mahankl",
+   "scheduled_time": "19:18",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 228
+  },
+  {
+   "station_code": "JTRD",
+   "station_name": "Jath Road",
+   "scheduled_time": "19:48",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 258
+  },
+  {
+   "station_code": "SGLA",
+   "station_name": "Sangola",
+   "scheduled_time": "20:13",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 283
+  },
+  {
+   "station_code": "PVR",
+   "station_name": "Pandharpur",
+   "scheduled_time": "21:05",
+   "sequence": 12,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 335
+  },
+  {
+   "station_code": "KWV",
+   "station_name": "Kurduvadi",
+   "scheduled_time": "22:00",
+   "sequence": 13,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 390
+  },
+  {
+   "station_code": "KEM",
+   "station_name": "Kem",
+   "scheduled_time": "22:53",
+   "sequence": 14,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 443
+  },
+  {
+   "station_code": "JEUR",
+   "station_name": "Jeur",
+   "scheduled_time": "23:08",
+   "sequence": 15,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 458
+  },
+  {
+   "station_code": "BGVN",
+   "station_name": "Bhigwan",
+   "scheduled_time": "00:13",
+   "sequence": 16,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 523
+  },
+  {
+   "station_code": "DD",
+   "station_name": "Daund Jn",
+   "scheduled_time": "00:50",
+   "sequence": 17,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 560
+  },
+  {
+   "station_code": "KDG",
+   "station_name": "Kedgaon",
+   "scheduled_time": "01:13",
+   "sequence": 18,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 583
+  },
+  {
+   "station_code": "URI",
+   "station_name": "Uruli",
+   "scheduled_time": "01:33",
+   "sequence": 19,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 603
+  },
+  {
+   "station_code": "PUNE",
+   "station_name": "Pune Jn",
+   "scheduled_time": "02:15",
+   "sequence": 20,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 645
+  },
+  {
+   "station_code": "TGN",
+   "station_name": "Talegaon",
+   "scheduled_time": "02:58",
+   "sequence": 21,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 688
+  },
+  {
+   "station_code": "LNL",
+   "station_name": "Lonavala",
+   "scheduled_time": "03:50",
+   "sequence": 22,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 740
+  },
+  {
+   "station_code": "KYN",
+   "station_name": "Kalyan Jn",
+   "scheduled_time": "05:30",
+   "sequence": 23,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 840
+  },
+  {
+   "station_code": "TNA",
+   "station_name": "Thane",
+   "scheduled_time": "05:52",
+   "sequence": 24,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 862
+  },
+  {
+   "station_code": "DR",
+   "station_name": "Dadar",
+   "scheduled_time": "06:35",
+   "sequence": 25,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 905
+  }
+ ]
+}

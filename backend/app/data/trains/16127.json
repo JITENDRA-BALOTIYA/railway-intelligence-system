@@ -1,0 +1,373 @@
+{
+ "train_id": "16127",
+ "train_name": "Guruvayur Express",
+ "train_class": "express",
+ "corridor_from": "Tambaram",
+ "corridor_to": "Guruvayur",
+ "total_min": 1233,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "CGL",
+   "station_name": "Chengalpattu",
+   "scheduled_time": "11:33",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 26
+  },
+  {
+   "station_code": "MLMR",
+   "station_name": "Melmaruvattur",
+   "scheduled_time": "11:58",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 51
+  },
+  {
+   "station_code": "TMV",
+   "station_name": "Tindivanam",
+   "scheduled_time": "12:23",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 76
+  },
+  {
+   "station_code": "VM",
+   "station_name": "Villupuram Jn",
+   "scheduled_time": "13:23",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 136
+  },
+  {
+   "station_code": "VRI",
+   "station_name": "Vridhachalam Jn",
+   "scheduled_time": "14:08",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 181
+  },
+  {
+   "station_code": "PNDM",
+   "station_name": "Pennadam",
+   "scheduled_time": "14:23",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 196
+  },
+  {
+   "station_code": "ALU",
+   "station_name": "Ariyalur",
+   "scheduled_time": "14:49",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 222
+  },
+  {
+   "station_code": "SRGM",
+   "station_name": "Srirangam",
+   "scheduled_time": "15:33",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 266
+  },
+  {
+   "station_code": "TPJ",
+   "station_name": "Tiruchchirapali",
+   "scheduled_time": "16:15",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 308
+  },
+  {
+   "station_code": "MPA",
+   "station_name": "Manaparai",
+   "scheduled_time": "16:44",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 337
+  },
+  {
+   "station_code": "DG",
+   "station_name": "Dindigul Jn",
+   "scheduled_time": "17:22",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 375
+  },
+  {
+   "station_code": "KQN",
+   "station_name": "Kodaikanal Road",
+   "scheduled_time": "17:42",
+   "sequence": 12,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 395
+  },
+  {
+   "station_code": "SDN",
+   "station_name": "Sholavandan",
+   "scheduled_time": "17:57",
+   "sequence": 13,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 410
+  },
+  {
+   "station_code": "KON",
+   "station_name": "Kudalnagar",
+   "scheduled_time": "18:14",
+   "sequence": 14,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 427
+  },
+  {
+   "station_code": "MDU",
+   "station_name": "Madurai Jn",
+   "scheduled_time": "18:40",
+   "sequence": 15,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 453
+  },
+  {
+   "station_code": "VPT",
+   "station_name": "Virudunagar Jn",
+   "scheduled_time": "19:23",
+   "sequence": 16,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 496
+  },
+  {
+   "station_code": "SRT",
+   "station_name": "Satur",
+   "scheduled_time": "19:43",
+   "sequence": 17,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 516
+  },
+  {
+   "station_code": "CVP",
+   "station_name": "Kovilpatti",
+   "scheduled_time": "20:01",
+   "sequence": 18,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 534
+  },
+  {
+   "station_code": "MEJ",
+   "station_name": "Vanchi Maniyachchi",
+   "scheduled_time": "20:38",
+   "sequence": 19,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 571
+  },
+  {
+   "station_code": "TEN",
+   "station_name": "Tirunelveli Jn",
+   "scheduled_time": "21:10",
+   "sequence": 20,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 603
+  },
+  {
+   "station_code": "NNN",
+   "station_name": "Nanguneri",
+   "scheduled_time": "21:35",
+   "sequence": 21,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 628
+  },
+  {
+   "station_code": "VLY",
+   "station_name": "Valliyur",
+   "scheduled_time": "21:47",
+   "sequence": 22,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 640
+  },
+  {
+   "station_code": "AAY",
+   "station_name": "Aralvaymozhi",
+   "scheduled_time": "22:03",
+   "sequence": 23,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 656
+  },
+  {
+   "station_code": "NJT",
+   "station_name": "Nager Coil Town",
+   "scheduled_time": "22:47",
+   "sequence": 24,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 700
+  },
+  {
+   "station_code": "KZT",
+   "station_name": "Kulitthurai",
+   "scheduled_time": "23:18",
+   "sequence": 25,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 731
+  },
+  {
+   "station_code": "CRY",
+   "station_name": "Chirayinkil",
+   "scheduled_time": "00:49",
+   "sequence": 26,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 822
+  },
+  {
+   "station_code": "KVU",
+   "station_name": "Kadakavur",
+   "scheduled_time": "00:53",
+   "sequence": 27,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 826
+  },
+  {
+   "station_code": "PVU",
+   "station_name": "Paravur",
+   "scheduled_time": "01:18",
+   "sequence": 28,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 851
+  },
+  {
+   "station_code": "QLN",
+   "station_name": "Kollam Jn",
+   "scheduled_time": "01:32",
+   "sequence": 29,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 865
+  },
+  {
+   "station_code": "KYJ",
+   "station_name": "Kayankulam Jn",
+   "scheduled_time": "02:05",
+   "sequence": 30,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 898
+  },
+  {
+   "station_code": "HAD",
+   "station_name": "Harippad",
+   "scheduled_time": "02:20",
+   "sequence": 31,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 913
+  },
+  {
+   "station_code": "ALLP",
+   "station_name": "Alleppey",
+   "scheduled_time": "02:57",
+   "sequence": 32,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 950
+  },
+  {
+   "station_code": "SRTL",
+   "station_name": "Shertalai",
+   "scheduled_time": "03:24",
+   "sequence": 33,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 977
+  },
+  {
+   "station_code": "ERS",
+   "station_name": "Ernakulam Jn",
+   "scheduled_time": "04:45",
+   "sequence": 34,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1058
+  },
+  {
+   "station_code": "ERN",
+   "station_name": "Ernakulam Town",
+   "scheduled_time": "04:58",
+   "sequence": 35,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1071
+  },
+  {
+   "station_code": "AFK",
+   "station_name": "Angamali",
+   "scheduled_time": "05:32",
+   "sequence": 36,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1105
+  },
+  {
+   "station_code": "IJK",
+   "station_name": "Irinjalakuda",
+   "scheduled_time": "05:57",
+   "sequence": 37,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1130
+  },
+  {
+   "station_code": "TCR",
+   "station_name": "Thrisur",
+   "scheduled_time": "06:57",
+   "sequence": 38,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1190
+  },
+  {
+   "station_code": "PNQ",
+   "station_name": "Punkunnam",
+   "scheduled_time": "07:03",
+   "sequence": 39,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1196
+  },
+  {
+   "station_code": "GUV",
+   "station_name": "Guruvayur",
+   "scheduled_time": "07:40",
+   "sequence": 40,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1233
+  }
+ ]
+}

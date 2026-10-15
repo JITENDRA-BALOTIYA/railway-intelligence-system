@@ -1,0 +1,328 @@
+{
+ "train_id": "12626",
+ "train_name": "Kerala Express",
+ "train_class": "express",
+ "corridor_from": "New Delhi",
+ "corridor_to": "Thiruvananthapuram Central",
+ "total_min": 2980,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "NDLS",
+   "station_name": "New Delhi",
+   "scheduled_time": "20:10",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "MTJ",
+   "station_name": "Mathura Jn",
+   "scheduled_time": "21:38",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 88
+  },
+  {
+   "station_code": "AGC",
+   "station_name": "Agra Cantt",
+   "scheduled_time": "22:25",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 135
+  },
+  {
+   "station_code": "GWL",
+   "station_name": "Gwalior",
+   "scheduled_time": "00:03",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 233
+  },
+  {
+   "station_code": "BINA",
+   "station_name": "Bina Jn",
+   "scheduled_time": "03:35",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 445
+  },
+  {
+   "station_code": "BPL",
+   "station_name": "Bhopal Jn",
+   "scheduled_time": "05:20",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 550
+  },
+  {
+   "station_code": "ET",
+   "station_name": "Itarsi Jn",
+   "scheduled_time": "07:05",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 655
+  },
+  {
+   "station_code": "NGP",
+   "station_name": "Nagpur",
+   "scheduled_time": "11:45",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 935
+  },
+  {
+   "station_code": "SEGM",
+   "station_name": "Sevagram",
+   "scheduled_time": "12:43",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 993
+  },
+  {
+   "station_code": "RDM",
+   "station_name": "Ramgundam",
+   "scheduled_time": "16:59",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1249
+  },
+  {
+   "station_code": "WL",
+   "station_name": "Warangal",
+   "scheduled_time": "18:28",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1338
+  },
+  {
+   "station_code": "BZA",
+   "station_name": "Vijayawada Jn",
+   "scheduled_time": "22:15",
+   "sequence": 12,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1565
+  },
+  {
+   "station_code": "NLR",
+   "station_name": "Nellore",
+   "scheduled_time": "01:53",
+   "sequence": 13,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1783
+  },
+  {
+   "station_code": "GDR",
+   "station_name": "Gudur Jn",
+   "scheduled_time": "02:33",
+   "sequence": 14,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1823
+  },
+  {
+   "station_code": "RU",
+   "station_name": "Renigunta Jn",
+   "scheduled_time": "04:00",
+   "sequence": 15,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1910
+  },
+  {
+   "station_code": "TPTY",
+   "station_name": "Tirupati",
+   "scheduled_time": "04:35",
+   "sequence": 16,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1945
+  },
+  {
+   "station_code": "CTO",
+   "station_name": "Chittoor",
+   "scheduled_time": "05:53",
+   "sequence": 17,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2023
+  },
+  {
+   "station_code": "KPD",
+   "station_name": "Katpadi Jn",
+   "scheduled_time": "06:45",
+   "sequence": 18,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2075
+  },
+  {
+   "station_code": "SA",
+   "station_name": "Salem Jn",
+   "scheduled_time": "09:37",
+   "sequence": 19,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2247
+  },
+  {
+   "station_code": "ED",
+   "station_name": "Erode Jn",
+   "scheduled_time": "10:45",
+   "sequence": 20,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2315
+  },
+  {
+   "station_code": "CBE",
+   "station_name": "Coimbatore Jn",
+   "scheduled_time": "12:30",
+   "sequence": 21,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2420
+  },
+  {
+   "station_code": "PGT",
+   "station_name": "Palakkad Jn",
+   "scheduled_time": "13:52",
+   "sequence": 22,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2502
+  },
+  {
+   "station_code": "OTP",
+   "station_name": "Ottappalam",
+   "scheduled_time": "14:19",
+   "sequence": 23,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2529
+  },
+  {
+   "station_code": "TCR",
+   "station_name": "Thrisur",
+   "scheduled_time": "15:21",
+   "sequence": 24,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2591
+  },
+  {
+   "station_code": "ERN",
+   "station_name": "Ernakulam Town",
+   "scheduled_time": "16:30",
+   "sequence": 25,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2660
+  },
+  {
+   "station_code": "VARD",
+   "station_name": "Vaikam Road",
+   "scheduled_time": "17:14",
+   "sequence": 26,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2704
+  },
+  {
+   "station_code": "KTYM",
+   "station_name": "Kottayam",
+   "scheduled_time": "17:52",
+   "sequence": 27,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2742
+  },
+  {
+   "station_code": "CGY",
+   "station_name": "Changanaseri",
+   "scheduled_time": "18:13",
+   "sequence": 28,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2763
+  },
+  {
+   "station_code": "TRVL",
+   "station_name": "Tiruvalla",
+   "scheduled_time": "18:23",
+   "sequence": 29,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2773
+  },
+  {
+   "station_code": "CNGR",
+   "station_name": "Chengannur",
+   "scheduled_time": "18:35",
+   "sequence": 30,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2785
+  },
+  {
+   "station_code": "MVLK",
+   "station_name": "Mavelikara",
+   "scheduled_time": "18:49",
+   "sequence": 31,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2799
+  },
+  {
+   "station_code": "KYJ",
+   "station_name": "Kayankulam Jn",
+   "scheduled_time": "19:18",
+   "sequence": 32,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2828
+  },
+  {
+   "station_code": "QLN",
+   "station_name": "Kollam Jn",
+   "scheduled_time": "20:00",
+   "sequence": 33,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2870
+  },
+  {
+   "station_code": "VAK",
+   "station_name": "Varkala",
+   "scheduled_time": "20:22",
+   "sequence": 34,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2892
+  },
+  {
+   "station_code": "TVP",
+   "station_name": "Trivandrum Pett",
+   "scheduled_time": "20:59",
+   "sequence": 35,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2929
+  }
+ ]
+}

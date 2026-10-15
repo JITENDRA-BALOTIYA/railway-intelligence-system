@@ -1,0 +1,148 @@
+{
+ "train_id": "12632",
+ "train_name": "Nellai Express",
+ "train_class": "express",
+ "corridor_from": "Tirunelveli",
+ "corridor_to": "Chennai Egmore",
+ "total_min": 620,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "TEN",
+   "station_name": "Tirunelveli Jn",
+   "scheduled_time": "20:50",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "CVP",
+   "station_name": "Kovilpatti",
+   "scheduled_time": "21:38",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 48
+  },
+  {
+   "station_code": "SRT",
+   "station_name": "Satur",
+   "scheduled_time": "21:55",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 65
+  },
+  {
+   "station_code": "VPT",
+   "station_name": "Virudunagar Jn",
+   "scheduled_time": "22:18",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 88
+  },
+  {
+   "station_code": "MDU",
+   "station_name": "Madurai Jn",
+   "scheduled_time": "23:05",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 135
+  },
+  {
+   "station_code": "SDN",
+   "station_name": "Sholavandan",
+   "scheduled_time": "23:29",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 159
+  },
+  {
+   "station_code": "DG",
+   "station_name": "Dindigul Jn",
+   "scheduled_time": "00:12",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 202
+  },
+  {
+   "station_code": "TPJ",
+   "station_name": "Tiruchchirapali",
+   "scheduled_time": "01:10",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 260
+  },
+  {
+   "station_code": "VRI",
+   "station_name": "Vridhachalam Jn",
+   "scheduled_time": "02:44",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 354
+  },
+  {
+   "station_code": "VM",
+   "station_name": "Villupuram Jn",
+   "scheduled_time": "03:38",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 408
+  },
+  {
+   "station_code": "TMV",
+   "station_name": "Tindivanam",
+   "scheduled_time": "04:13",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 443
+  },
+  {
+   "station_code": "MLMR",
+   "station_name": "Melmaruvattur",
+   "scheduled_time": "04:38",
+   "sequence": 12,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 468
+  },
+  {
+   "station_code": "CGL",
+   "station_name": "Chengalpattu",
+   "scheduled_time": "05:13",
+   "sequence": 13,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 503
+  },
+  {
+   "station_code": "TBM",
+   "station_name": "Tambaram",
+   "scheduled_time": "05:43",
+   "sequence": 14,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 533
+  },
+  {
+   "station_code": "MBM",
+   "station_name": "Mambalam",
+   "scheduled_time": "06:03",
+   "sequence": 15,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 553
+  }
+ ]
+}

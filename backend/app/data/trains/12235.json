@@ -1,0 +1,94 @@
+{
+ "train_id": "12235",
+ "train_name": "Duronto Express",
+ "train_class": "duronto",
+ "corridor_from": "Madhupur Jn",
+ "corridor_to": "Anand Vihar Terminal",
+ "total_min": 1065,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "MDP",
+   "station_name": "Madhupur Jn",
+   "scheduled_time": "17:05",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "JSME",
+   "station_name": "Jasidih Jn",
+   "scheduled_time": "17:25",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 20
+  },
+  {
+   "station_code": "JAJ",
+   "station_name": "Jhajha",
+   "scheduled_time": "18:30",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 85
+  },
+  {
+   "station_code": "MKA",
+   "station_name": "Mokameh Jn",
+   "scheduled_time": "19:36",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 151
+  },
+  {
+   "station_code": "PNBE",
+   "station_name": "Patna Jn",
+   "scheduled_time": "21:28",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 263
+  },
+  {
+   "station_code": "ARA",
+   "station_name": "Ara",
+   "scheduled_time": "22:11",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 306
+  },
+  {
+   "station_code": "BXR",
+   "station_name": "Buxar",
+   "scheduled_time": "22:56",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 351
+  },
+  {
+   "station_code": "PRYJ",
+   "station_name": "Prayagraj Jn",
+   "scheduled_time": "03:20",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 615
+  },
+  {
+   "station_code": "CNB",
+   "station_name": "Kanpur Central",
+   "scheduled_time": "05:25",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 740
+  }
+ ]
+}

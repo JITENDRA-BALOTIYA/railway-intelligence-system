@@ -1,0 +1,67 @@
+{
+ "train_id": "12236",
+ "train_name": "Duronto Express",
+ "train_class": "duronto",
+ "corridor_from": "Anand Vihar Terminal",
+ "corridor_to": "Madhupur Jn",
+ "total_min": 1020,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "PRYJ",
+   "station_name": "Prayagraj Jn",
+   "scheduled_time": "00:23",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 423
+  },
+  {
+   "station_code": "BXR",
+   "station_name": "Buxar",
+   "scheduled_time": "03:40",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 620
+  },
+  {
+   "station_code": "ARA",
+   "station_name": "Ara",
+   "scheduled_time": "04:25",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 665
+  },
+  {
+   "station_code": "JAJ",
+   "station_name": "Jhajha",
+   "scheduled_time": "08:50",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 930
+  },
+  {
+   "station_code": "JSME",
+   "station_name": "Jasidih Jn",
+   "scheduled_time": "09:25",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 965
+  },
+  {
+   "station_code": "MDP",
+   "station_name": "Madhupur Jn",
+   "scheduled_time": "10:20",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1020
+  }
+ ]
+}

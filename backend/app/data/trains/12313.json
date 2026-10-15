@@ -1,0 +1,76 @@
+{
+ "train_id": "12313",
+ "train_name": "Sealdah Rajdhani",
+ "train_class": "rajdhani",
+ "corridor_from": "Sealdah",
+ "corridor_to": "New Delhi",
+ "total_min": 1080,
+ "route_partial": false,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "SDAH",
+   "station_name": "Sealdah",
+   "scheduled_time": "16:50",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "DGR",
+   "station_name": "Durgapur",
+   "scheduled_time": "18:38",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 108
+  },
+  {
+   "station_code": "ASN",
+   "station_name": "Asansol Jn",
+   "scheduled_time": "19:06",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 136
+  },
+  {
+   "station_code": "DHN",
+   "station_name": "Dhanbad Jn",
+   "scheduled_time": "20:20",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 210
+  },
+  {
+   "station_code": "GAYA",
+   "station_name": "Gaya Jn",
+   "scheduled_time": "22:57",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 367
+  },
+  {
+   "station_code": "CNB",
+   "station_name": "Kanpur Central",
+   "scheduled_time": "05:15",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 745
+  },
+  {
+   "station_code": "NDLS",
+   "station_name": "New Delhi",
+   "scheduled_time": "10:50",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1080
+  }
+ ]
+}

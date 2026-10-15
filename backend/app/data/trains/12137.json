@@ -1,0 +1,418 @@
+{
+ "train_id": "12137",
+ "train_name": "Punjab Mail",
+ "train_class": "mail",
+ "corridor_from": "C Shivaji Maharaj T",
+ "corridor_to": "Firozpur Cantt Jn",
+ "total_min": 2020,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "DR",
+   "station_name": "Dadar",
+   "scheduled_time": "19:47",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 12
+  },
+  {
+   "station_code": "KYN",
+   "station_name": "Kalyan Jn",
+   "scheduled_time": "20:32",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 57
+  },
+  {
+   "station_code": "KSRA",
+   "station_name": "Kasara",
+   "scheduled_time": "21:42",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 127
+  },
+  {
+   "station_code": "MMR",
+   "station_name": "Manmad Jn",
+   "scheduled_time": "00:07",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 272
+  },
+  {
+   "station_code": "CSN",
+   "station_name": "Chalisgaon Jn",
+   "scheduled_time": "00:53",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 318
+  },
+  {
+   "station_code": "JL",
+   "station_name": "Jalgaon Jn",
+   "scheduled_time": "02:03",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 388
+  },
+  {
+   "station_code": "BSL",
+   "station_name": "Bhusaval Jn",
+   "scheduled_time": "02:40",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 425
+  },
+  {
+   "station_code": "BAU",
+   "station_name": "Burhanpur",
+   "scheduled_time": "03:28",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 473
+  },
+  {
+   "station_code": "KNW",
+   "station_name": "Khandwa",
+   "scheduled_time": "04:52",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 557
+  },
+  {
+   "station_code": "KKN",
+   "station_name": "Khirkiya",
+   "scheduled_time": "05:40",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 605
+  },
+  {
+   "station_code": "HD",
+   "station_name": "Harda",
+   "scheduled_time": "06:01",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 626
+  },
+  {
+   "station_code": "BPF",
+   "station_name": "Banapura",
+   "scheduled_time": "06:31",
+   "sequence": 12,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 656
+  },
+  {
+   "station_code": "ET",
+   "station_name": "Itarsi Jn",
+   "scheduled_time": "07:30",
+   "sequence": 13,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 715
+  },
+  {
+   "station_code": "NDPM",
+   "station_name": "Narmadapuram",
+   "scheduled_time": "07:58",
+   "sequence": 14,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 743
+  },
+  {
+   "station_code": "RKMP",
+   "station_name": "Rani Kamlapati",
+   "scheduled_time": "09:28",
+   "sequence": 15,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 833
+  },
+  {
+   "station_code": "BPL",
+   "station_name": "Bhopal Jn",
+   "scheduled_time": "09:45",
+   "sequence": 16,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 850
+  },
+  {
+   "station_code": "BHS",
+   "station_name": "Vidisha",
+   "scheduled_time": "10:25",
+   "sequence": 17,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 890
+  },
+  {
+   "station_code": "BAQ",
+   "station_name": "Ganj Basoda",
+   "scheduled_time": "10:51",
+   "sequence": 18,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 916
+  },
+  {
+   "station_code": "BINA",
+   "station_name": "Bina Jn",
+   "scheduled_time": "12:00",
+   "sequence": 19,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 985
+  },
+  {
+   "station_code": "LAR",
+   "station_name": "Lalitpur",
+   "scheduled_time": "12:50",
+   "sequence": 20,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1035
+  },
+  {
+   "station_code": "BAB",
+   "station_name": "Babina",
+   "scheduled_time": "13:35",
+   "sequence": 21,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1080
+  },
+  {
+   "station_code": "DAA",
+   "station_name": "Datia",
+   "scheduled_time": "14:44",
+   "sequence": 22,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1149
+  },
+  {
+   "station_code": "GWL",
+   "station_name": "Gwalior",
+   "scheduled_time": "15:40",
+   "sequence": 23,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1205
+  },
+  {
+   "station_code": "MRA",
+   "station_name": "Morena",
+   "scheduled_time": "16:15",
+   "sequence": 24,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1240
+  },
+  {
+   "station_code": "DHO",
+   "station_name": "Dhaulpur",
+   "scheduled_time": "17:20",
+   "sequence": 25,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1305
+  },
+  {
+   "station_code": "AGC",
+   "station_name": "Agra Cantt",
+   "scheduled_time": "18:00",
+   "sequence": 26,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1345
+  },
+  {
+   "station_code": "RKM",
+   "station_name": "Raja Ki Mandi",
+   "scheduled_time": "18:13",
+   "sequence": 27,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1358
+  },
+  {
+   "station_code": "MTJ",
+   "station_name": "Mathura Jn",
+   "scheduled_time": "18:45",
+   "sequence": 28,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1390
+  },
+  {
+   "station_code": "KSV",
+   "station_name": "Kosi Kalan",
+   "scheduled_time": "19:16",
+   "sequence": 29,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1421
+  },
+  {
+   "station_code": "FDB",
+   "station_name": "Faridabad",
+   "scheduled_time": "20:35",
+   "sequence": 30,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1500
+  },
+  {
+   "station_code": "NDLS",
+   "station_name": "New Delhi",
+   "scheduled_time": "21:25",
+   "sequence": 31,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1550
+  },
+  {
+   "station_code": "DKZ",
+   "station_name": "Delhi Kishangnj",
+   "scheduled_time": "21:54",
+   "sequence": 32,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1579
+  },
+  {
+   "station_code": "SSB",
+   "station_name": "Shakurbasti",
+   "scheduled_time": "22:08",
+   "sequence": 33,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1593
+  },
+  {
+   "station_code": "BGZ",
+   "station_name": "Bahadurgarh",
+   "scheduled_time": "22:26",
+   "sequence": 34,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1611
+  },
+  {
+   "station_code": "ROK",
+   "station_name": "Rohtak Jn",
+   "scheduled_time": "22:56",
+   "sequence": 35,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1641
+  },
+  {
+   "station_code": "JIND",
+   "station_name": "Jind Jn",
+   "scheduled_time": "23:44",
+   "sequence": 36,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1689
+  },
+  {
+   "station_code": "NRW",
+   "station_name": "Narwana Jn",
+   "scheduled_time": "00:11",
+   "sequence": 37,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1716
+  },
+  {
+   "station_code": "JHL",
+   "station_name": "Jakhal Jn",
+   "scheduled_time": "00:53",
+   "sequence": 38,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1758
+  },
+  {
+   "station_code": "BRZ",
+   "station_name": "Bareta",
+   "scheduled_time": "01:06",
+   "sequence": 39,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1771
+  },
+  {
+   "station_code": "MSZ",
+   "station_name": "Mansa",
+   "scheduled_time": "01:35",
+   "sequence": 40,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1800
+  },
+  {
+   "station_code": "MAUR",
+   "station_name": "Maur",
+   "scheduled_time": "01:51",
+   "sequence": 41,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1816
+  },
+  {
+   "station_code": "BTI",
+   "station_name": "Bhatinda Jn",
+   "scheduled_time": "02:55",
+   "sequence": 42,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1880
+  },
+  {
+   "station_code": "GNA",
+   "station_name": "Goneana Bhai Jagta",
+   "scheduled_time": "03:17",
+   "sequence": 43,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1902
+  },
+  {
+   "station_code": "FDK",
+   "station_name": "Faridkot",
+   "scheduled_time": "04:05",
+   "sequence": 44,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1950
+  },
+  {
+   "station_code": "FZR",
+   "station_name": "Firozpur Cant",
+   "scheduled_time": "05:15",
+   "sequence": 45,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2020
+  }
+ ]
+}

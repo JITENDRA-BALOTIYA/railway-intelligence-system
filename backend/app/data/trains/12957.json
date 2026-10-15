@@ -1,0 +1,85 @@
+{
+ "train_id": "12957",
+ "train_name": "Swarna Jayanti Rajdhani",
+ "train_class": "rajdhani",
+ "corridor_from": "Sabarmati Bg",
+ "corridor_to": "New Delhi",
+ "total_min": 730,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "SBIB",
+   "station_name": "Sabarmati Bg",
+   "scheduled_time": "19:20",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "MSH",
+   "station_name": "Mahesana Jn",
+   "scheduled_time": "20:03",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 43
+  },
+  {
+   "station_code": "ABR",
+   "station_name": "Abu Road",
+   "scheduled_time": "21:38",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 138
+  },
+  {
+   "station_code": "FA",
+   "station_name": "Falna",
+   "scheduled_time": "22:50",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 210
+  },
+  {
+   "station_code": "AII",
+   "station_name": "Ajmer Jn",
+   "scheduled_time": "01:05",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 345
+  },
+  {
+   "station_code": "JP",
+   "station_name": "Jaipur",
+   "scheduled_time": "02:40",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 440
+  },
+  {
+   "station_code": "GGN",
+   "station_name": "Gurgaon",
+   "scheduled_time": "06:24",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 664
+  },
+  {
+   "station_code": "DEC",
+   "station_name": "Delhi Cantt",
+   "scheduled_time": "06:40",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 680
+  }
+ ]
+}

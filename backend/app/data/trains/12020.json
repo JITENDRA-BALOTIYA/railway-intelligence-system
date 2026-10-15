@@ -1,0 +1,67 @@
+{
+ "train_id": "12020",
+ "train_name": "Shatabdi",
+ "train_class": "shatabdi",
+ "corridor_from": "Ranchi",
+ "corridor_to": "Howrah Jn",
+ "total_min": 455,
+ "route_partial": false,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "RNC",
+   "station_name": "Ranchi",
+   "scheduled_time": "13:45",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "CRP",
+   "station_name": "Chandrapura",
+   "scheduled_time": "16:31",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 166
+  },
+  {
+   "station_code": "DHN",
+   "station_name": "Dhanbad Jn",
+   "scheduled_time": "17:35",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 230
+  },
+  {
+   "station_code": "ASN",
+   "station_name": "Asansol Jn",
+   "scheduled_time": "18:27",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 282
+  },
+  {
+   "station_code": "RNG",
+   "station_name": "Raniganj",
+   "scheduled_time": "18:44",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 299
+  },
+  {
+   "station_code": "HWH",
+   "station_name": "Howrah Jn",
+   "scheduled_time": "21:20",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 455
+  }
+ ]
+}
