@@ -1,0 +1,175 @@
+{
+ "train_id": "22652",
+ "train_name": "Palakkad Superfast",
+ "train_class": "express",
+ "corridor_from": "Palakkad",
+ "corridor_to": "Mgr Chennai Ctr",
+ "total_min": 715,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "PGT",
+   "station_name": "Palakkad Jn",
+   "scheduled_time": "15:50",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "PGTN",
+   "station_name": "Palghat Town",
+   "scheduled_time": "16:02",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 12
+  },
+  {
+   "station_code": "POY",
+   "station_name": "Pollachi Jn",
+   "scheduled_time": "16:47",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 57
+  },
+  {
+   "station_code": "UDT",
+   "station_name": "Udumalaippettai",
+   "scheduled_time": "17:13",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 83
+  },
+  {
+   "station_code": "PLNI",
+   "station_name": "Palani",
+   "scheduled_time": "17:47",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 117
+  },
+  {
+   "station_code": "ODC",
+   "station_name": "Oddanchatram",
+   "scheduled_time": "18:13",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 143
+  },
+  {
+   "station_code": "DG",
+   "station_name": "Dindigul Jn",
+   "scheduled_time": "19:25",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 215
+  },
+  {
+   "station_code": "KRR",
+   "station_name": "Karur",
+   "scheduled_time": "20:28",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 278
+  },
+  {
+   "station_code": "MONR",
+   "station_name": "Mohanur",
+   "scheduled_time": "20:46",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 296
+  },
+  {
+   "station_code": "NMKL",
+   "station_name": "Namakkal",
+   "scheduled_time": "21:02",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 312
+  },
+  {
+   "station_code": "RASP",
+   "station_name": "Rasipuram",
+   "scheduled_time": "21:24",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 334
+  },
+  {
+   "station_code": "SA",
+   "station_name": "Salem Jn",
+   "scheduled_time": "22:00",
+   "sequence": 12,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 370
+  },
+  {
+   "station_code": "MAP",
+   "station_name": "Morappur",
+   "scheduled_time": "22:59",
+   "sequence": 13,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 429
+  },
+  {
+   "station_code": "JTJ",
+   "station_name": "Jolarpettai",
+   "scheduled_time": "00:08",
+   "sequence": 14,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 498
+  },
+  {
+   "station_code": "GYM",
+   "station_name": "Gudiyattam",
+   "scheduled_time": "00:53",
+   "sequence": 15,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 543
+  },
+  {
+   "station_code": "KPD",
+   "station_name": "Katpadi Jn",
+   "scheduled_time": "01:18",
+   "sequence": 16,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 568
+  },
+  {
+   "station_code": "AJJ",
+   "station_name": "Arakkonam",
+   "scheduled_time": "02:13",
+   "sequence": 17,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 623
+  },
+  {
+   "station_code": "TRL",
+   "station_name": "Tiruvallur",
+   "scheduled_time": "02:38",
+   "sequence": 18,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 648
+  }
+ ]
+}

@@ -1,0 +1,166 @@
+{
+ "train_id": "22602",
+ "train_name": "Chennai Intercity",
+ "train_class": "express",
+ "corridor_from": "Sainagar Shirdi",
+ "corridor_to": "Mgr Chennai Ctr",
+ "total_min": 1470,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "SNSI",
+   "station_name": "Sainagar Shirdi",
+   "scheduled_time": "08:55",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "DD",
+   "station_name": "Daund Jn",
+   "scheduled_time": "12:05",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 190
+  },
+  {
+   "station_code": "SUR",
+   "station_name": "Solapur Jn",
+   "scheduled_time": "14:20",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 325
+  },
+  {
+   "station_code": "KLBG",
+   "station_name": "Kalaburagi Jn",
+   "scheduled_time": "15:57",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 422
+  },
+  {
+   "station_code": "RC",
+   "station_name": "Raichur",
+   "scheduled_time": "18:28",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 573
+  },
+  {
+   "station_code": "AD",
+   "station_name": "Adoni",
+   "scheduled_time": "19:28",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 633
+  },
+  {
+   "station_code": "GTL",
+   "station_name": "Guntakal Jn",
+   "scheduled_time": "20:40",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 705
+  },
+  {
+   "station_code": "ATP",
+   "station_name": "Anantapur",
+   "scheduled_time": "21:48",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 773
+  },
+  {
+   "station_code": "DMM",
+   "station_name": "Dharmavaram Jn",
+   "scheduled_time": "23:05",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 850
+  },
+  {
+   "station_code": "HUP",
+   "station_name": "Hindupur",
+   "scheduled_time": "00:24",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 929
+  },
+  {
+   "station_code": "YNK",
+   "station_name": "Yelhanka Jn",
+   "scheduled_time": "01:40",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1005
+  },
+  {
+   "station_code": "KJM",
+   "station_name": "Krishnarajapurm",
+   "scheduled_time": "02:58",
+   "sequence": 12,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1083
+  },
+  {
+   "station_code": "MLO",
+   "station_name": "Malur",
+   "scheduled_time": "03:28",
+   "sequence": 13,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1113
+  },
+  {
+   "station_code": "BWT",
+   "station_name": "Bangarapet",
+   "scheduled_time": "03:53",
+   "sequence": 14,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1138
+  },
+  {
+   "station_code": "KPN",
+   "station_name": "Kuppam",
+   "scheduled_time": "04:23",
+   "sequence": 15,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1168
+  },
+  {
+   "station_code": "JTJ",
+   "station_name": "Jolarpettai",
+   "scheduled_time": "05:40",
+   "sequence": 16,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1245
+  },
+  {
+   "station_code": "KPD",
+   "station_name": "Katpadi Jn",
+   "scheduled_time": "07:03",
+   "sequence": 17,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1328
+  }
+ ]
+}

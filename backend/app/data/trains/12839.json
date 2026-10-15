@@ -1,0 +1,310 @@
+{
+ "train_id": "12839",
+ "train_name": "Howrah Mail",
+ "train_class": "mail",
+ "corridor_from": "Howrah Jn",
+ "corridor_to": "Mgr Chennai Ctr",
+ "total_min": 1655,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "HWH",
+   "station_name": "Howrah Jn",
+   "scheduled_time": "23:45",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "KGP",
+   "station_name": "Kharagpur Jn",
+   "scheduled_time": "01:20",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 95
+  },
+  {
+   "station_code": "BLS",
+   "station_name": "Balasore",
+   "scheduled_time": "02:45",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 180
+  },
+  {
+   "station_code": "BHC",
+   "station_name": "Bhadrakh",
+   "scheduled_time": "03:50",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 245
+  },
+  {
+   "station_code": "CTC",
+   "station_name": "Cuttack",
+   "scheduled_time": "05:20",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 335
+  },
+  {
+   "station_code": "BBS",
+   "station_name": "Bhubaneswar",
+   "scheduled_time": "05:55",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 370
+  },
+  {
+   "station_code": "KUR",
+   "station_name": "Khurda Road Jn",
+   "scheduled_time": "06:30",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 405
+  },
+  {
+   "station_code": "BALU",
+   "station_name": "Balugan",
+   "scheduled_time": "07:28",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 463
+  },
+  {
+   "station_code": "CAP",
+   "station_name": "Chatrapur",
+   "scheduled_time": "08:08",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 503
+  },
+  {
+   "station_code": "BAM",
+   "station_name": "Brahmapur",
+   "scheduled_time": "08:20",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 515
+  },
+  {
+   "station_code": "IPM",
+   "station_name": "Ichchpuram",
+   "scheduled_time": "08:53",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 548
+  },
+  {
+   "station_code": "SPT",
+   "station_name": "Sompeta",
+   "scheduled_time": "09:13",
+   "sequence": 12,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 568
+  },
+  {
+   "station_code": "PSA",
+   "station_name": "Palasa",
+   "scheduled_time": "10:22",
+   "sequence": 13,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 637
+  },
+  {
+   "station_code": "NWP",
+   "station_name": "Naupada Jn",
+   "scheduled_time": "10:53",
+   "sequence": 14,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 668
+  },
+  {
+   "station_code": "CHE",
+   "station_name": "Srikakulam Road",
+   "scheduled_time": "11:30",
+   "sequence": 15,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 705
+  },
+  {
+   "station_code": "CPP",
+   "station_name": "Chipurupalle",
+   "scheduled_time": "11:58",
+   "sequence": 16,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 733
+  },
+  {
+   "station_code": "VZM",
+   "station_name": "Vizianagram Jn",
+   "scheduled_time": "12:35",
+   "sequence": 17,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 770
+  },
+  {
+   "station_code": "VSKP",
+   "station_name": "Visakhapatnam",
+   "scheduled_time": "13:50",
+   "sequence": 18,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 845
+  },
+  {
+   "station_code": "AKP",
+   "station_name": "Anakapalle",
+   "scheduled_time": "14:59",
+   "sequence": 19,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 914
+  },
+  {
+   "station_code": "TUNI",
+   "station_name": "Tuni",
+   "scheduled_time": "15:44",
+   "sequence": 20,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 959
+  },
+  {
+   "station_code": "ANV",
+   "station_name": "Annavaram",
+   "scheduled_time": "16:09",
+   "sequence": 21,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 984
+  },
+  {
+   "station_code": "SLO",
+   "station_name": "Samalkot Jn",
+   "scheduled_time": "16:44",
+   "sequence": 22,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1019
+  },
+  {
+   "station_code": "RJY",
+   "station_name": "Rajamundry",
+   "scheduled_time": "17:28",
+   "sequence": 23,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1063
+  },
+  {
+   "station_code": "NDD",
+   "station_name": "Nidadavolu Jn",
+   "scheduled_time": "17:58",
+   "sequence": 24,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1093
+  },
+  {
+   "station_code": "TDD",
+   "station_name": "Tadepalligudem",
+   "scheduled_time": "18:29",
+   "sequence": 25,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1124
+  },
+  {
+   "station_code": "EE",
+   "station_name": "Eluru",
+   "scheduled_time": "18:59",
+   "sequence": 26,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1154
+  },
+  {
+   "station_code": "BZA",
+   "station_name": "Vijayawada Jn",
+   "scheduled_time": "20:10",
+   "sequence": 27,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1225
+  },
+  {
+   "station_code": "TEL",
+   "station_name": "Tenali Jn",
+   "scheduled_time": "20:49",
+   "sequence": 28,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1264
+  },
+  {
+   "station_code": "BPP",
+   "station_name": "Bapatla",
+   "scheduled_time": "21:24",
+   "sequence": 29,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1299
+  },
+  {
+   "station_code": "CLX",
+   "station_name": "Chirala",
+   "scheduled_time": "21:44",
+   "sequence": 30,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1319
+  },
+  {
+   "station_code": "OGL",
+   "station_name": "Ongole",
+   "scheduled_time": "22:24",
+   "sequence": 31,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1359
+  },
+  {
+   "station_code": "NLR",
+   "station_name": "Nellore",
+   "scheduled_time": "00:04",
+   "sequence": 32,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1459
+  },
+  {
+   "station_code": "GDR",
+   "station_name": "Gudur Jn",
+   "scheduled_time": "00:48",
+   "sequence": 33,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1503
+  }
+ ]
+}

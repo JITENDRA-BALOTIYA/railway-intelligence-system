@@ -1,0 +1,193 @@
+{
+ "train_id": "12367",
+ "train_name": "Vikramshila Express",
+ "train_class": "express",
+ "corridor_from": "Bhagalpur",
+ "corridor_to": "Anand Vihar Terminal",
+ "total_min": 1165,
+ "route_partial": false,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "BGP",
+   "station_name": "Bhagalpur",
+   "scheduled_time": "11:55",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "SGG",
+   "station_name": "Sultanganj",
+   "scheduled_time": "12:08",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 13
+  },
+  {
+   "station_code": "BUP",
+   "station_name": "Bariarpur",
+   "scheduled_time": "12:32",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 37
+  },
+  {
+   "station_code": "JMP",
+   "station_name": "Jamalpur Jn",
+   "scheduled_time": "12:49",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 54
+  },
+  {
+   "station_code": "DRH",
+   "station_name": "Dharhara",
+   "scheduled_time": "13:07",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 72
+  },
+  {
+   "station_code": "AHA",
+   "station_name": "Abhaipur",
+   "scheduled_time": "13:20",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 85
+  },
+  {
+   "station_code": "KJH",
+   "station_name": "Kajra",
+   "scheduled_time": "13:30",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 95
+  },
+  {
+   "station_code": "KIUL",
+   "station_name": "Kiul Jn",
+   "scheduled_time": "14:15",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 140
+  },
+  {
+   "station_code": "BRYA",
+   "station_name": "Barhiya",
+   "scheduled_time": "14:45",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 170
+  },
+  {
+   "station_code": "HTZ",
+   "station_name": "Hathidah Jn",
+   "scheduled_time": "14:56",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 181
+  },
+  {
+   "station_code": "MKA",
+   "station_name": "Mokameh Jn",
+   "scheduled_time": "15:06",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 191
+  },
+  {
+   "station_code": "BARH",
+   "station_name": "Barh",
+   "scheduled_time": "15:25",
+   "sequence": 12,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 210
+  },
+  {
+   "station_code": "BKP",
+   "station_name": "Bakhtiyarpur Jn",
+   "scheduled_time": "15:41",
+   "sequence": 13,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 226
+  },
+  {
+   "station_code": "FUT",
+   "station_name": "Fatuha Jn",
+   "scheduled_time": "16:06",
+   "sequence": 14,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 251
+  },
+  {
+   "station_code": "PNC",
+   "station_name": "Patna Saheb",
+   "scheduled_time": "16:20",
+   "sequence": 15,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 265
+  },
+  {
+   "station_code": "PNBE",
+   "station_name": "Patna Jn",
+   "scheduled_time": "16:48",
+   "sequence": 16,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 293
+  },
+  {
+   "station_code": "ARA",
+   "station_name": "Ara",
+   "scheduled_time": "17:28",
+   "sequence": 17,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 333
+  },
+  {
+   "station_code": "BXR",
+   "station_name": "Buxar",
+   "scheduled_time": "18:10",
+   "sequence": 18,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 375
+  },
+  {
+   "station_code": "CNB",
+   "station_name": "Kanpur Central",
+   "scheduled_time": "01:05",
+   "sequence": 19,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 790
+  },
+  {
+   "station_code": "ANVT",
+   "station_name": "Anand Vihar Trm",
+   "scheduled_time": "07:20",
+   "sequence": 20,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1165
+  }
+ ]
+}

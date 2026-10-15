@@ -1,0 +1,238 @@
+{
+ "train_id": "17058",
+ "train_name": "Devagiri Express",
+ "train_class": "express",
+ "corridor_from": "Lingampalli",
+ "corridor_to": "C Shivaji Maharaj T",
+ "total_min": 1125,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "LPI",
+   "station_name": "Lingampalli",
+   "scheduled_time": "12:25",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "BMT",
+   "station_name": "Begumpet",
+   "scheduled_time": "12:54",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 29
+  },
+  {
+   "station_code": "BMO",
+   "station_name": "Bolarum",
+   "scheduled_time": "13:47",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 82
+  },
+  {
+   "station_code": "MZL",
+   "station_name": "Mirzapali",
+   "scheduled_time": "14:34",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 129
+  },
+  {
+   "station_code": "AKE",
+   "station_name": "Akanapet",
+   "scheduled_time": "14:44",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 139
+  },
+  {
+   "station_code": "KMC",
+   "station_name": "Kamareddi",
+   "scheduled_time": "15:08",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 163
+  },
+  {
+   "station_code": "NZB",
+   "station_name": "Nizamabad",
+   "scheduled_time": "15:55",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 210
+  },
+  {
+   "station_code": "BSX",
+   "station_name": "Basar",
+   "scheduled_time": "16:28",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 243
+  },
+  {
+   "station_code": "DAB",
+   "station_name": "Dharmabad",
+   "scheduled_time": "16:44",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 259
+  },
+  {
+   "station_code": "UMRI",
+   "station_name": "Umri",
+   "scheduled_time": "17:29",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 304
+  },
+  {
+   "station_code": "MUE",
+   "station_name": "Mudkhed",
+   "scheduled_time": "18:13",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 348
+  },
+  {
+   "station_code": "NED",
+   "station_name": "H Sahib Nanded",
+   "scheduled_time": "18:45",
+   "sequence": 12,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 380
+  },
+  {
+   "station_code": "PAU",
+   "station_name": "Purna Jn",
+   "scheduled_time": "19:35",
+   "sequence": 13,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 430
+  },
+  {
+   "station_code": "PBN",
+   "station_name": "Parbhani Jn",
+   "scheduled_time": "20:20",
+   "sequence": 14,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 475
+  },
+  {
+   "station_code": "MVO",
+   "station_name": "Manwath Road",
+   "scheduled_time": "20:45",
+   "sequence": 15,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 500
+  },
+  {
+   "station_code": "SELU",
+   "station_name": "Selu",
+   "scheduled_time": "21:04",
+   "sequence": 16,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 519
+  },
+  {
+   "station_code": "PTU",
+   "station_name": "Partur",
+   "scheduled_time": "21:29",
+   "sequence": 17,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 544
+  },
+  {
+   "station_code": "LSR",
+   "station_name": "Lasur",
+   "scheduled_time": "23:58",
+   "sequence": 18,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 693
+  },
+  {
+   "station_code": "RGO",
+   "station_name": "Rotegaon",
+   "scheduled_time": "00:25",
+   "sequence": 19,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 720
+  },
+  {
+   "station_code": "MMR",
+   "station_name": "Manmad Jn",
+   "scheduled_time": "01:45",
+   "sequence": 20,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 800
+  },
+  {
+   "station_code": "NK",
+   "station_name": "Nasik Road",
+   "scheduled_time": "02:45",
+   "sequence": 21,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 860
+  },
+  {
+   "station_code": "IGP",
+   "station_name": "Igatpuri",
+   "scheduled_time": "04:08",
+   "sequence": 22,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 943
+  },
+  {
+   "station_code": "KYN",
+   "station_name": "Kalyan Jn",
+   "scheduled_time": "05:42",
+   "sequence": 23,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1037
+  },
+  {
+   "station_code": "TNA",
+   "station_name": "Thane",
+   "scheduled_time": "06:00",
+   "sequence": 24,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1055
+  },
+  {
+   "station_code": "DR",
+   "station_name": "Dadar",
+   "scheduled_time": "06:29",
+   "sequence": 25,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1084
+  }
+ ]
+}

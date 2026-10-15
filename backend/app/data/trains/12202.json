@@ -1,0 +1,193 @@
+{
+ "train_id": "12202",
+ "train_name": "Garib Rath",
+ "train_class": "express",
+ "corridor_from": "Thiruvananthapuram North",
+ "corridor_to": "Lokmanyatilak",
+ "total_min": 1595,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "QLN",
+   "station_name": "Kollam Jn",
+   "scheduled_time": "10:05",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 55
+  },
+  {
+   "station_code": "KYJ",
+   "station_name": "Kayankulam Jn",
+   "scheduled_time": "10:42",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 92
+  },
+  {
+   "station_code": "CNGR",
+   "station_name": "Chengannur",
+   "scheduled_time": "11:05",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 115
+  },
+  {
+   "station_code": "TRVL",
+   "station_name": "Tiruvalla",
+   "scheduled_time": "11:16",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 126
+  },
+  {
+   "station_code": "CGY",
+   "station_name": "Changanaseri",
+   "scheduled_time": "11:26",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 136
+  },
+  {
+   "station_code": "KTYM",
+   "station_name": "Kottayam",
+   "scheduled_time": "11:45",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 155
+  },
+  {
+   "station_code": "ERN",
+   "station_name": "Ernakulam Town",
+   "scheduled_time": "12:50",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 220
+  },
+  {
+   "station_code": "TCR",
+   "station_name": "Thrisur",
+   "scheduled_time": "14:09",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 299
+  },
+  {
+   "station_code": "SRR",
+   "station_name": "Shoranur Jn",
+   "scheduled_time": "15:05",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 355
+  },
+  {
+   "station_code": "TIR",
+   "station_name": "Tirur",
+   "scheduled_time": "15:49",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 399
+  },
+  {
+   "station_code": "KGQ",
+   "station_name": "Kasaragod",
+   "scheduled_time": "19:04",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 594
+  },
+  {
+   "station_code": "MAJN",
+   "station_name": "Mangalore Jn",
+   "scheduled_time": "20:05",
+   "sequence": 12,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 655
+  },
+  {
+   "station_code": "UD",
+   "station_name": "Udupi",
+   "scheduled_time": "21:38",
+   "sequence": 13,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 748
+  },
+  {
+   "station_code": "ANKL",
+   "station_name": "Ankola",
+   "scheduled_time": "23:26",
+   "sequence": 14,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 856
+  },
+  {
+   "station_code": "KAWR",
+   "station_name": "Karwar",
+   "scheduled_time": "23:43",
+   "sequence": 15,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 873
+  },
+  {
+   "station_code": "MAO",
+   "station_name": "Madgaon",
+   "scheduled_time": "01:05",
+   "sequence": 16,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 955
+  },
+  {
+   "station_code": "RN",
+   "station_name": "Ratnagiri",
+   "scheduled_time": "04:50",
+   "sequence": 17,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1180
+  },
+  {
+   "station_code": "PNVL",
+   "station_name": "Panvel",
+   "scheduled_time": "09:42",
+   "sequence": 18,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1472
+  },
+  {
+   "station_code": "TNA",
+   "station_name": "Thane",
+   "scheduled_time": "10:58",
+   "sequence": 19,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1548
+  },
+  {
+   "station_code": "LTT",
+   "station_name": "Lokmanyatilak T",
+   "scheduled_time": "11:45",
+   "sequence": 20,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1595
+  }
+ ]
+}

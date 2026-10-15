@@ -1,0 +1,94 @@
+{
+ "train_id": "12001",
+ "train_name": "Shatabdi",
+ "train_class": "shatabdi",
+ "corridor_from": "Rani Kamlapati(Bhopal",
+ "corridor_to": "New Delhi",
+ "total_min": 520,
+ "route_partial": false,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "RKMP",
+   "station_name": "Rani Kamlapati",
+   "scheduled_time": "15:10",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "BINA",
+   "station_name": "Bina Jn",
+   "scheduled_time": "17:00",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 110
+  },
+  {
+   "station_code": "LAR",
+   "station_name": "Lalitpur",
+   "scheduled_time": "17:35",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 145
+  },
+  {
+   "station_code": "GWL",
+   "station_name": "Gwalior",
+   "scheduled_time": "19:40",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 270
+  },
+  {
+   "station_code": "MRA",
+   "station_name": "Morena",
+   "scheduled_time": "20:10",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 300
+  },
+  {
+   "station_code": "DHO",
+   "station_name": "Dhaulpur",
+   "scheduled_time": "20:45",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 335
+  },
+  {
+   "station_code": "AGC",
+   "station_name": "Agra Cantt",
+   "scheduled_time": "21:20",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 370
+  },
+  {
+   "station_code": "MTJ",
+   "station_name": "Mathura Jn",
+   "scheduled_time": "22:00",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 410
+  },
+  {
+   "station_code": "NDLS",
+   "station_name": "New Delhi",
+   "scheduled_time": "23:50",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 520
+  }
+ ]
+}

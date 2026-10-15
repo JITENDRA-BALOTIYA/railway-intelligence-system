@@ -1,0 +1,76 @@
+{
+ "train_id": "12260",
+ "train_name": "Sealdah Duronto",
+ "train_class": "duronto",
+ "corridor_from": "Bikaner Jn",
+ "corridor_to": "Sealdah",
+ "total_min": 1520,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "SDGH",
+   "station_name": "Sri Dungargarh",
+   "scheduled_time": "13:00",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 50
+  },
+  {
+   "station_code": "SDLP",
+   "station_name": "Sadulpur Jn",
+   "scheduled_time": "15:15",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 185
+  },
+  {
+   "station_code": "LHU",
+   "station_name": "Loharu",
+   "scheduled_time": "15:55",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 225
+  },
+  {
+   "station_code": "NDLS",
+   "station_name": "New Delhi",
+   "scheduled_time": "19:30",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 440
+  },
+  {
+   "station_code": "CNB",
+   "station_name": "Kanpur Central",
+   "scheduled_time": "00:35",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 745
+  },
+  {
+   "station_code": "DHN",
+   "station_name": "Dhanbad Jn",
+   "scheduled_time": "09:12",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1262
+  },
+  {
+   "station_code": "SDAH",
+   "station_name": "Sealdah",
+   "scheduled_time": "13:30",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1520
+  }
+ ]
+}

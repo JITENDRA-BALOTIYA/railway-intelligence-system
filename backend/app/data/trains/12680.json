@@ -1,0 +1,112 @@
+{
+ "train_id": "12680",
+ "train_name": "Coimbatore Intercity",
+ "train_class": "express",
+ "corridor_from": "Coimbatore Jn",
+ "corridor_to": "Mgr Chennai Ctr",
+ "total_min": 445,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "CBE",
+   "station_name": "Coimbatore Jn",
+   "scheduled_time": "06:20",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "TUP",
+   "station_name": "Tiruppur",
+   "scheduled_time": "07:03",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 43
+  },
+  {
+   "station_code": "ED",
+   "station_name": "Erode Jn",
+   "scheduled_time": "07:45",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 85
+  },
+  {
+   "station_code": "SA",
+   "station_name": "Salem Jn",
+   "scheduled_time": "08:42",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 142
+  },
+  {
+   "station_code": "BQI",
+   "station_name": "Bommidi",
+   "scheduled_time": "09:19",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 179
+  },
+  {
+   "station_code": "MAP",
+   "station_name": "Morappur",
+   "scheduled_time": "09:38",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 198
+  },
+  {
+   "station_code": "SLY",
+   "station_name": "Samalpatti",
+   "scheduled_time": "09:59",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 219
+  },
+  {
+   "station_code": "JTJ",
+   "station_name": "Jolarpettai",
+   "scheduled_time": "10:33",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 253
+  },
+  {
+   "station_code": "AB",
+   "station_name": "Ambur",
+   "scheduled_time": "10:53",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 273
+  },
+  {
+   "station_code": "KPD",
+   "station_name": "Katpadi Jn",
+   "scheduled_time": "11:38",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 318
+  },
+  {
+   "station_code": "AJJ",
+   "station_name": "Arakkonam",
+   "scheduled_time": "12:28",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 368
+  }
+ ]
+}

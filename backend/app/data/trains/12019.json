@@ -1,0 +1,85 @@
+{
+ "train_id": "12019",
+ "train_name": "Shatabdi",
+ "train_class": "shatabdi",
+ "corridor_from": "Howrah Jn",
+ "corridor_to": "Ranchi",
+ "total_min": 430,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "HWH",
+   "station_name": "Howrah Jn",
+   "scheduled_time": "06:05",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "DGR",
+   "station_name": "Durgapur",
+   "scheduled_time": "07:38",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 93
+  },
+  {
+   "station_code": "RNG",
+   "station_name": "Raniganj",
+   "scheduled_time": "07:56",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 111
+  },
+  {
+   "station_code": "ASN",
+   "station_name": "Asansol Jn",
+   "scheduled_time": "08:12",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 127
+  },
+  {
+   "station_code": "DHN",
+   "station_name": "Dhanbad Jn",
+   "scheduled_time": "09:23",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 198
+  },
+  {
+   "station_code": "CRP",
+   "station_name": "Chandrapura",
+   "scheduled_time": "10:24",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 259
+  },
+  {
+   "station_code": "BKSC",
+   "station_name": "Bokaro Stl City",
+   "scheduled_time": "10:55",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 290
+  },
+  {
+   "station_code": "MURI",
+   "station_name": "Muri",
+   "scheduled_time": "11:45",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 340
+  }
+ ]
+}

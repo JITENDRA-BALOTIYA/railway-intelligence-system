@@ -1,0 +1,85 @@
+{
+ "train_id": "12952",
+ "train_name": "Mumbai Rajdhani",
+ "train_class": "rajdhani",
+ "corridor_from": "New Delhi",
+ "corridor_to": "Mumbai Central",
+ "total_min": 940,
+ "route_partial": false,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "NDLS",
+   "station_name": "New Delhi",
+   "scheduled_time": "16:55",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "KOTA",
+   "station_name": "Kota Jn",
+   "scheduled_time": "21:30",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 275
+  },
+  {
+   "station_code": "NAD",
+   "station_name": "Nagda Jn",
+   "scheduled_time": "23:57",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 422
+  },
+  {
+   "station_code": "RTM",
+   "station_name": "Ratlam Jn",
+   "scheduled_time": "00:30",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 455
+  },
+  {
+   "station_code": "BRC",
+   "station_name": "Vadodara Jn",
+   "scheduled_time": "03:40",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 645
+  },
+  {
+   "station_code": "ST",
+   "station_name": "Surat",
+   "scheduled_time": "05:13",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 738
+  },
+  {
+   "station_code": "BVI",
+   "station_name": "Borivali",
+   "scheduled_time": "07:38",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 883
+  },
+  {
+   "station_code": "MMCT",
+   "station_name": "Mumbai Central",
+   "scheduled_time": "08:35",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 940
+  }
+ ]
+}

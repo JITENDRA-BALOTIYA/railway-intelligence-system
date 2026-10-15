@@ -1,0 +1,67 @@
+{
+ "train_id": "12434",
+ "train_name": "Rajdhani",
+ "train_class": "rajdhani",
+ "corridor_from": "Hazrat Nizamuddin",
+ "corridor_to": "Mgr Chennai Ctr",
+ "total_min": 1755,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "AGC",
+   "station_name": "Agra Cantt",
+   "scheduled_time": "17:25",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 110
+  },
+  {
+   "station_code": "BPL",
+   "station_name": "Bhopal Jn",
+   "scheduled_time": "23:30",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 475
+  },
+  {
+   "station_code": "NGP",
+   "station_name": "Nagpur",
+   "scheduled_time": "05:05",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 810
+  },
+  {
+   "station_code": "BPQ",
+   "station_name": "Balharshah",
+   "scheduled_time": "08:00",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 985
+  },
+  {
+   "station_code": "WL",
+   "station_name": "Warangal",
+   "scheduled_time": "11:14",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1179
+  },
+  {
+   "station_code": "BZA",
+   "station_name": "Vijayawada Jn",
+   "scheduled_time": "14:20",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1365
+  }
+ ]
+}

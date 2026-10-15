@@ -1,0 +1,103 @@
+{
+ "train_id": "12259",
+ "train_name": "Sealdah Duronto",
+ "train_class": "duronto",
+ "corridor_from": "Sealdah",
+ "corridor_to": "Bikaner Jn",
+ "total_min": 1535,
+ "route_partial": false,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "SDAH",
+   "station_name": "Sealdah",
+   "scheduled_time": "17:00",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "DHN",
+   "station_name": "Dhanbad Jn",
+   "scheduled_time": "20:30",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 210
+  },
+  {
+   "station_code": "KQR",
+   "station_name": "Koderma",
+   "scheduled_time": "21:45",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 285
+  },
+  {
+   "station_code": "CNB",
+   "station_name": "Kanpur Central",
+   "scheduled_time": "05:25",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 745
+  },
+  {
+   "station_code": "NDLS",
+   "station_name": "New Delhi",
+   "scheduled_time": "11:00",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1080
+  },
+  {
+   "station_code": "LHU",
+   "station_name": "Loharu",
+   "scheduled_time": "13:50",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1250
+  },
+  {
+   "station_code": "SDLP",
+   "station_name": "Sadulpur Jn",
+   "scheduled_time": "14:27",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1287
+  },
+  {
+   "station_code": "CUR",
+   "station_name": "Churu",
+   "scheduled_time": "15:15",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1335
+  },
+  {
+   "station_code": "SDGH",
+   "station_name": "Sri Dungargarh",
+   "scheduled_time": "16:37",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1417
+  },
+  {
+   "station_code": "BKN",
+   "station_name": "Bikaner Jn",
+   "scheduled_time": "18:35",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1535
+  }
+ ]
+}

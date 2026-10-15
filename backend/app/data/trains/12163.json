@@ -1,0 +1,202 @@
+{
+ "train_id": "12163",
+ "train_name": "Chennai Express",
+ "train_class": "express",
+ "corridor_from": "Lokmanyatilak",
+ "corridor_to": "Mgr Chennai Ctr",
+ "total_min": 1300,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "LTT",
+   "station_name": "Lokmanyatilak T",
+   "scheduled_time": "18:30",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "TNA",
+   "station_name": "Thane",
+   "scheduled_time": "18:42",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 12
+  },
+  {
+   "station_code": "KYN",
+   "station_name": "Kalyan Jn",
+   "scheduled_time": "19:07",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 37
+  },
+  {
+   "station_code": "LNL",
+   "station_name": "Lonavala",
+   "scheduled_time": "20:56",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 146
+  },
+  {
+   "station_code": "PUNE",
+   "station_name": "Pune Jn",
+   "scheduled_time": "22:05",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 215
+  },
+  {
+   "station_code": "SUR",
+   "station_name": "Solapur Jn",
+   "scheduled_time": "01:45",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 435
+  },
+  {
+   "station_code": "WADI",
+   "station_name": "Wadi",
+   "scheduled_time": "04:13",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 583
+  },
+  {
+   "station_code": "YG",
+   "station_name": "Yadgir",
+   "scheduled_time": "04:38",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 608
+  },
+  {
+   "station_code": "SADP",
+   "station_name": "Saidapur",
+   "scheduled_time": "04:59",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 629
+  },
+  {
+   "station_code": "MALM",
+   "station_name": "Manthralayam Rd",
+   "scheduled_time": "06:18",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 708
+  },
+  {
+   "station_code": "AD",
+   "station_name": "Adoni",
+   "scheduled_time": "06:53",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 743
+  },
+  {
+   "station_code": "GTL",
+   "station_name": "Guntakal Jn",
+   "scheduled_time": "08:00",
+   "sequence": 12,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 810
+  },
+  {
+   "station_code": "GY",
+   "station_name": "Gooty Jn",
+   "scheduled_time": "08:33",
+   "sequence": 13,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 843
+  },
+  {
+   "station_code": "TU",
+   "station_name": "Tadipatri",
+   "scheduled_time": "09:18",
+   "sequence": 14,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 888
+  },
+  {
+   "station_code": "YA",
+   "station_name": "Yerraguntla",
+   "scheduled_time": "10:03",
+   "sequence": 15,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 933
+  },
+  {
+   "station_code": "HX",
+   "station_name": "Cuddapah",
+   "scheduled_time": "10:43",
+   "sequence": 16,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 973
+  },
+  {
+   "station_code": "RJP",
+   "station_name": "Razampeta",
+   "scheduled_time": "11:23",
+   "sequence": 17,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1013
+  },
+  {
+   "station_code": "RU",
+   "station_name": "Renigunta Jn",
+   "scheduled_time": "12:55",
+   "sequence": 18,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1105
+  },
+  {
+   "station_code": "PUT",
+   "station_name": "Puttur",
+   "scheduled_time": "13:28",
+   "sequence": 19,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1138
+  },
+  {
+   "station_code": "TRT",
+   "station_name": "Tiruttani",
+   "scheduled_time": "13:58",
+   "sequence": 20,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1168
+  },
+  {
+   "station_code": "AJJ",
+   "station_name": "Arakkonam",
+   "scheduled_time": "14:18",
+   "sequence": 21,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1188
+  }
+ ]
+}

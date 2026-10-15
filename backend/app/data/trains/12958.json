@@ -1,0 +1,76 @@
+{
+ "train_id": "12958",
+ "train_name": "Swarna Jayanti Rajdhani",
+ "train_class": "rajdhani",
+ "corridor_from": "New Delhi",
+ "corridor_to": "Sabarmati Bg",
+ "total_min": 730,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "DEC",
+   "station_name": "Delhi Cantt",
+   "scheduled_time": "20:23",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 28
+  },
+  {
+   "station_code": "GGN",
+   "station_name": "Gurgaon",
+   "scheduled_time": "20:41",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 46
+  },
+  {
+   "station_code": "AII",
+   "station_name": "Ajmer Jn",
+   "scheduled_time": "01:35",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 340
+  },
+  {
+   "station_code": "FA",
+   "station_name": "Falna",
+   "scheduled_time": "03:48",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 473
+  },
+  {
+   "station_code": "ABR",
+   "station_name": "Abu Road",
+   "scheduled_time": "04:53",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 538
+  },
+  {
+   "station_code": "PNU",
+   "station_name": "Palanpur Jn",
+   "scheduled_time": "05:50",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 595
+  },
+  {
+   "station_code": "MSH",
+   "station_name": "Mahesana Jn",
+   "scheduled_time": "06:38",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 643
+  }
+ ]
+}

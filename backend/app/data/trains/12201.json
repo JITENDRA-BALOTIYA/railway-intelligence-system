@@ -1,0 +1,157 @@
+{
+ "train_id": "12201",
+ "train_name": "Garib Rath",
+ "train_class": "express",
+ "corridor_from": "Lokmanyatilak",
+ "corridor_to": "Thiruvananthapuram North",
+ "total_min": 1660,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "LTT",
+   "station_name": "Lokmanyatilak T",
+   "scheduled_time": "16:45",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "TNA",
+   "station_name": "Thane",
+   "scheduled_time": "17:02",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 17
+  },
+  {
+   "station_code": "PNVL",
+   "station_name": "Panvel",
+   "scheduled_time": "17:40",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 55
+  },
+  {
+   "station_code": "RN",
+   "station_name": "Ratnagiri",
+   "scheduled_time": "22:30",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 345
+  },
+  {
+   "station_code": "MAO",
+   "station_name": "Madgaon",
+   "scheduled_time": "03:00",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 615
+  },
+  {
+   "station_code": "KAWR",
+   "station_name": "Karwar",
+   "scheduled_time": "04:00",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 675
+  },
+  {
+   "station_code": "ANKL",
+   "station_name": "Ankola",
+   "scheduled_time": "04:22",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 697
+  },
+  {
+   "station_code": "BYNR",
+   "station_name": "Mookambika Road",
+   "scheduled_time": "05:38",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 773
+  },
+  {
+   "station_code": "UD",
+   "station_name": "Udupi",
+   "scheduled_time": "06:30",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 825
+  },
+  {
+   "station_code": "KGQ",
+   "station_name": "Kasaragod",
+   "scheduled_time": "08:49",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 964
+  },
+  {
+   "station_code": "TIR",
+   "station_name": "Tirur",
+   "scheduled_time": "11:59",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1154
+  },
+  {
+   "station_code": "SRR",
+   "station_name": "Shoranur Jn",
+   "scheduled_time": "13:00",
+   "sequence": 12,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1215
+  },
+  {
+   "station_code": "TCR",
+   "station_name": "Thrisur",
+   "scheduled_time": "13:40",
+   "sequence": 13,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1255
+  },
+  {
+   "station_code": "KTYM",
+   "station_name": "Kottayam",
+   "scheduled_time": "16:07",
+   "sequence": 14,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1402
+  },
+  {
+   "station_code": "CGY",
+   "station_name": "Changanaseri",
+   "scheduled_time": "16:33",
+   "sequence": 15,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1428
+  },
+  {
+   "station_code": "KYJ",
+   "station_name": "Kayankulam Jn",
+   "scheduled_time": "17:08",
+   "sequence": 16,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1463
+  }
+ ]
+}

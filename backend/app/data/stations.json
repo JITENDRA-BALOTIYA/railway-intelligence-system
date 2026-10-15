@@ -1,0 +1,15 @@
+{
+ "note": "Curated approximate city-level coordinates (used only for weather lookup). Stations not listed here are geocoded at runtime via Open-Meteo geocoding (approximate) and cached.",
+ "stations": {
+  "MMCT": {"name": "Mumbai Central", "lat": 18.9690, "lon": 72.8205},
+  "BVI":  {"name": "Borivali",       "lat": 19.2307, "lon": 72.8567},
+  "ST":   {"name": "Surat",          "lat": 21.2054, "lon": 72.8408},
+  "BRC":  {"name": "Vadodara Jn",    "lat": 22.3103, "lon": 73.1810},
+  "RTM":  {"name": "Ratlam Jn",      "lat": 23.3315, "lon": 75.0367},
+  "NAD":  {"name": "Nagda Jn",       "lat": 23.4550, "lon": 75.4167},
+  "KOTA": {"name": "Kota Jn",        "lat": 25.1800, "lon": 75.8648},
+  "NDLS": {"name": "New Delhi",      "lat": 28.6429, "lon": 77.2191},
+  "HWH":  {"name": "Howrah Jn",      "lat": 22.5839, "lon": 88.3425},
+  "MAS":  {"name": "Chennai Central","lat": 13.0827, "lon": 80.2757}
+ }
+}

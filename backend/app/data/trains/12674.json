@@ -1,0 +1,67 @@
+{
+ "train_id": "12674",
+ "train_name": "Cheran Express",
+ "train_class": "express",
+ "corridor_from": "Coimbatore Jn",
+ "corridor_to": "Mgr Chennai Ctr",
+ "total_min": 490,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "CBE",
+   "station_name": "Coimbatore Jn",
+   "scheduled_time": "22:50",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "ED",
+   "station_name": "Erode Jn",
+   "scheduled_time": "00:25",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 95
+  },
+  {
+   "station_code": "SA",
+   "station_name": "Salem Jn",
+   "scheduled_time": "01:22",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 152
+  },
+  {
+   "station_code": "JTJ",
+   "station_name": "Jolarpettai",
+   "scheduled_time": "03:23",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 273
+  },
+  {
+   "station_code": "KPD",
+   "station_name": "Katpadi Jn",
+   "scheduled_time": "04:23",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 333
+  },
+  {
+   "station_code": "AJJ",
+   "station_name": "Arakkonam",
+   "scheduled_time": "05:13",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 383
+  }
+ ]
+}

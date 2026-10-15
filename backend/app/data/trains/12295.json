@@ -1,0 +1,274 @@
+{
+ "train_id": "12295",
+ "train_name": "Sanghamitra Express",
+ "train_class": "express",
+ "corridor_from": "Smvt Bengaluru",
+ "corridor_to": "Danapur",
+ "total_min": 2785,
+ "route_partial": false,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "SMVB",
+   "station_name": "Smvt Bengaluru",
+   "scheduled_time": "09:15",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "BWT",
+   "station_name": "Bangarapet",
+   "scheduled_time": "10:07",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 52
+  },
+  {
+   "station_code": "KPN",
+   "station_name": "Kuppam",
+   "scheduled_time": "10:34",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 79
+  },
+  {
+   "station_code": "JTJ",
+   "station_name": "Jolarpettai",
+   "scheduled_time": "11:23",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 128
+  },
+  {
+   "station_code": "KPD",
+   "station_name": "Katpadi Jn",
+   "scheduled_time": "12:35",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 200
+  },
+  {
+   "station_code": "AJJ",
+   "station_name": "Arakkonam",
+   "scheduled_time": "13:43",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 268
+  },
+  {
+   "station_code": "GDR",
+   "station_name": "Gudur Jn",
+   "scheduled_time": "17:13",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 478
+  },
+  {
+   "station_code": "NLR",
+   "station_name": "Nellore",
+   "scheduled_time": "17:43",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 508
+  },
+  {
+   "station_code": "OGL",
+   "station_name": "Ongole",
+   "scheduled_time": "19:14",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 599
+  },
+  {
+   "station_code": "BZA",
+   "station_name": "Vijayawada Jn",
+   "scheduled_time": "21:30",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 735
+  },
+  {
+   "station_code": "KMT",
+   "station_name": "Khammam",
+   "scheduled_time": "23:24",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 849
+  },
+  {
+   "station_code": "WL",
+   "station_name": "Warangal",
+   "scheduled_time": "00:48",
+   "sequence": 12,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 933
+  },
+  {
+   "station_code": "RDM",
+   "station_name": "Ramgundam",
+   "scheduled_time": "02:19",
+   "sequence": 13,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1024
+  },
+  {
+   "station_code": "BPQ",
+   "station_name": "Balharshah",
+   "scheduled_time": "04:50",
+   "sequence": 14,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1175
+  },
+  {
+   "station_code": "SEGM",
+   "station_name": "Sevagram",
+   "scheduled_time": "06:59",
+   "sequence": 15,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1304
+  },
+  {
+   "station_code": "NGP",
+   "station_name": "Nagpur",
+   "scheduled_time": "08:35",
+   "sequence": 16,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1400
+  },
+  {
+   "station_code": "BZU",
+   "station_name": "Betul",
+   "scheduled_time": "11:03",
+   "sequence": 17,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1548
+  },
+  {
+   "station_code": "GDYA",
+   "station_name": "Ghoradongri",
+   "scheduled_time": "11:41",
+   "sequence": 18,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1586
+  },
+  {
+   "station_code": "ET",
+   "station_name": "Itarsi Jn",
+   "scheduled_time": "13:45",
+   "sequence": 19,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1710
+  },
+  {
+   "station_code": "NU",
+   "station_name": "Narsinghpur",
+   "scheduled_time": "15:38",
+   "sequence": 20,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1823
+  },
+  {
+   "station_code": "JBP",
+   "station_name": "Jabalpur",
+   "scheduled_time": "17:10",
+   "sequence": 21,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1915
+  },
+  {
+   "station_code": "KTE",
+   "station_name": "Katni",
+   "scheduled_time": "18:35",
+   "sequence": 22,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 2000
+  },
+  {
+   "station_code": "MYR",
+   "station_name": "Maihar",
+   "scheduled_time": "19:28",
+   "sequence": 23,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 2053
+  },
+  {
+   "station_code": "STA",
+   "station_name": "Satna",
+   "scheduled_time": "20:10",
+   "sequence": 24,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 2095
+  },
+  {
+   "station_code": "PCOI",
+   "station_name": "Prayagraj Chheoki",
+   "scheduled_time": "23:40",
+   "sequence": 25,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 2305
+  },
+  {
+   "station_code": "MZP",
+   "station_name": "Mirzapur",
+   "scheduled_time": "01:50",
+   "sequence": 26,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2435
+  },
+  {
+   "station_code": "BXR",
+   "station_name": "Buxar",
+   "scheduled_time": "05:23",
+   "sequence": 27,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2648
+  },
+  {
+   "station_code": "ARA",
+   "station_name": "Ara",
+   "scheduled_time": "06:22",
+   "sequence": 28,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2707
+  },
+  {
+   "station_code": "DNR",
+   "station_name": "Danapur",
+   "scheduled_time": "07:40",
+   "sequence": 29,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2785
+  }
+ ]
+}

@@ -1,0 +1,265 @@
+{
+ "train_id": "16339",
+ "train_name": "Nagercoil Express",
+ "train_class": "express",
+ "corridor_from": "Lokmanyatilak",
+ "corridor_to": "Nagarcoil Jn",
+ "total_min": 2220,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "TNA",
+   "station_name": "Thane",
+   "scheduled_time": "21:07",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 12
+  },
+  {
+   "station_code": "KYN",
+   "station_name": "Kalyan Jn",
+   "scheduled_time": "21:27",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 32
+  },
+  {
+   "station_code": "PUNE",
+   "station_name": "Pune Jn",
+   "scheduled_time": "00:15",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 200
+  },
+  {
+   "station_code": "KWV",
+   "station_name": "Kurduvadi",
+   "scheduled_time": "02:48",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 353
+  },
+  {
+   "station_code": "SUR",
+   "station_name": "Solapur Jn",
+   "scheduled_time": "03:45",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 410
+  },
+  {
+   "station_code": "SDB",
+   "station_name": "Shahabad",
+   "scheduled_time": "06:03",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 548
+  },
+  {
+   "station_code": "WADI",
+   "station_name": "Wadi",
+   "scheduled_time": "06:43",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 588
+  },
+  {
+   "station_code": "YG",
+   "station_name": "Yadgir",
+   "scheduled_time": "07:13",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 618
+  },
+  {
+   "station_code": "RC",
+   "station_name": "Raichur",
+   "scheduled_time": "08:18",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 683
+  },
+  {
+   "station_code": "AD",
+   "station_name": "Adoni",
+   "scheduled_time": "09:18",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 743
+  },
+  {
+   "station_code": "GTL",
+   "station_name": "Guntakal Jn",
+   "scheduled_time": "10:30",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 815
+  },
+  {
+   "station_code": "ATP",
+   "station_name": "Anantapur",
+   "scheduled_time": "11:38",
+   "sequence": 12,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 883
+  },
+  {
+   "station_code": "KRY",
+   "station_name": "Kadiri",
+   "scheduled_time": "13:08",
+   "sequence": 13,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 973
+  },
+  {
+   "station_code": "MPL",
+   "station_name": "Madanapalle Rd",
+   "scheduled_time": "14:03",
+   "sequence": 14,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1028
+  },
+  {
+   "station_code": "PAK",
+   "station_name": "Pakala Jn",
+   "scheduled_time": "16:00",
+   "sequence": 15,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1145
+  },
+  {
+   "station_code": "CTO",
+   "station_name": "Chittoor",
+   "scheduled_time": "16:58",
+   "sequence": 16,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1203
+  },
+  {
+   "station_code": "KPD",
+   "station_name": "Katpadi Jn",
+   "scheduled_time": "18:20",
+   "sequence": 17,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1285
+  },
+  {
+   "station_code": "TPT",
+   "station_name": "Tirupattur Jn",
+   "scheduled_time": "20:14",
+   "sequence": 18,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1399
+  },
+  {
+   "station_code": "SA",
+   "station_name": "Salem Jn",
+   "scheduled_time": "22:35",
+   "sequence": 19,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1540
+  },
+  {
+   "station_code": "KRR",
+   "station_name": "Karur",
+   "scheduled_time": "00:48",
+   "sequence": 20,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1673
+  },
+  {
+   "station_code": "DG",
+   "station_name": "Dindigul Jn",
+   "scheduled_time": "02:35",
+   "sequence": 21,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1780
+  },
+  {
+   "station_code": "KQN",
+   "station_name": "Kodaikanal Road",
+   "scheduled_time": "02:56",
+   "sequence": 22,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1801
+  },
+  {
+   "station_code": "MDU",
+   "station_name": "Madurai Jn",
+   "scheduled_time": "03:35",
+   "sequence": 23,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1840
+  },
+  {
+   "station_code": "VPT",
+   "station_name": "Virudunagar Jn",
+   "scheduled_time": "04:13",
+   "sequence": 24,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1878
+  },
+  {
+   "station_code": "SRT",
+   "station_name": "Satur",
+   "scheduled_time": "04:33",
+   "sequence": 25,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1898
+  },
+  {
+   "station_code": "CVP",
+   "station_name": "Kovilpatti",
+   "scheduled_time": "04:53",
+   "sequence": 26,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1918
+  },
+  {
+   "station_code": "TEN",
+   "station_name": "Tirunelveli Jn",
+   "scheduled_time": "07:15",
+   "sequence": 27,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2060
+  },
+  {
+   "station_code": "NNN",
+   "station_name": "Nanguneri",
+   "scheduled_time": "07:49",
+   "sequence": 28,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2094
+  }
+ ]
+}

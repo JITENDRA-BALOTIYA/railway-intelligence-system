@@ -1,0 +1,103 @@
+{
+ "train_id": "12622",
+ "train_name": "Tamil Nadu Exp",
+ "train_class": "express",
+ "corridor_from": "New Delhi",
+ "corridor_to": "Mgr Chennai Ctr",
+ "total_min": 2010,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "NDLS",
+   "station_name": "New Delhi",
+   "scheduled_time": "21:05",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "AGC",
+   "station_name": "Agra Cantt",
+   "scheduled_time": "23:25",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 140
+  },
+  {
+   "station_code": "GWL",
+   "station_name": "Gwalior",
+   "scheduled_time": "01:13",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 248
+  },
+  {
+   "station_code": "BPL",
+   "station_name": "Bhopal Jn",
+   "scheduled_time": "06:45",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 580
+  },
+  {
+   "station_code": "ET",
+   "station_name": "Itarsi Jn",
+   "scheduled_time": "08:35",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 690
+  },
+  {
+   "station_code": "NGP",
+   "station_name": "Nagpur",
+   "scheduled_time": "13:05",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 960
+  },
+  {
+   "station_code": "BPQ",
+   "station_name": "Balharshah",
+   "scheduled_time": "16:20",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1155
+  },
+  {
+   "station_code": "WL",
+   "station_name": "Warangal",
+   "scheduled_time": "19:48",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1363
+  },
+  {
+   "station_code": "KMT",
+   "station_name": "Khammam",
+   "scheduled_time": "20:59",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1434
+  },
+  {
+   "station_code": "BZA",
+   "station_name": "Vijayawada Jn",
+   "scheduled_time": "23:00",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1555
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+{
+ "train_id": "12305",
+ "train_name": "Kolkata Rajdhani",
+ "train_class": "rajdhani",
+ "corridor_from": "Howrah Jn",
+ "corridor_to": "New Delhi",
+ "total_min": 1200,
+ "route_partial": false,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "HWH",
+   "station_name": "Howrah Jn",
+   "scheduled_time": "14:05",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "BWN",
+   "station_name": "Barddhaman Jn",
+   "scheduled_time": "14:57",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 52
+  },
+  {
+   "station_code": "MDP",
+   "station_name": "Madhupur Jn",
+   "scheduled_time": "17:02",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 177
+  },
+  {
+   "station_code": "PNBE",
+   "station_name": "Patna Jn",
+   "scheduled_time": "21:28",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 443
+  },
+  {
+   "station_code": "PRYJ",
+   "station_name": "Prayagraj Jn",
+   "scheduled_time": "02:43",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 758
+  },
+  {
+   "station_code": "CNB",
+   "station_name": "Kanpur Central",
+   "scheduled_time": "04:45",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 880
+  },
+  {
+   "station_code": "NDLS",
+   "station_name": "New Delhi",
+   "scheduled_time": "10:05",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1200
+  }
+ ]
+}

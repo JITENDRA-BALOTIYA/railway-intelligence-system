@@ -1,0 +1,175 @@
+{
+ "train_id": "12423",
+ "train_name": "Dibrugarh Rajdhani",
+ "train_class": "rajdhani",
+ "corridor_from": "Dibrugarh",
+ "corridor_to": "New Delhi",
+ "total_min": 2260,
+ "route_partial": false,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "DBRG",
+   "station_name": "Dibrugarh",
+   "scheduled_time": "20:50",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "NTSK",
+   "station_name": "New Tinsukia Jn",
+   "scheduled_time": "21:35",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 45
+  },
+  {
+   "station_code": "MXN",
+   "station_name": "Mariani Jn",
+   "scheduled_time": "23:53",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 183
+  },
+  {
+   "station_code": "DMV",
+   "station_name": "Dimapur",
+   "scheduled_time": "02:00",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 310
+  },
+  {
+   "station_code": "LMG",
+   "station_name": "Lumding Jn",
+   "scheduled_time": "03:15",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 385
+  },
+  {
+   "station_code": "GHY",
+   "station_name": "Guwahati",
+   "scheduled_time": "06:20",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 570
+  },
+  {
+   "station_code": "NBQ",
+   "station_name": "New Bongaigaon",
+   "scheduled_time": "09:00",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 730
+  },
+  {
+   "station_code": "KOJ",
+   "station_name": "Kokrajhar",
+   "scheduled_time": "09:50",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 780
+  },
+  {
+   "station_code": "NCB",
+   "station_name": "New Cooch Behar",
+   "scheduled_time": "10:58",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 848
+  },
+  {
+   "station_code": "NJP",
+   "station_name": "New Jalpaiguri",
+   "scheduled_time": "13:05",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 975
+  },
+  {
+   "station_code": "KIR",
+   "station_name": "Katihar Jn",
+   "scheduled_time": "16:20",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1170
+  },
+  {
+   "station_code": "NNA",
+   "station_name": "Naugachia",
+   "scheduled_time": "17:08",
+   "sequence": 12,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1218
+  },
+  {
+   "station_code": "MNE",
+   "station_name": "Mansi Jn",
+   "scheduled_time": "18:03",
+   "sequence": 13,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1273
+  },
+  {
+   "station_code": "PPTA",
+   "station_name": "Patliputra",
+   "scheduled_time": "21:30",
+   "sequence": 14,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1480
+  },
+  {
+   "station_code": "DNR",
+   "station_name": "Danapur",
+   "scheduled_time": "21:56",
+   "sequence": 15,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1506
+  },
+  {
+   "station_code": "PRYJ",
+   "station_name": "Prayagraj Jn",
+   "scheduled_time": "02:50",
+   "sequence": 16,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1800
+  },
+  {
+   "station_code": "CNB",
+   "station_name": "Kanpur Central",
+   "scheduled_time": "04:55",
+   "sequence": 17,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1925
+  },
+  {
+   "station_code": "NDLS",
+   "station_name": "New Delhi",
+   "scheduled_time": "10:30",
+   "sequence": 18,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 2260
+  }
+ ]
+}

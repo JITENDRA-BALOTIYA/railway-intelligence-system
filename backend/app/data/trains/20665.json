@@ -1,0 +1,76 @@
+{
+ "train_id": "20665",
+ "train_name": "Vande Bharat",
+ "train_class": "vande_bharat",
+ "corridor_from": "Chennai Egmore",
+ "corridor_to": "Tirunelveli",
+ "total_min": 470,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "MS",
+   "station_name": "Chennai Egmore",
+   "scheduled_time": "15:10",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "TBM",
+   "station_name": "Tambaram",
+   "scheduled_time": "15:30",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 20
+  },
+  {
+   "station_code": "VM",
+   "station_name": "Villupuram Jn",
+   "scheduled_time": "17:00",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 110
+  },
+  {
+   "station_code": "TPJ",
+   "station_name": "Tiruchchirapali",
+   "scheduled_time": "19:00",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 230
+  },
+  {
+   "station_code": "DG",
+   "station_name": "Dindigul Jn",
+   "scheduled_time": "19:58",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 288
+  },
+  {
+   "station_code": "MDU",
+   "station_name": "Madurai Jn",
+   "scheduled_time": "20:45",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 335
+  },
+  {
+   "station_code": "VPT",
+   "station_name": "Virudunagar Jn",
+   "scheduled_time": "21:20",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 370
+  }
+ ]
+}

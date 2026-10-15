@@ -1,0 +1,445 @@
+{
+ "train_id": "15960",
+ "train_name": "Kamrup Express",
+ "train_class": "express",
+ "corridor_from": "Dibrugarh",
+ "corridor_to": "Howrah Jn",
+ "total_min": 1960,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "NTSK",
+   "station_name": "New Tinsukia Jn",
+   "scheduled_time": "20:45",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 45
+  },
+  {
+   "station_code": "DJG",
+   "station_name": "Duliajan",
+   "scheduled_time": "21:17",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 77
+  },
+  {
+   "station_code": "NHK",
+   "station_name": "Naharkatiya",
+   "scheduled_time": "21:31",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 91
+  },
+  {
+   "station_code": "NAM",
+   "station_name": "Namrup",
+   "scheduled_time": "21:45",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 105
+  },
+  {
+   "station_code": "BOJ",
+   "station_name": "Bhojo",
+   "scheduled_time": "22:13",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 133
+  },
+  {
+   "station_code": "SLGR",
+   "station_name": "Simaluguri Jn",
+   "scheduled_time": "22:45",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 165
+  },
+  {
+   "station_code": "AGI",
+   "station_name": "Amguri",
+   "scheduled_time": "23:10",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 190
+  },
+  {
+   "station_code": "MXN",
+   "station_name": "Mariani Jn",
+   "scheduled_time": "00:15",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 255
+  },
+  {
+   "station_code": "FKG",
+   "station_name": "Furkating Jn",
+   "scheduled_time": "02:01",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 361
+  },
+  {
+   "station_code": "BXP",
+   "station_name": "Barpathar",
+   "scheduled_time": "02:28",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 388
+  },
+  {
+   "station_code": "SZR",
+   "station_name": "Sarupathar",
+   "scheduled_time": "02:41",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 401
+  },
+  {
+   "station_code": "DMV",
+   "station_name": "Dimapur",
+   "scheduled_time": "03:22",
+   "sequence": 12,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 442
+  },
+  {
+   "station_code": "LMG",
+   "station_name": "Lumding Jn",
+   "scheduled_time": "04:50",
+   "sequence": 13,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 530
+  },
+  {
+   "station_code": "LKA",
+   "station_name": "Lanka",
+   "scheduled_time": "05:37",
+   "sequence": 14,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 577
+  },
+  {
+   "station_code": "HJI",
+   "station_name": "Hojai",
+   "scheduled_time": "05:53",
+   "sequence": 15,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 593
+  },
+  {
+   "station_code": "CPK",
+   "station_name": "Chaparmukh Jn",
+   "scheduled_time": "06:27",
+   "sequence": 16,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 627
+  },
+  {
+   "station_code": "KYQ",
+   "station_name": "Kamakhya",
+   "scheduled_time": "08:45",
+   "sequence": 17,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 765
+  },
+  {
+   "station_code": "NLV",
+   "station_name": "Nalbari",
+   "scheduled_time": "10:00",
+   "sequence": 18,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 840
+  },
+  {
+   "station_code": "TIHU",
+   "station_name": "Tihu",
+   "scheduled_time": "10:13",
+   "sequence": 19,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 853
+  },
+  {
+   "station_code": "PBL",
+   "station_name": "Pathsala",
+   "scheduled_time": "10:23",
+   "sequence": 20,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 863
+  },
+  {
+   "station_code": "BPRD",
+   "station_name": "Barpeta Road",
+   "scheduled_time": "10:40",
+   "sequence": 21,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 880
+  },
+  {
+   "station_code": "SBE",
+   "station_name": "Sorbhog Jn",
+   "scheduled_time": "10:55",
+   "sequence": 22,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 895
+  },
+  {
+   "station_code": "BNGN",
+   "station_name": "Bongaigaon",
+   "scheduled_time": "11:30",
+   "sequence": 23,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 930
+  },
+  {
+   "station_code": "NBQ",
+   "station_name": "New Bongaigaon",
+   "scheduled_time": "12:15",
+   "sequence": 24,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 975
+  },
+  {
+   "station_code": "KOJ",
+   "station_name": "Kokrajhar",
+   "scheduled_time": "12:58",
+   "sequence": 25,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1018
+  },
+  {
+   "station_code": "FKM",
+   "station_name": "Fakiragram Jn",
+   "scheduled_time": "13:10",
+   "sequence": 26,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1030
+  },
+  {
+   "station_code": "KAMG",
+   "station_name": "Kamakhyaguri",
+   "scheduled_time": "13:53",
+   "sequence": 27,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1073
+  },
+  {
+   "station_code": "NOQ",
+   "station_name": "New Alipurdaur",
+   "scheduled_time": "14:15",
+   "sequence": 28,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1095
+  },
+  {
+   "station_code": "NCB",
+   "station_name": "New Cooch Behar",
+   "scheduled_time": "14:40",
+   "sequence": 29,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1120
+  },
+  {
+   "station_code": "DQG",
+   "station_name": "Dhupguri",
+   "scheduled_time": "15:45",
+   "sequence": 30,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1185
+  },
+  {
+   "station_code": "NMX",
+   "station_name": "New Maynaguri",
+   "scheduled_time": "16:03",
+   "sequence": 31,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1203
+  },
+  {
+   "station_code": "JPE",
+   "station_name": "Jalpaiguri Road",
+   "scheduled_time": "16:20",
+   "sequence": 32,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1220
+  },
+  {
+   "station_code": "NJP",
+   "station_name": "New Jalpaiguri",
+   "scheduled_time": "17:15",
+   "sequence": 33,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1275
+  },
+  {
+   "station_code": "AUB",
+   "station_name": "Aluabari Road",
+   "scheduled_time": "18:07",
+   "sequence": 34,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1327
+  },
+  {
+   "station_code": "KNE",
+   "station_name": "Kishanganj",
+   "scheduled_time": "18:40",
+   "sequence": 35,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1360
+  },
+  {
+   "station_code": "SM",
+   "station_name": "Samsi",
+   "scheduled_time": "20:40",
+   "sequence": 36,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1480
+  },
+  {
+   "station_code": "MLDT",
+   "station_name": "Malda Town",
+   "scheduled_time": "21:50",
+   "sequence": 37,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1550
+  },
+  {
+   "station_code": "NFK",
+   "station_name": "New Farakka Jn",
+   "scheduled_time": "22:32",
+   "sequence": 38,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1592
+  },
+  {
+   "station_code": "DGLE",
+   "station_name": "Dhulian Ganga",
+   "scheduled_time": "22:56",
+   "sequence": 39,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1616
+  },
+  {
+   "station_code": "NILE",
+   "station_name": "Nimtita",
+   "scheduled_time": "23:08",
+   "sequence": 40,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1628
+  },
+  {
+   "station_code": "JRLE",
+   "station_name": "Jangipur Road",
+   "scheduled_time": "23:27",
+   "sequence": 41,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1647
+  },
+  {
+   "station_code": "AZ",
+   "station_name": "Azimganj Jn",
+   "scheduled_time": "00:15",
+   "sequence": 42,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1695
+  },
+  {
+   "station_code": "KGLE",
+   "station_name": "Khagraghat Road",
+   "scheduled_time": "00:33",
+   "sequence": 43,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1713
+  },
+  {
+   "station_code": "SALE",
+   "station_name": "Salar",
+   "scheduled_time": "01:01",
+   "sequence": 44,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1741
+  },
+  {
+   "station_code": "NDAE",
+   "station_name": "Nabadwip Dham",
+   "scheduled_time": "01:56",
+   "sequence": 45,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1796
+  },
+  {
+   "station_code": "ABKA",
+   "station_name": "Ambika Kalna",
+   "scheduled_time": "02:18",
+   "sequence": 46,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1818
+  },
+  {
+   "station_code": "BDC",
+   "station_name": "Bandel Jn",
+   "scheduled_time": "03:05",
+   "sequence": 47,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1865
+  },
+  {
+   "station_code": "HWH",
+   "station_name": "Howrah Jn",
+   "scheduled_time": "04:40",
+   "sequence": 48,
+   "zone": "NA",
+   "day_offset": 2,
+   "elapsed_min": 1960
+  }
+ ]
+}

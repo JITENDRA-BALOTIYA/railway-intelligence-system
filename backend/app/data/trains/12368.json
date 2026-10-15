@@ -1,0 +1,166 @@
+{
+ "train_id": "12368",
+ "train_name": "Vikramshila Express",
+ "train_class": "express",
+ "corridor_from": "Anand Vihar Terminal",
+ "corridor_to": "Bhagalpur",
+ "total_min": 1140,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "BXR",
+   "station_name": "Buxar",
+   "scheduled_time": "00:40",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 685
+  },
+  {
+   "station_code": "ARA",
+   "station_name": "Ara",
+   "scheduled_time": "01:25",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 730
+  },
+  {
+   "station_code": "PNBE",
+   "station_name": "Patna Jn",
+   "scheduled_time": "02:13",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 778
+  },
+  {
+   "station_code": "PNC",
+   "station_name": "Patna Saheb",
+   "scheduled_time": "02:38",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 803
+  },
+  {
+   "station_code": "FUT",
+   "station_name": "Fatuha Jn",
+   "scheduled_time": "02:53",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 818
+  },
+  {
+   "station_code": "KOO",
+   "station_name": "Khusropur",
+   "scheduled_time": "03:04",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 829
+  },
+  {
+   "station_code": "BARH",
+   "station_name": "Barh",
+   "scheduled_time": "03:33",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 858
+  },
+  {
+   "station_code": "MKA",
+   "station_name": "Mokameh Jn",
+   "scheduled_time": "03:53",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 878
+  },
+  {
+   "station_code": "BRYA",
+   "station_name": "Barhiya",
+   "scheduled_time": "04:15",
+   "sequence": 9,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 900
+  },
+  {
+   "station_code": "LKR",
+   "station_name": "Luckeesarai Jn",
+   "scheduled_time": "04:43",
+   "sequence": 10,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 928
+  },
+  {
+   "station_code": "KIUL",
+   "station_name": "Kiul Jn",
+   "scheduled_time": "05:30",
+   "sequence": 11,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 975
+  },
+  {
+   "station_code": "AHA",
+   "station_name": "Abhaipur",
+   "scheduled_time": "06:02",
+   "sequence": 12,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1007
+  },
+  {
+   "station_code": "DRH",
+   "station_name": "Dharhara",
+   "scheduled_time": "06:15",
+   "sequence": 13,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1020
+  },
+  {
+   "station_code": "JMP",
+   "station_name": "Jamalpur Jn",
+   "scheduled_time": "06:30",
+   "sequence": 14,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1035
+  },
+  {
+   "station_code": "BUP",
+   "station_name": "Bariarpur",
+   "scheduled_time": "06:48",
+   "sequence": 15,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1053
+  },
+  {
+   "station_code": "SGG",
+   "station_name": "Sultanganj",
+   "scheduled_time": "07:16",
+   "sequence": 16,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1081
+  },
+  {
+   "station_code": "BGP",
+   "station_name": "Bhagalpur",
+   "scheduled_time": "08:15",
+   "sequence": 17,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1140
+  }
+ ]
+}

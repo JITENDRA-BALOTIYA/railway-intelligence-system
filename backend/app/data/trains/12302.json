@@ -1,0 +1,76 @@
+{
+ "train_id": "12302",
+ "train_name": "Howrah Rajdhani",
+ "train_class": "rajdhani",
+ "corridor_from": "New Delhi",
+ "corridor_to": "Howrah Jn",
+ "total_min": 1025,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "CNB",
+   "station_name": "Kanpur Central",
+   "scheduled_time": "21:30",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 280
+  },
+  {
+   "station_code": "PRYJ",
+   "station_name": "Prayagraj Jn",
+   "scheduled_time": "23:41",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 411
+  },
+  {
+   "station_code": "GAYA",
+   "station_name": "Gaya Jn",
+   "scheduled_time": "03:57",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 667
+  },
+  {
+   "station_code": "PNME",
+   "station_name": "Parasnath",
+   "scheduled_time": "05:43",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 773
+  },
+  {
+   "station_code": "DHN",
+   "station_name": "Dhanbad Jn",
+   "scheduled_time": "06:33",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 823
+  },
+  {
+   "station_code": "ASN",
+   "station_name": "Asansol Jn",
+   "scheduled_time": "07:18",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 868
+  },
+  {
+   "station_code": "HWH",
+   "station_name": "Howrah Jn",
+   "scheduled_time": "09:55",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 1025
+  }
+ ]
+}

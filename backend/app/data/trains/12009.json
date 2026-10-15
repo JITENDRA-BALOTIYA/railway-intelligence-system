@@ -1,0 +1,85 @@
+{
+ "train_id": "12009",
+ "train_name": "Shatabdi",
+ "train_class": "shatabdi",
+ "corridor_from": "Mumbai Central",
+ "corridor_to": "Ahmedabad Jn",
+ "total_min": 380,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "MMCT",
+   "station_name": "Mumbai Central",
+   "scheduled_time": "06:20",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "BVI",
+   "station_name": "Borivali",
+   "scheduled_time": "06:43",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 23
+  },
+  {
+   "station_code": "VAPI",
+   "station_name": "Vapi",
+   "scheduled_time": "08:05",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 105
+  },
+  {
+   "station_code": "ST",
+   "station_name": "Surat",
+   "scheduled_time": "09:21",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 181
+  },
+  {
+   "station_code": "BH",
+   "station_name": "Bharuch Jn",
+   "scheduled_time": "10:02",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 222
+  },
+  {
+   "station_code": "BRC",
+   "station_name": "Vadodara Jn",
+   "scheduled_time": "10:54",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 274
+  },
+  {
+   "station_code": "ANND",
+   "station_name": "Anand Jn",
+   "scheduled_time": "11:30",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 310
+  },
+  {
+   "station_code": "ND",
+   "station_name": "Nadiad Jn",
+   "scheduled_time": "11:46",
+   "sequence": 8,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 326
+  }
+ ]
+}

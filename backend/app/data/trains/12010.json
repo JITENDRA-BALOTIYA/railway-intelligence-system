@@ -1,0 +1,76 @@
+{
+ "train_id": "12010",
+ "train_name": "Shatabdi",
+ "train_class": "shatabdi",
+ "corridor_from": "Ahmedabad Jn",
+ "corridor_to": "Mumbai Central",
+ "total_min": 395,
+ "route_partial": false,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "ADI",
+   "station_name": "Ahmedabad Jn",
+   "scheduled_time": "15:10",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "ND",
+   "station_name": "Nadiad Jn",
+   "scheduled_time": "15:39",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 29
+  },
+  {
+   "station_code": "ANND",
+   "station_name": "Anand Jn",
+   "scheduled_time": "15:58",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 48
+  },
+  {
+   "station_code": "BRC",
+   "station_name": "Vadodara Jn",
+   "scheduled_time": "16:30",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 80
+  },
+  {
+   "station_code": "ST",
+   "station_name": "Surat",
+   "scheduled_time": "18:10",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 180
+  },
+  {
+   "station_code": "BVI",
+   "station_name": "Borivali",
+   "scheduled_time": "20:48",
+   "sequence": 6,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 338
+  },
+  {
+   "station_code": "MMCT",
+   "station_name": "Mumbai Central",
+   "scheduled_time": "21:45",
+   "sequence": 7,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 395
+  }
+ ]
+}

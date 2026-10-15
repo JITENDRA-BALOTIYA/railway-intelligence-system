@@ -1,0 +1,58 @@
+{
+ "train_id": "12682",
+ "train_name": "Kovai Express",
+ "train_class": "express",
+ "corridor_from": "Coimbatore Jn",
+ "corridor_to": "Mgr Chennai Ctr",
+ "total_min": 485,
+ "route_partial": true,
+ "verified": false,
+ "source": "Timetable: IRCTC_cleaned.csv (public dump, date unknown, NOT NTES-verified). Delay stats: etrain.info scrape 2025-09-27 (public Kaggle dump). Stops = intersection of both datasets.",
+ "stops": [
+  {
+   "station_code": "CBE",
+   "station_name": "Coimbatore Jn",
+   "scheduled_time": "23:30",
+   "sequence": 1,
+   "zone": "NA",
+   "day_offset": 0,
+   "elapsed_min": 0
+  },
+  {
+   "station_code": "TUP",
+   "station_name": "Tiruppur",
+   "scheduled_time": "00:07",
+   "sequence": 2,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 37
+  },
+  {
+   "station_code": "ED",
+   "station_name": "Erode Jn",
+   "scheduled_time": "00:50",
+   "sequence": 3,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 80
+  },
+  {
+   "station_code": "SA",
+   "station_name": "Salem Jn",
+   "scheduled_time": "01:47",
+   "sequence": 4,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 137
+  },
+  {
+   "station_code": "KPD",
+   "station_name": "Katpadi Jn",
+   "scheduled_time": "05:08",
+   "sequence": 5,
+   "zone": "NA",
+   "day_offset": 1,
+   "elapsed_min": 338
+  }
+ ]
+}
