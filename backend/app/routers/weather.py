@@ -1,5 +1,5 @@
 """
-REAL, LIVE weather (Open-Meteo, free, no key).
+REAL, LIVE weather (Open-Meteo, free, no key; MET Norway as automatic second provider).
 
 Scaling: readings are cached per ~1 km cell for CACHE_TTL_SECONDS, so many trains sharing stations
 do not multiply upstream calls. If Open-Meteo fails and an older reading exists it is served with
@@ -38,29 +38,55 @@ def _visibility_flag(precip_mm: float, cloud_cover_pct: float) -> str:
     return "clear"
 
 
+MET_NO_URL = "https://api.met.no/weatherapi/locationforecast/2.0/compact"
+MET_NO_HEADERS = {"User-Agent": "RailPulse/1.0 github.com/lokesh-kumar-khandelwal/railpulse"}
+
+
+async def _from_open_meteo(lat: float, lon: float):
+    params = {"latitude": lat, "longitude": lon,
+              "current": "temperature_2m,precipitation,wind_speed_10m,cloud_cover", "timezone": "auto"}
+    async with httpx.AsyncClient(timeout=6.0) as client:
+        resp = await client.get(OPEN_METEO_URL, params=params)
+        resp.raise_for_status()
+        cur = resp.json().get("current", {})
+    return (float(cur.get("temperature_2m", 0.0)), float(cur.get("precipitation", 0.0)),
+            float(cur.get("wind_speed_10m", 0.0)), float(cur.get("cloud_cover", 0.0)), "open-meteo")
+
+
+async def _from_met_no(lat: float, lon: float):
+    """Second real provider (MET Norway). Used only when Open-Meteo fails, e.g. 429 on a shared host IP."""
+    async with httpx.AsyncClient(timeout=8.0, headers=MET_NO_HEADERS) as client:
+        resp = await client.get(MET_NO_URL, params={"lat": round(lat, 4), "lon": round(lon, 4)})
+        resp.raise_for_status()
+        first = resp.json()["properties"]["timeseries"][0]["data"]
+    det = first["instant"]["details"]
+    nxt = (first.get("next_1_hours") or first.get("next_6_hours") or {}).get("details", {})
+    return (float(det.get("air_temperature", 0.0)), float(nxt.get("precipitation_amount", 0.0)),
+            float(det.get("wind_speed", 0.0)) * 3.6, float(det.get("cloud_area_fraction", 0.0)), "met.no")
+
+
 async def fetch_weather(lat: float, lon: float) -> WeatherData:
     key = (round(lat, 2), round(lon, 2))
     now = time.time()
     hit = _cache.get(key)
     if hit and now - hit[0] < CACHE_TTL_SECONDS:
         return hit[1].model_copy(update={"cached": True})
-    params = {"latitude": lat, "longitude": lon,
-              "current": "temperature_2m,precipitation,wind_speed_10m,cloud_cover", "timezone": "auto"}
-    try:
-        async with httpx.AsyncClient(timeout=6.0) as client:
-            resp = await client.get(OPEN_METEO_URL, params=params)
-            resp.raise_for_status()
-            data = resp.json()
-    except (httpx.HTTPError, httpx.TimeoutException) as exc:
+    result, errors = None, []
+    for provider in (_from_open_meteo, _from_met_no):
+        try:
+            result = await provider(lat, lon)
+            break
+        except (httpx.HTTPError, httpx.TimeoutException, KeyError, IndexError, ValueError) as exc:
+            errors.append(f"{provider.__name__}: {exc}")
+    if result is None:
         if hit:
             return hit[1].model_copy(update={"cached": True, "stale": True})
-        raise HTTPException(status_code=503, detail=f"Open-Meteo unreachable: {exc}")
-    cur = data.get("current", {})
-    precip, wind, cloud = (float(cur.get(k, 0.0)) for k in ("precipitation", "wind_speed_10m", "cloud_cover"))
+        raise HTTPException(status_code=503, detail="Weather providers unreachable: " + " | ".join(errors))
+    temp, precip, wind, cloud, source = result
     vis = _visibility_flag(precip, cloud)
     reading = WeatherData(
-        temperature_c=float(cur.get("temperature_2m", 0.0)), precipitation_mm=precip, wind_speed_kmh=wind,
-        visibility_flag=vis, severity_index=_severity_index(precip, wind, vis), source="open-meteo",
+        temperature_c=temp, precipitation_mm=precip, wind_speed_kmh=wind,
+        visibility_flag=vis, severity_index=_severity_index(precip, wind, vis), source=source,
         is_live=True, cached=False, stale=False, fetched_at=datetime.now(timezone.utc).isoformat(),
         location_source="coordinates")
     _cache[key] = (now, reading)

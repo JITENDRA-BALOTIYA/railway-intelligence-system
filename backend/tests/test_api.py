@@ -177,6 +177,29 @@ def test_weather_cache_stale_and_503(monkeypatch):
     assert client.get("/api/weather/station/KOTA").status_code == 503     # never fabricated
 
 
+def test_falls_back_to_met_no_when_open_meteo_rate_limited(monkeypatch):
+    calls = []
+
+    class Fake:
+        def __init__(self, *a, **k): pass
+        async def __aenter__(self): return self
+        async def __aexit__(self, *a): return False
+        async def get(self, url, params=None):
+            calls.append(url)
+            if "open-meteo" in url:
+                raise httpx.HTTPStatusError("429", request=httpx.Request("GET", url),
+                                            response=httpx.Response(429))
+            return _Resp({"properties": {"timeseries": [{"data": {
+                "instant": {"details": {"air_temperature": 31.0, "wind_speed": 5.0, "cloud_area_fraction": 20.0}},
+                "next_1_hours": {"details": {"precipitation_amount": 1.5}}}}]}})
+    monkeypatch.setattr(httpx, "AsyncClient", Fake)
+    weather_mod._cache.clear()
+    j = client.get("/api/weather/station/KOTA").json()
+    assert j["source"] == "met.no" and j["is_live"] and j["stale"] is False
+    assert j["temperature_c"] == 31.0 and abs(j["wind_speed_kmh"] - 18.0) < 1e-6 and j["precipitation_mm"] == 1.5
+    weather_mod._cache.clear()
+
+
 def test_geocoded_station_weather_is_flagged_approximate(monkeypatch, tmp_path):
     st = {"calls": [], "fail": False}
     _install_fake(monkeypatch, st)
