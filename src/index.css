@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/* Minimal, sleek custom scrollbar for terminal feed */
+.custom-terminal-scrollbar::-webkit-scrollbar,
+.terminal-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.custom-terminal-scrollbar::-webkit-scrollbar-track,
+.terminal-scrollbar::-webkit-scrollbar-track {
+  background: rgba(11, 17, 26, 0.7);
+  border-radius: 9999px;
+  margin: 6px 0;
+}
+
+.custom-terminal-scrollbar::-webkit-scrollbar-thumb,
+.terminal-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 9999px;
+  transition: background-color 0.2s ease;
+}
+
+.custom-terminal-scrollbar::-webkit-scrollbar-thumb:hover,
+.terminal-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(232, 115, 26, 0.85);
+}
+
+.custom-terminal-scrollbar,
+.terminal-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.3) rgba(11, 17, 26, 0.7);
+}
+
+/* RecalculationLog precision typography & vertical alignment */
+.recalculation-eyebrow {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #E8731A;
+  line-height: 1.2;
+  margin-bottom: 3px;
+  display: block;
+}
+
+.recalculation-title {
+  font-size: 1.125rem;
+  line-height: 1.3;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #12386B;
+  margin: 0;
+}
