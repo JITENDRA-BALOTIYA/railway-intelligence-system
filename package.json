@@ -1,30 +1,21 @@
 {
-  "name": "react-example",
+  "name": "railway-intelligence-system",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "description": "Railway Intelligence System - AI-driven train delay prediction and tracking",
   "scripts": {
-    "dev": "vite --port=3000 --host=0.0.0.0",
-    "build": "vite build",
-    "preview": "vite preview",
-    "clean": "rm -rf dist",
-    "lint": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.3.3",
-    "@vitejs/plugin-react": "^6.1.1",
-    "lucide-react": "^0.546.0",
-    "react": "^19.0.1",
-    "react-dom": "^19.0.1",
-    "vite": "^8.3.0",
-    "motion": "^12.23.24"
+    "dev": "concurrently -n \"client,server\" -c \"cyan.bold,magenta.bold\" \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "npm run dev --prefix client",
+    "dev:server": "python -m uvicorn app.main:app --reload --app-dir server --port 8000",
+    "build": "npm run build --prefix client",
+    "build:client": "npm run build --prefix client",
+    "install:client": "npm install --prefix client",
+    "install:server": "pip install -r server/requirements.txt",
+    "install:all": "npm run install:client && npm run install:server",
+    "lint": "npm run lint --prefix client",
+    "test:server": "pytest server/tests"
   },
   "devDependencies": {
-    "@types/node": "^22.14.0",
-    "@types/react": "^19.3.0",
-    "@types/react-dom": "^19.3.0",
-    "autoprefixer": "^10.4.21",
-    "tailwindcss": "^4.3.3",
-    "typescript": "^7.0.2"
+    "concurrently": "^9.1.2"
   }
 }

@@ -19,34 +19,40 @@ Details and honest Q&A for the jury: `JURY_QA.md`.
 ## Layout
 
 ```
-src/            React UI (components unchanged in design; all data comes from the API)
-backend/        FastAPI + XGBoost (app/, scripts/build_data.py, tests/, data_raw/)
-render.yaml     Render blueprint for the backend
-Dockerfile      alternative backend container
+client/         React UI (Vite + Tailwind, components, types, utils)
+server/         FastAPI + XGBoost (app/, scripts/build_data.py, tests/, data_raw/)
+render.yaml     Render blueprint for the backend (rootDir: server)
+Dockerfile      Backend container
+package.json    Root workspace orchestration scripts (run both client & server)
 ```
 
 ## Run locally
 
 ```bash
-# 1) backend (terminal 1)
-cd backend
+# Option 1: Run both concurrently from root
+npm run dev
+
+# Option 2: Run individually
+# 1) Server (terminal 1)
+cd server
 python -m venv .venv && source .venv/bin/activate     # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 python -m uvicorn app.main:app --port 8000
 
-# 2) UI (terminal 2, repo root)
+# 2) Client (terminal 2)
+cd client
 npm install
 npm run dev          # http://localhost:3000, /api is proxied to :8000
 ```
 
-Tests: `cd backend && python -m pytest -q` (19 tests).
-Retrain: `cd backend && python scripts/build_data.py && python -m app.ml.train`.
+Tests: `cd server && python -m pytest -q` (19 tests).
+Retrain: `cd server && python scripts/build_data.py && python -m app.ml.train`.
 
 ## Deploy
 
-1. **API on Render:** New → Blueprint → select this repo (uses `render.yaml`, `rootDir: backend`).
+1. **API on Render:** New → Blueprint → select this repo (uses `render.yaml`, `rootDir: server`).
    Open `https://<your-app>.onrender.com/api/health`.
-2. **UI on Vercel:** import this repo (root directory = repo root). Environment variable
+2. **UI on Vercel:** import this repo (root directory = `client`). Environment variable
    `VITE_API_BASE` = the Render URL (no trailing slash). Redeploy.
 3. **CORS:** `RAILPULSE_CORS` in Render must contain the exact Vercel origin
    (preset to `https://railway-intelligence-system.vercel.app`).
